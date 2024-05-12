@@ -44,3 +44,19 @@ protocol HideStickerButtonDelegate {
     func sideBarDidToggleBack()
     func toggleStickerButtonsVisibility(hidden: Bool)
 }
+
+protocol SearchBarDelegate {
+    func searchBarDidTap()
+}
+
+protocol ViewAllAstrologersButtonDelegate {
+    func viewAstrologerButtonDidTap()
+}
+
+protocol ViewAllAstroShopButtonDelegate {
+    func viewAstroShopButtonDidTap()
+}
+
+protocol StickerButtonVisibilityDelegate {
+    func toggleStickerButtonsVisibility(hidden: Bool)
+}

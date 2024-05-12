@@ -11,23 +11,24 @@ class SearchBarHeader: UICollectionReusableView, UISearchBarDelegate {
     
     //MARK: - Objects initialization
     static let identifier = "SearchBarHeader"
+    var delegate: SearchBarDelegate?
     
     fileprivate lazy var searchBar: UISearchBar = {
-           let search = UISearchBar()
-           search.translatesAutoresizingMaskIntoConstraints = false
-           search.placeholder = "Search astrologer, astromall products"
-           search.delegate = self
-           search.searchBarStyle = .minimal
-           search.backgroundImage = UIImage()
-           let searchTxtField = search.value(forKey: "searchField") as? UITextField
-           searchTxtField?.backgroundColor = .white
-           search.layer.shadowColor = UIColor.gray.cgColor
-           search.layer.shadowOpacity = 10
-           search.layer.shadowOffset = CGSize(width: 5, height: 5)
-           search.layer.shadowRadius = 6
-           search.layer.masksToBounds = false
-           return search
-       }()
+        let search = UISearchBar()
+        search.translatesAutoresizingMaskIntoConstraints = false
+        search.placeholder = "Search astrologer, astromall products"
+        search.delegate = self
+        search.searchBarStyle = .minimal
+        search.backgroundImage = UIImage()
+        let searchTxtField = search.value(forKey: "searchField") as? UITextField
+        searchTxtField?.backgroundColor = .white
+        search.layer.shadowColor = UIColor.gray.cgColor
+        search.layer.shadowOpacity = 10
+        search.layer.shadowOffset = CGSize(width: 5, height: 5)
+        search.layer.shadowRadius = 6
+        search.layer.masksToBounds = false
+        return search
+    }()
     
     
     public func configure() {
@@ -60,6 +61,16 @@ class SearchBarHeader: UICollectionReusableView, UISearchBarDelegate {
             searchBar.text = nil
             searchBar.tintColor = .black
         }
+    }
+    
+    //MARK: - Tap gesture action to show a Search Viewcontroller -
+    func tapGesture() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapGestureDelegateAction))
+        searchBar.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc func tapGestureDelegateAction() {
+        delegate?.searchBarDidTap()
     }
 }
 

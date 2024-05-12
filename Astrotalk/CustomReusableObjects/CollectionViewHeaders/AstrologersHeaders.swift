@@ -11,6 +11,7 @@ class AstrologersHeaders: UICollectionReusableView {
     
     //MARK: - Objects initialization
     static let identifier = "AstrologersHeaders"
+    var delegate: ViewAllAstrologersButtonDelegate?
     
     let astrologersLabel = Label(label: "Astrologers", textColor: .black, font: UIFont.systemFont(ofSize: 16, weight: .bold))
     
@@ -29,6 +30,7 @@ class AstrologersHeaders: UICollectionReusableView {
     
     // MARK: - Subviews and Layout -
     func setupSectionHeaders() {
+        viewAllBtn.addTarget(self, action: #selector(btnTappedAction), for: .touchUpInside)
         NSLayoutConstraint.activate([
             astrologersLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
             astrologersLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
@@ -36,5 +38,9 @@ class AstrologersHeaders: UICollectionReusableView {
             viewAllBtn.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
             viewAllBtn.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
         ])
+    }
+    
+    @objc func btnTappedAction() {
+        delegate?.viewAstrologerButtonDidTap()
     }
 }

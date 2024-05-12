@@ -30,7 +30,10 @@ class ChatsViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        subviewsAndLayout()
+        addUsersChatsDB()
+    }
+    
+    func addUsersChatsDB() {
         dbRef.child("messages").observe(.childAdded, with: { [weak self] (snapshot) in
             guard let self = self else { return }
             if let messageData = snapshot.value as? [String: String],
@@ -41,7 +44,7 @@ class ChatsViewController: UIViewController, UITableViewDataSource, UITableViewD
                 self.chatsTableView.reloadData()
             }
         })
-        
+        subviewsAndLayout()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -54,11 +57,17 @@ class ChatsViewController: UIViewController, UITableViewDataSource, UITableViewD
         let message = messages[indexPath.row]
         let isCurrentUser = message.sender == currentUserUID
         if isCurrentUser {
-            cell.textLabel?.textAlignment = .right
-            cell.textLabel?.text = message.text
+            cell.bubbleChatsView.backgroundColor = .systemYellow
+            cell.topAnchor.constraint(equalTo: view.topAnchor, constant: 8).isActive = true
+            cell.bubbleChatsView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10).isActive = true
+            cell.chatsLabel.text = message.text
+            cell.chatsLabel.textColor = .lightGray
         } else {
-            cell.textLabel?.textAlignment = .left
-            cell.textLabel?.text = message.text
+            cell.bubbleChatsView.backgroundColor = .lightGray
+            cell.topAnchor.constraint(equalTo: view.topAnchor, constant: 8).isActive = true
+            cell.bubbleChatsView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10).isActive = true
+            cell.chatsLabel.text = message.text
+            cell.chatsLabel.textColor = .systemYellow
         }
         return cell
     }

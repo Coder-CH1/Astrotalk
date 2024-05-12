@@ -9,8 +9,6 @@ import UIKit
 
 // MARK: -
 
-var leftSticker: UIButton!
-var rightSticker: UIButton!
 class HomeBaseViewController: UIViewController {
     
     // MARK: - UI -
@@ -58,6 +56,8 @@ class HomeBaseViewController: UIViewController {
     
     var isFeedbackViewVisible = false
     let yourFeedbackViewHeight: CGFloat = 280
+    var leftSticker = Button(image: UIImage(systemName: "ellipsis.message.fill"), text: "Chat with Astrologer", btnTitleColor: .black, backgroundColor: .systemYellow, radius: 20, imageColor: .black)
+    var rightSticker = Button(image: UIImage(systemName: "phone.fill"), text: "Call with Astrologer", btnTitleColor: .black, backgroundColor: .systemYellow, radius: 20, imageColor: .black)
     
     // MARK: - Lifecycle -
     override func viewDidLoad() {
@@ -76,14 +76,6 @@ class HomeBaseViewController: UIViewController {
         setupStickerButtions()
         leftSticker.isHidden = true
         rightSticker.isHidden = true
-    }
-    
-    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        super.viewWillTransition(to: size, with: coordinator)
-        if self.children.contains(where: { $0 is SideBarViewController }) {
-            leftSticker.isHidden = true
-            rightSticker.isHidden = true
-        }
     }
     
     //MARK: - Subviews and Layout -
@@ -232,6 +224,7 @@ extension HomeBaseViewController: UICollectionViewDelegateFlowLayout {
             switch indexPath.section {
             case 0:
                 let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: SearchBarHeader.identifier, for: indexPath) as! SearchBarHeader
+                header.delegate = self
                 header.configure()
                 return header
             case 2:
@@ -240,6 +233,7 @@ extension HomeBaseViewController: UICollectionViewDelegateFlowLayout {
                 return header
             case 3:
                 let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: AstrologersHeaders.identifier, for: indexPath) as! AstrologersHeaders
+                header.delegate = self
                 header.configure()
                 return header
             case 4:
@@ -248,6 +242,7 @@ extension HomeBaseViewController: UICollectionViewDelegateFlowLayout {
                 return header
             case 5:
                 let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: AstroShopHeaders.identifier, for: indexPath) as! AstroShopHeaders
+                header.delegate = self
                 header.configure()
                 return header
             case 6:
@@ -347,14 +342,8 @@ extension HomeBaseViewController {
               let topMostView = windowScene.windows.first else { return }
         
         //MARK: - Left Sticker Button -
-        leftSticker = UIButton(type: .system)
         leftSticker.translatesAutoresizingMaskIntoConstraints = false
         topMostView.addSubview(leftSticker)
-        leftSticker.backgroundColor = .systemYellow
-        leftSticker.layer.cornerRadius = 20
-        leftSticker.setImage(UIImage(systemName: "ellipsis.message.fill"), for: .normal)
-        leftSticker.setTitle("Chat with Astrologer", for: .normal)
-        leftSticker.tintColor = .black
         leftSticker.bottomAnchor.constraint(equalTo: topMostView.bottomAnchor, constant: -100).isActive = true
         leftSticker.leadingAnchor.constraint(equalTo: topMostView.leadingAnchor, constant: 14).isActive = true
         leftSticker.widthAnchor.constraint(equalToConstant: 170).isActive = true
@@ -362,14 +351,8 @@ extension HomeBaseViewController {
         leftSticker.addTarget(self, action: #selector(leftStickerBtnTapped), for: .touchUpInside)
         
         //MARK: - Right Sticker Button -
-        rightSticker = UIButton(type: .system)
         rightSticker.translatesAutoresizingMaskIntoConstraints = false
         topMostView.addSubview(rightSticker)
-        rightSticker.backgroundColor = .systemYellow
-        rightSticker.layer.cornerRadius = 20
-        rightSticker.tintColor = .black
-        rightSticker.setImage(UIImage(systemName: "phone.fill"), for: .normal)
-        rightSticker.setTitle("Call with Astrologer", for: .normal)
         rightSticker.bottomAnchor.constraint(equalTo: topMostView.bottomAnchor, constant: -100).isActive = true
         rightSticker.trailingAnchor.constraint(equalTo: topMostView.trailingAnchor, constant: -14).isActive = true
         rightSticker.widthAnchor.constraint(equalToConstant: 170).isActive = true
@@ -408,3 +391,25 @@ extension HomeBaseViewController {
         navigationController?.pushViewController(chatTabBarVC, animated: false)
     }
 }
+
+extension HomeBaseViewController: SearchBarDelegate {
+    func searchBarDidTap() {
+        let vc = SearchViewController()
+        navigationController?.pushViewController(vc, animated: false)
+    }
+}
+
+extension HomeBaseViewController: ViewAllAstrologersButtonDelegate {
+    func viewAstrologerButtonDidTap() {
+        let vc = ChatViewController()
+        navigationController?.pushViewController(vc, animated: false)
+    }
+}
+
+extension HomeBaseViewController: ViewAllAstroShopButtonDelegate {
+    func viewAstroShopButtonDidTap() {
+        let vc = MessageViewController()
+        navigationController?.pushViewController(vc, animated: false)
+    }
+}
+

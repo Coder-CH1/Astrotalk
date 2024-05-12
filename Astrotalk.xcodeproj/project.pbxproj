@@ -342,6 +342,40 @@
 			path = TabBars;
 			sourceTree = "<group>";
 		};
+		041847402BF0EA8D008AF6B1 /* MessagesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0422BC5C2BE9B20C00DA4D23 /* MessagesViewController.swift */,
+				041847422BF0EBCF008AF6B1 /* Cell */,
+			);
+			path = MessagesViewController;
+			sourceTree = "<group>";
+		};
+		041847412BF0EAAA008AF6B1 /* ChatsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0422BC622BE9C37C00DA4D23 /* ChatsViewController.swift */,
+				041847432BF0EBE2008AF6B1 /* Cell */,
+			);
+			path = ChatsViewController;
+			sourceTree = "<group>";
+		};
+		041847422BF0EBCF008AF6B1 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0422BC5E2BE9B3D100DA4D23 /* MessagesCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		041847432BF0EBE2008AF6B1 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				049ED1292BF066E30038B7E3 /* ChatsTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		042AC9882BD8BA2900C1CFCD /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -735,10 +769,8 @@
 				0406D6D72BCA014100E35A60 /* Delegates */,
 				0406D6D82BCA015400E35A60 /* Controllers */,
 				04917D572BD15E1C00010C2F /* ProtocolDelegates */,
-				0422BC5C2BE9B20C00DA4D23 /* MessagesViewController.swift */,
-				0422BC622BE9C37C00DA4D23 /* ChatsViewController.swift */,
-				049ED1292BF066E30038B7E3 /* ChatsTableViewCell.swift */,
-				0422BC5E2BE9B3D100DA4D23 /* MessagesCell.swift */,
+				041847402BF0EA8D008AF6B1 /* MessagesViewController */,
+				041847412BF0EAAA008AF6B1 /* ChatsViewController */,
 				04898CEF2BDD79320054585A /* Views */,
 				04A875202BC8AC1F008C7E06 /* Info.plist */,
 			);
