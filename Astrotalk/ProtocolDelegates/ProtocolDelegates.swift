@@ -39,3 +39,8 @@ protocol CellSelectedDelegate {
 protocol CellButtonDelegate {
     func didButtonTapped(index: Int)
 }
+
+protocol HideStickerButtonDelegate {
+    func sideBarDidToggleBack()
+    func toggleStickerButtonsVisibility(hidden: Bool)
+}

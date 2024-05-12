@@ -9,6 +9,8 @@ import UIKit
 
 // MARK: -
 
+var leftSticker: UIButton!
+var rightSticker: UIButton!
 class HomeBaseViewController: UIViewController {
     
     // MARK: - UI -
@@ -56,8 +58,6 @@ class HomeBaseViewController: UIViewController {
     
     var isFeedbackViewVisible = false
     let yourFeedbackViewHeight: CGFloat = 280
-    var leftSticker: UIButton!
-    var rightSticker: UIButton!
     
     // MARK: - Lifecycle -
     override func viewDidLoad() {
@@ -73,6 +73,7 @@ class HomeBaseViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        setupStickerButtions()
         leftSticker.isHidden = true
         rightSticker.isHidden = true
     }
@@ -343,7 +344,7 @@ extension HomeBaseViewController {
     
     func setupStickerButtions() {
         guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
-        let topMostView = windowScene.windows.first else { return }
+              let topMostView = windowScene.windows.first else { return }
         
         //MARK: - Left Sticker Button -
         leftSticker = UIButton(type: .system)
