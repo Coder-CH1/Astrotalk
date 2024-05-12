@@ -45,6 +45,7 @@ class ShopCell: UICollectionViewCell {
         ])
     }
     
+    //MARK: Configuring the cell objects and Data model -
     func configure(model: AstroMallShopModel) {
         for (key, value) in model.fields {
             print("configuring model for shop: \(value)")

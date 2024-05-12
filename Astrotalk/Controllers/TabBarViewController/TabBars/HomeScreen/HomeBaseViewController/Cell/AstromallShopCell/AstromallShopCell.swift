@@ -74,6 +74,7 @@ class AstromallShopCell: UICollectionViewCell, UICollectionViewDataSource, UICol
         }
     }
     
+    //MARK: - Updating UI with singleton instance and fetch method -
     func fetchAstroMallShopData() {
         firestoreService.fetchDataForAstroMallShop { data, error in
             if let error = error {

@@ -61,6 +61,7 @@ class AstrologerProfileViewController: UIViewController {
         ])
     }
     
+    //MARK: -
     @objc func btnTapped() {
         let vc = MessageViewController()
         navigationController?.pushViewController(vc, animated: false)

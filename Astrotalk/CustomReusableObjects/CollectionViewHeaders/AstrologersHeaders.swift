@@ -40,6 +40,7 @@ class AstrologersHeaders: UICollectionReusableView {
         ])
     }
     
+    //MARK: - Delegate protocol to toggle a Chat View Controller -
     @objc func btnTappedAction() {
         delegate?.viewAstrologerButtonDidTap()
     }

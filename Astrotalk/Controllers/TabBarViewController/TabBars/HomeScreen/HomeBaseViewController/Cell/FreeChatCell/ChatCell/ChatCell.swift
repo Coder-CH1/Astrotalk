@@ -45,11 +45,13 @@ class ChatCell: UICollectionViewCell {
         animateLabel()
     }
     
+    //MARK: - CADisplayLink implemented for rendering of the label -
     func applyCADisplayOnLabel() {
         let displayLink = CADisplayLink(target: self, selector: #selector(animateLabel))
         displayLink.add(to: .main, forMode: .default)
     }
     
+    //MARK: - Animating Label forth and back -
     @objc func animateLabel() {
         UIView.animate(withDuration: 2.0, delay: 0, options: [.repeat, .autoreverse],
                        animations: {
@@ -57,6 +59,7 @@ class ChatCell: UICollectionViewCell {
         }
         )}
     
+    //MARK: Configuring the cell objects and Data model -
     func configure(model: FreeChatModel) {
         print("configuring model for free chat: \(model)")
         let url = URL(string: model.imageUrl)

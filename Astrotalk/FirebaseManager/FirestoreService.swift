@@ -7,14 +7,15 @@
 
 import UIKit
 import FirebaseFirestore
-import FirebaseStorage
 
+//MARK: - A Firestore Singleton to be shared to viewcontrollers -
 class FirestoreService {
     
     static let shared = FirestoreService()
     
     private init() {}
     
+    //MARK: - Fetches dictionary of data saved in Firestore
     func fetchDataForFreeChat(completion: @escaping ([FreeChatModel], Error?) -> Void) {
         let database = Firestore.firestore()
         let query = database.collection("section1")
@@ -47,6 +48,7 @@ class FirestoreService {
         }
     }
     
+    //MARK: - Fetches dictionary of data saved in Firestore
     func fetchDataForLiveAstrologers(completion: @escaping ([LiveAstrologersModel], Error?) -> Void) {
         let database = Firestore.firestore()
         let query = database.collection("section2")
@@ -80,6 +82,7 @@ class FirestoreService {
         }
     }
     
+    //MARK: - Fetches dictionary of data saved in Firestore
     func fetchDataForAstrologers(completion: @escaping ([AstrologersModel], Error?) -> Void) {
         let database = Firestore.firestore()
         let query = database.collection("section3")
@@ -115,6 +118,7 @@ class FirestoreService {
         }
     }
     
+    //MARK: - Fetches dictionary of data saved in Firestore
     func fetchDataForLatestBlog(completion: @escaping ([LatestBlogModel], Error?) -> Void) {
         let database = Firestore.firestore()
         let query = database.collection("section6")
@@ -144,6 +148,7 @@ class FirestoreService {
         }
     }
     
+    //MARK: - Fetches dictionary of data saved in Firestore
     func fetchDataForAstroMallShop(completion: @escaping ([AstroMallShopModel], Error?) -> Void) {
         let database = Firestore.firestore()
         let query = database.collection("section5")
@@ -178,6 +183,7 @@ class FirestoreService {
         }
     }
     
+    //MARK: - Fetches dictionary of data saved in Firestore
     func fetchDataForAstroTalkNews(completion: @escaping ([AstroTalkModel], Error?) -> Void) {
         let database = Firestore.firestore()
         let query = database.collection("section6")

@@ -7,12 +7,14 @@
 
 import UIKit
 
+//MARK: -
 class ChatsTableViewCell: UITableViewCell {
-    
+    //MARK: - UI -
     let identifier = "ChatsTableViewCell"
     let bubbleChatsView = CustomView(color: .clear)
     let chatsLabel = Label(label: "", textColor: .black, font: UIFont.systemFont(ofSize: 12, weight: .regular))
-
+    
+    //MARK: - Lifecyle -
     override func awakeFromNib() {
         super.awakeFromNib()
         subviewsAndLayout()

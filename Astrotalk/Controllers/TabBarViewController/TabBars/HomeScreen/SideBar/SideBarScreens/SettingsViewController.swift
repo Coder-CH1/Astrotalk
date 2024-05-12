@@ -30,6 +30,7 @@ class SettingsViewController: UIViewController {
         ])
     }
     
+    //MARK: - Firebase Google logout Implementation -
     @objc func tapped() {
         let auth = Auth.auth()
         do {

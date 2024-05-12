@@ -71,6 +71,7 @@ struct AstroTalkModel {
     }
 }
 
+//MARK: - Registered users model
 struct RegisteredUsersModel {
     let email: String
 }

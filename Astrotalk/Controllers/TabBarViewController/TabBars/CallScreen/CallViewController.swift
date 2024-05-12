@@ -24,10 +24,12 @@ class CallViewController: BaseViewController {
         self.segmentedCollectionView.reloadData()
     }
     
+    //MARK: - Override Method from BaseViewController -
     override func toggleSideBar() {
         super.toggleSideBar()
     }
     
+    //MARK: - Override Method from BaseViewController -
     override func toggleSearchVC() {
         super.toggleSearchVC()
     }
@@ -37,10 +39,12 @@ class CallViewController: BaseViewController {
         super.setSubviewsAndLayout()
     }
     
+    //MARK: - Override Method from BaseViewController -
     override func setupCustomViews() {
         super.setupCustomViews()
     }
     
+    //MARK: - Override Objects from BaseViewController -
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = super.collectionView(collectionView, cellForItemAt: indexPath)
         return cell

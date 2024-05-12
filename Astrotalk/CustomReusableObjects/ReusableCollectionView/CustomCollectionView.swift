@@ -81,6 +81,7 @@ class CustomCollectionView: UICollectionView, UICollectionViewDataSource, UIColl
         }
     }
     
+    //MARK: - Fetches Dictionary Data from Firestore -
     func fetchAstrologersData() {
         firestoreService.fetchDataForAstrologers { astrologerModels, error in
             if let error = error {

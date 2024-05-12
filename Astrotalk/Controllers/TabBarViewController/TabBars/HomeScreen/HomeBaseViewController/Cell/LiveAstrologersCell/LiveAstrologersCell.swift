@@ -74,6 +74,7 @@ class LiveAstrologersCell: UICollectionViewCell, UICollectionViewDataSource, UIC
         }
     }
     
+    //MARK: - Updating UI with singleton instance and fetch method -
     func fetchLiveAstrologersData() {
         firestoreService.fetchDataForLiveAstrologers { model, error in
             if let error = error {

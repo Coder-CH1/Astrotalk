@@ -42,6 +42,7 @@ class BlogCell: UICollectionViewCell {
         ])
     }
     
+    //MARK: Configuring the cell objects and Data model -
     func configure(with url: String) {
         guard let linkView = self.linkView else { return }
         

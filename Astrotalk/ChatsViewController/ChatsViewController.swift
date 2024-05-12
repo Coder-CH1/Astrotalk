@@ -9,8 +9,10 @@ import UIKit
 import FirebaseAuth
 import FirebaseDatabase
 
+//MARK: -
 class ChatsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    //MARK: - UI -
     let dbRef = Database.database().reference()
     var messages: [Chats] = []
     var member: Member!
@@ -20,7 +22,6 @@ class ChatsViewController: UIViewController, UITableViewDataSource, UITableViewD
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.dataSource = self
         tableView.delegate = self
-        //tableView.backgroundColor = .lightGray
         tableView.register(ChatsTableViewCell.self, forCellReuseIdentifier: "ChatsTableViewCell")
         return tableView
     }()
@@ -28,12 +29,14 @@ class ChatsViewController: UIViewController, UITableViewDataSource, UITableViewD
     let chatsTextField = TextField(placeholder: "", isSecureTextEntry: false, radius: 10, background: .gray)
     let sendBtn = Button(image: UIImage(systemName: ""), text: "Send", btnTitleColor: .systemYellow, backgroundColor: .clear, radius: 0, imageColor: .clear)
     
+    //MARK: - Lifecyle -
     override func viewDidLoad() {
         super.viewDidLoad()
-        addUsersChatsDB()
+        fetchUsersFromDB()
     }
     
-    func addUsersChatsDB() {
+    //MARK: - Fetching Multiple Dictionary Registered users from Database -
+    func fetchUsersFromDB() {
         dbRef.child("messages").observe(.childAdded, with: { [weak self] (snapshot) in
             guard let self = self else { return }
             if let messageData = snapshot.value as? [String: String],
@@ -46,6 +49,11 @@ class ChatsViewController: UIViewController, UITableViewDataSource, UITableViewD
         })
         subviewsAndLayout()
     }
+    
+}
+
+//MARK: - DataSource, Delegate -
+extension ChatsViewController {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return messages.count
@@ -100,6 +108,7 @@ class ChatsViewController: UIViewController, UITableViewDataSource, UITableViewD
         sendBtn.addTarget(self, action: #selector(btnTapped), for: .touchUpInside)
     }
     
+    //MARK: Implementation to update and embed the Textfield chats to the TableView -
     @objc func btnTapped() {
         if let message = chatsTextField.text, !message.isEmpty {
             let messageData = [
@@ -111,4 +120,3 @@ class ChatsViewController: UIViewController, UITableViewDataSource, UITableViewD
         }
     }
 }
-

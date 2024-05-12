@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+//MARK: -
 class CustomCell: UICollectionViewCell {
     
     //MARK: - UI -
@@ -51,6 +51,7 @@ class CustomCell: UICollectionViewCell {
         ])
     }
     
+    //MARK: Configuring the cell objects and Data model -
     func configure(model: AstrologersModel) {
         for (key, value) in model.fields {
             if let url = URL(string: value){

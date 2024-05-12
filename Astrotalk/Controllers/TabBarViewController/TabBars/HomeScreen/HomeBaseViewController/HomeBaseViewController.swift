@@ -65,17 +65,20 @@ class HomeBaseViewController: UIViewController {
         setSubviewsAndLayout()
     }
     
+    // MARK: - Lifecycle -
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         toggleStickerButtonsVisibility(hidden: false)
     }
     
+    // MARK: - Lifecycle -
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         setupStickerButtions()
         toggleStickerButtonsVisibility(hidden: true)
     }
     
+    // MARK: - Lifecycle -
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
         if self.children.contains(where: { $0 is SideBarViewController }) {
@@ -339,7 +342,7 @@ extension HomeBaseViewController: UICollectionViewDelegateFlowLayout {
     }
 }
 
-//MARK: - Extensions -
+//MARK: - Extensions - Configure the sticker buttons -
 extension HomeBaseViewController {
     
     func setupStickerButtions() {
@@ -371,6 +374,7 @@ extension HomeBaseViewController {
     }
 }
 
+//MARK: - Extensions -
 extension HomeBaseViewController: CellSelectedDelegate {
     func cellSelected(_ vc: UIViewController) {
         self.navigationController?.pushViewController(vc, animated: true)
@@ -378,6 +382,7 @@ extension HomeBaseViewController: CellSelectedDelegate {
     }
 }
 
+//MARK: - Extensions -
 extension HomeBaseViewController: CellButtonDelegate {
     func didButtonTapped(_ vc: UIViewController) {
         self.navigationController?.pushViewController(vc, animated: true)
@@ -385,6 +390,7 @@ extension HomeBaseViewController: CellButtonDelegate {
     }
 }
 
+//MARK: - Extensions -
 extension HomeBaseViewController {
     @objc func leftStickerBtnTapped() {
         let chatTabBarVC = ChatViewController()
@@ -397,6 +403,7 @@ extension HomeBaseViewController {
     }
 }
 
+//MARK: - Extensions -
 extension HomeBaseViewController: SearchBarDelegate {
     func searchBarDidTap() {
         let vc = SearchViewController()
@@ -404,6 +411,7 @@ extension HomeBaseViewController: SearchBarDelegate {
     }
 }
 
+//MARK: - Extensions -
 extension HomeBaseViewController: ViewAllAstrologersButtonDelegate {
     func viewAstrologerButtonDidTap() {
         let vc = ChatViewController()
@@ -411,6 +419,7 @@ extension HomeBaseViewController: ViewAllAstrologersButtonDelegate {
     }
 }
 
+//MARK: - Extensions -
 extension HomeBaseViewController: ViewAllAstroShopButtonDelegate {
     func viewAstroShopButtonDidTap() {
         let vc = MessageViewController()

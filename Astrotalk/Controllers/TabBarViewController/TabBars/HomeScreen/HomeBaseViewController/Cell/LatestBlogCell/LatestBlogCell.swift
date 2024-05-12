@@ -84,6 +84,7 @@ class LatestBlogCell: UICollectionViewCell, UICollectionViewDataSource, UICollec
         }
     }
     
+    //MARK: - Updating UI with singleton instance and fetch method -
     func fetchDataAndUpdateUI() {
         firestoreService.fetchDataForLatestBlog { latestBlogModel, error in
             if let error = error {

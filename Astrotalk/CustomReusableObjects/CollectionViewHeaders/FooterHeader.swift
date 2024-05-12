@@ -89,6 +89,7 @@ class FooterHeader: UICollectionReusableView, UITextViewDelegate {
         }
     }
     
+    //MARK: - Action Button on Send Feedback - 
     @objc func sendFeedBackAction(_ sender: UIButton) {
         guard let feedback = feedbackTextView.text, !feedback.isEmpty else {
             return

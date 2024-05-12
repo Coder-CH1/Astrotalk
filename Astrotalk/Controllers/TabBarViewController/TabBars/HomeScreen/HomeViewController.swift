@@ -15,14 +15,15 @@ class HomeViewController: HomeBaseViewController {
         super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated: true)
         configureProperties()
-        //callFirestoreData()
     }
     
+    //MARK: - Configuring UI -
     private func configureProperties() {
         titleText.text = "Astrotalk"
         sideBarButton.addTarget(self, action: #selector(toggleSideBar), for: .touchUpInside)
     }
     
+    //MARK: - Override Method from BaseViewController -
     override func toggleSideBar() {
         super.toggleSideBar()
     }
@@ -32,6 +33,7 @@ class HomeViewController: HomeBaseViewController {
         super.setSubviewsAndLayout()
     }
     
+    //MARK: - Override Objects from BaseViewController -
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = super.collectionView(collectionView, cellForItemAt: indexPath)
         return cell

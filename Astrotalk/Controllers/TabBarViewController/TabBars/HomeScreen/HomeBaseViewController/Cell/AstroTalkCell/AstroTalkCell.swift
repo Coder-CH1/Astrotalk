@@ -15,7 +15,6 @@ class AstroTalkCell: UICollectionViewCell, UICollectionViewDataSource, UICollect
     //MARK: - UI -
     let firestoreService = FirestoreService.shared
     var astroTalkArray: [AstroTalkModel] = []
-    //let preView = WebLinkPreview.OpenGraphMetadata.self
     
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -82,12 +81,17 @@ class AstroTalkCell: UICollectionViewCell, UICollectionViewDataSource, UICollect
         return CGSize(width: 300, height: 150)
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let vc = MessageViewController()
+    }
+    
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         if indexPath.item == astroTalkArray.count - 1 {
             fetchAstroTalkData()
         }
     }
     
+    //MARK: - Updating UI with singleton instance and fetch method -
     func fetchAstroTalkData() {
         firestoreService.fetchDataForAstroTalkNews { data, error in
             if let error = error {
@@ -98,10 +102,6 @@ class AstroTalkCell: UICollectionViewCell, UICollectionViewDataSource, UICollect
                 self.collectionView.reloadData()
             }
         }
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let vc = MessageViewController()
     }
     
     required init?(coder: NSCoder) {

@@ -24,24 +24,18 @@ class PoojaViewController: PoojaBaseViewController {
         rightSearchButton.addTarget(self, action: #selector(toggleSearchVC), for: .touchUpInside)
     }
     
+    //MARK: - Override Method from BaseViewController -
     override func toggleSideBar() {
         super.toggleSideBar()
     }
     
+    //MARK: - Override Method from BaseViewController -
     override func toggleSearchVC() {
         super.toggleSearchVC()
     }
     
+    //MARK: - Override Method from BaseViewController -
     override func setSubviewsAndLayout() {
         super.setSubviewsAndLayout()
     }
-    
-//    override func setupCustomViews() {
-//        super.setupCustomViews()
-//    }
-    
-//    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        let cell = super.collectionView(collectionView, cellForItemAt: indexPath)
-//        return cell
-//    }
 }

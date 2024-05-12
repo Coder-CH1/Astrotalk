@@ -66,6 +66,7 @@ class LoginTopSectionVC: UIViewController {
         ])
     }
     
+    //MARK: - Action button tapped to open Settings ViewController -
     @objc func skipButtonTapped() {
         let secondViewController = SettingsViewController()
         navigationController?.pushViewController(secondViewController, animated: false)

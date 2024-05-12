@@ -63,6 +63,7 @@ class CircleCell: UICollectionViewCell {
         ])
     }
     
+    //MARK: - Configuring the cell objects and Data model -
     func configure(model: Horoscope) {
         print("configuring model for horoscope: \(model)")
         dailyHoroscopeImg.image = model.img
@@ -78,6 +79,7 @@ class CircleCell: UICollectionViewCell {
         freeChatImg.tintColor = .black
         freeChatLbl.text = model.label
     }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

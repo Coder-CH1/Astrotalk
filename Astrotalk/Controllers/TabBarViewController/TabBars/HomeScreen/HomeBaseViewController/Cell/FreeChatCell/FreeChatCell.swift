@@ -69,6 +69,7 @@ class FreeChatCell: UICollectionViewCell, UICollectionViewDataSource, UICollecti
         return CGSize(width: collectionView.bounds.width, height: 80)
     }
     
+    //MARK: - Updating UI with singleton instance and fetch method -
     func fetchFreeChatData() {
         firestoreService.fetchDataForFreeChat { model, error  in
             if let error = error {

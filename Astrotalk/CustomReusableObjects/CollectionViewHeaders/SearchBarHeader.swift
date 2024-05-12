@@ -69,6 +69,7 @@ class SearchBarHeader: UICollectionReusableView, UISearchBarDelegate {
         searchBar.addGestureRecognizer(tapGesture)
     }
     
+    //MARK: - Delegate protocol to toggle a Search Viewcontroller -
     @objc func tapGestureDelegateAction() {
         delegate?.searchBarDidTap()
     }

@@ -24,6 +24,7 @@ class TalkCell: UICollectionViewCell {
         setupLinkView()
     }
     
+    //MARK: - Setting up the UI
     private func setupLinkView() {
         addSubview(containerView)
         let linkView = LPLinkView()
@@ -43,6 +44,7 @@ class TalkCell: UICollectionViewCell {
         ])
     }
     
+    //MARK: Configuring the cell objects and Data model -
     func configure(with url: String) {
         guard let linkView = self.linkView else { return }
         if let url = URL(string: url) {

@@ -83,6 +83,7 @@ class AstrologersCell: UICollectionViewCell, UICollectionViewDataSource, UIColle
         self.delegate?.didButtonTapped(vc)
     }
     
+    //MARK: - Updating UI with singleton instance and fetch method -
     func fetchAstrologersData() {
         firestoreService.fetchDataForAstrologers { astrologerModels, error in
             if let error = error {

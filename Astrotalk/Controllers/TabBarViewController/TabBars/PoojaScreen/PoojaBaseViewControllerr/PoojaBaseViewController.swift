@@ -141,6 +141,7 @@ class PoojaBaseViewController: UIViewController {
         ])
     }
     
+    //MARK: - Setting up the views in the segments -
     func setupCustomViews() {
         poojaAllView.isHidden = false
         poojaLoveView.isHidden = true

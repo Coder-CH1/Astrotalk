@@ -6,12 +6,12 @@
 //
 
 import UIKit
-import MessageKit
 import Firebase
 
-
+//MARK: -
 class MessageViewController: UIViewController {
     
+    //MARK: - UI -
     var usersModel: [RegisteredUsersModel] = []
     let dbRef = Database.database().reference().child("users")
     
@@ -20,11 +20,11 @@ class MessageViewController: UIViewController {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.dataSource = self
         tableView.delegate = self
-        //tableView.backgroundColor = .lightGray
         tableView.register(MessagesCell.self, forCellReuseIdentifier: "MessagesCell")
         return tableView
     }()
     
+    //MARK: - Lifecyle -
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Messages"
@@ -44,6 +44,7 @@ class MessageViewController: UIViewController {
     }
 }
 
+//MARK: - Extension - DataSource, Delegate
 extension MessageViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return usersModel.count
@@ -67,6 +68,7 @@ extension MessageViewController: UITableViewDataSource, UITableViewDelegate {
         navigationController?.pushViewController(chatsKitVC, animated: false)
     }
     
+    //MARK: - Fetch registered users from Database -
     func fetchUsersFromDB() {
         dbRef.observe(.childAdded) { snapshot,_ in
             if let dict = snapshot.value as? [String: Any] {

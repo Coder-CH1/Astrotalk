@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+//MARK: -
 class SearchViewController: UIViewController {
     //MARK: - UI
     var topEdgesView = CustomView(color: .systemYellow)

@@ -141,9 +141,4 @@ extension LoginBottomSectionVC {
             }
         }
     }
-    
-    //MARK: -
-    func checkIfUserIsAstrologer() -> Bool {
-        return false
-    }
 }

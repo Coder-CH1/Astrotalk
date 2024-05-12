@@ -7,6 +7,7 @@
 
 import UIKit
 
+//MARK: -
 class MessagesCell: UITableViewCell {
     
     let identifier = "MessagesCell"
