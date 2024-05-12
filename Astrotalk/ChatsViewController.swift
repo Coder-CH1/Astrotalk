@@ -6,15 +6,12 @@
 
 
 import UIKit
-//import MessageKit
-//import InputBarAccessoryView
+import FirebaseAuth
 import FirebaseDatabase
 
 class ChatsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     let dbRef = Database.database().reference()
-    let currentUser = Member(name: "bbbbbb", color: .red)
-    let otherUser = Member(name: "cccccc", color: .green)
     var messages: [Chats] = []
     var member: Member!
     
@@ -39,11 +36,8 @@ class ChatsViewController: UIViewController, UITableViewDataSource, UITableViewD
             if let messageData = snapshot.value as? [String: String],
                let messageText = messageData["message"],
                let sender = messageData["sender"] {
-                // Create a Chats instance from the received message data
                 let chatMessage = Chats(text: messageText, sender: sender)
-                // Append the received chat message to the local array
                 self.messages.append(chatMessage)
-                // Reload the table view to reflect the new message
                 self.chatsTableView.reloadData()
             }
         })
@@ -56,10 +50,16 @@ class ChatsViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ChatsTableViewCell", for: indexPath) as! ChatsTableViewCell
+        let currentUserUID = Auth.auth().currentUser?.uid
         let message = messages[indexPath.row]
-        let isCurrentUser = message.sender == ""
-        cell.textLabel?.textAlignment = isCurrentUser ? .right : .left
-        cell.textLabel?.backgroundColor = .systemYellow
+        let isCurrentUser = message.sender == currentUserUID
+        if isCurrentUser {
+            cell.textLabel?.textAlignment = .right
+            cell.textLabel?.text = message.text
+        } else {
+            cell.textLabel?.textAlignment = .left
+            cell.textLabel?.text = message.text
+        }
         return cell
     }
     

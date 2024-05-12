@@ -21,6 +21,11 @@ class LoginViewController: UIViewController {
         embedChildViewControllers()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tabBarController?.tabBar.isHidden = true
+    }
+    
     // MARK: - Embed ChildViewControllers to the Superview -
     func embedChildViewControllers() {
         addChild(topSectionViewController)

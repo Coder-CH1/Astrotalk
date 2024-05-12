@@ -77,6 +77,14 @@ class HomeBaseViewController: UIViewController {
         rightSticker.isHidden = true
     }
     
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        if self.children.contains(where: { $0 is SideBarViewController }) {
+            leftSticker.isHidden = true
+            rightSticker.isHidden = true
+        }
+    }
+    
     //MARK: - Subviews and Layout -
     func setSubviewsAndLayout() {
         view.addSubview(topView)
