@@ -65,7 +65,6 @@ class AstrologersCell: UICollectionViewCell, UICollectionViewDataSource, UIColle
         let data = astrologerModel[indexPath.item]
         cell.configure(model: data)
         cell.layer.cornerRadius = 8
-        cell.delegate = self as? CellButtonDelegate
         return cell
     }
     

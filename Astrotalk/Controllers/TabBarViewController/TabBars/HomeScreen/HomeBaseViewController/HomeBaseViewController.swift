@@ -67,15 +67,20 @@ class HomeBaseViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        leftSticker.isHidden = false
-        rightSticker.isHidden = false
+        toggleStickerButtonsVisibility(hidden: false)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         setupStickerButtions()
-        leftSticker.isHidden = true
-        rightSticker.isHidden = true
+        toggleStickerButtonsVisibility(hidden: true)
+    }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        if self.children.contains(where: { $0 is SideBarViewController }) {
+            toggleStickerButtonsVisibility(hidden: true)
+        }
     }
     
     //MARK: - Subviews and Layout -

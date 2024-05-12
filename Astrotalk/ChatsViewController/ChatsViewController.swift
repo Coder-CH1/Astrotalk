@@ -66,7 +66,6 @@ class ChatsViewController: UIViewController, UITableViewDataSource, UITableViewD
             cell.chatsLabel.text = message.text
             cell.chatsLabel.textColor = .systemYellow
             cell.chatsLabel.textAlignment = .left
-            cell.bubbleChatsView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 14).isActive = true
         }
         return cell
     }

@@ -64,29 +64,6 @@ class DailyHoroscopeCell: UICollectionViewCell, UICollectionViewDataSource, UICo
         return CGSize(width: collectionView.bounds.width/4.7, height: 70)
     }
     
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        DispatchQueue.global(qos: .userInitiated).async {
-//            guard let url = URL(string: "https://astrotalk.com/horoscope/todays-horoscope") else {
-//                print("Invalid URL.")
-//                return
-//            }
-//
-//            let session = URLSession.shared
-//            let task = session.dataTask(with: url) { (data, response, error) in
-//                guard let data = data else {
-//                    print("Failed to load data.")
-//                    return
-//                }
-//
-//                DispatchQueue.main.async {
-//                    let webVC = WebViewController()
-//                    webVC.title = String(data: data, encoding: .utf8)
-//                    self.delegate?.cellSelected(webVC)
-//                }
-//            }
-//            task.resume()
-//        }
-//    }
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
