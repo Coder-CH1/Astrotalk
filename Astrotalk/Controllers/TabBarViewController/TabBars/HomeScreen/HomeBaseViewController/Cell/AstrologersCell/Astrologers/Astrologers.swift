@@ -25,7 +25,6 @@ class Astrologers: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setSubviewsAndLayout()
-        chatButton.addTarget(self, action: #selector(btnTapped), for: .touchUpInside)
     }
     
     // MARK: - Subviews and Layout -
@@ -72,13 +71,6 @@ class Astrologers: UICollectionViewCell {
         chatButton.layer.cornerRadius = 15
         chatButton.layer.borderWidth = 2
         chatButton.layer.borderColor = UIColor.systemGreen.cgColor
-    }
-    
-    @objc func btnTapped() {
-        print("nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnBBBBBBBBBBBB")
-        if let delegate = self.delegate {
-            delegate.didButtonTapped(index: index!)
-        }
     }
     
     required init?(coder: NSCoder) {

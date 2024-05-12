@@ -14,6 +14,7 @@ class AstrologersCell: UICollectionViewCell, UICollectionViewDataSource, UIColle
     //MARK: - UI -
     let firestoreService = FirestoreService.shared
     var astrologerModel: [AstrologersModel] = []
+    var delegate: CellButtonDelegate?
     
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -76,6 +77,11 @@ class AstrologersCell: UICollectionViewCell, UICollectionViewDataSource, UIColle
         if indexPath.item == astrologerModel.count - 1 {
                 fetchAstrologersData()
         }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+       let vc = AstrologerProfileViewController()
+        self.delegate?.didButtonTapped(vc)
     }
     
     func fetchAstrologersData() {

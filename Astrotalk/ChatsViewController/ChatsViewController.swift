@@ -58,16 +58,15 @@ class ChatsViewController: UIViewController, UITableViewDataSource, UITableViewD
         let isCurrentUser = message.sender == currentUserUID
         if isCurrentUser {
             cell.bubbleChatsView.backgroundColor = .systemYellow
-            cell.topAnchor.constraint(equalTo: view.topAnchor, constant: 8).isActive = true
-            cell.bubbleChatsView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10).isActive = true
             cell.chatsLabel.text = message.text
             cell.chatsLabel.textColor = .lightGray
+            cell.chatsLabel.textAlignment = .right
         } else {
             cell.bubbleChatsView.backgroundColor = .lightGray
-            cell.topAnchor.constraint(equalTo: view.topAnchor, constant: 8).isActive = true
-            cell.bubbleChatsView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10).isActive = true
             cell.chatsLabel.text = message.text
             cell.chatsLabel.textColor = .systemYellow
+            cell.chatsLabel.textAlignment = .left
+            cell.bubbleChatsView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 14).isActive = true
         }
         return cell
     }

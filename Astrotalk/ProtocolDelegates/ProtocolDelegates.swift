@@ -37,7 +37,7 @@ protocol CellSelectedDelegate {
 }
 
 protocol CellButtonDelegate {
-    func didButtonTapped(index: Int)
+    func didButtonTapped(_ vc: UIViewController)
 }
 
 protocol HideStickerButtonDelegate {

@@ -374,9 +374,9 @@ extension HomeBaseViewController: CellSelectedDelegate {
 }
 
 extension HomeBaseViewController: CellButtonDelegate {
-    func didButtonTapped(index: Int) {
-        let vc = ChatViewController()
-        navigationController?.pushViewController(vc, animated: false)
+    func didButtonTapped(_ vc: UIViewController) {
+        self.navigationController?.pushViewController(vc, animated: true)
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
 }
 

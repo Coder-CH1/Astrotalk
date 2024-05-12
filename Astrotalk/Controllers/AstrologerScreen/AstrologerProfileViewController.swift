@@ -17,6 +17,7 @@ class AstrologerProfileViewController: UIViewController {
     let profileName = Label(label: "", textColor: .black, font: UIFont.systemFont(ofSize: 14, weight: .regular))
     let expYrs = Label(label: "", textColor: .gray, font: UIFont.systemFont(ofSize: 14, weight: .bold))
     let biography = Label(label: "", textColor: .lightGray, font: UIFont.systemFont(ofSize: 14, weight: .regular))
+    let chatButton = Button(image: UIImage(systemName: "ellipsis.message.fill"), text: "", btnTitleColor: .black, backgroundColor: .clear, radius: 0, imageColor: .systemYellow)
     
     //MARK: - Lifecycle -
     override func viewDidLoad() {
@@ -26,7 +27,8 @@ class AstrologerProfileViewController: UIViewController {
     
     // MARK: - Subviews and Layout -
     func setSubviewsAndLayout() {
-        let subviews = [topView, profileImage, profileEmail, profileName, expYrs, biography]
+        chatButton.addTarget(self, action: #selector(btnTapped), for: .touchUpInside)
+        let subviews = [topView, profileImage, profileEmail, profileName, expYrs, biography, chatButton]
         for subview in subviews {
             view.addSubview(subview)
         }
@@ -53,6 +55,14 @@ class AstrologerProfileViewController: UIViewController {
             
             biography.topAnchor.constraint(equalTo: expYrs.bottomAnchor, constant: 50),
             biography.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            
+            chatButton.topAnchor.constraint(equalTo: biography.bottomAnchor, constant: 20),
+            chatButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
         ])
+    }
+    
+    @objc func btnTapped() {
+        let vc = MessageViewController()
+        navigationController?.pushViewController(vc, animated: false)
     }
 }
