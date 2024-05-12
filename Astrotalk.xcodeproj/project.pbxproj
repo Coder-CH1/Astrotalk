@@ -1,0 +1,1561 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0406D6D62BC9FEFA00E35A60 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0406D6D52BC9FEF900E35A60 /* TextField.swift */; };
+		0406D6DA2BCA844100E35A60 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0406D6D92BCA844100E35A60 /* View.swift */; };
+		0406D6DC2BCAA55E00E35A60 /* PaddedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0406D6DB2BCAA55E00E35A60 /* PaddedLabel.swift */; };
+		0406D6DE2BCAD89B00E35A60 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0406D6DD2BCAD89B00E35A60 /* TabBarViewController.swift */; };
+		0406D6E02BCAD8BC00E35A60 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0406D6DF2BCAD8BC00E35A60 /* HomeViewController.swift */; };
+		0406D6E22BCAD8CE00E35A60 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0406D6E12BCAD8CE00E35A60 /* ChatViewController.swift */; };
+		0406D6E42BCAD8DC00E35A60 /* LiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0406D6E32BCAD8DC00E35A60 /* LiveViewController.swift */; };
+		0406D6E62BCAD8E800E35A60 /* CallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0406D6E52BCAD8E800E35A60 /* CallViewController.swift */; };
+		0406D6E82BCAD8F900E35A60 /* PoojaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0406D6E72BCAD8F900E35A60 /* PoojaViewController.swift */; };
+		041610152BE3F0BA00A5AB51 /* CustomTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041610142BE3F0BA00A5AB51 /* CustomTextFieldView.swift */; };
+		0422BC5D2BE9B20C00DA4D23 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0422BC5C2BE9B20C00DA4D23 /* MessagesViewController.swift */; };
+		0422BC5F2BE9B3D100DA4D23 /* MessagesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0422BC5E2BE9B3D100DA4D23 /* MessagesCell.swift */; };
+		0422BC612BE9BFE200DA4D23 /* ChatManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0422BC602BE9BFE200DA4D23 /* ChatManager.swift */; };
+		0422BC632BE9C37C00DA4D23 /* ChatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0422BC622BE9C37C00DA4D23 /* ChatsViewController.swift */; };
+		042AC9852BD8B82C00C1CFCD /* SideBarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042AC9842BD8B82C00C1CFCD /* SideBarCell.swift */; };
+		042AC9872BD8BA1600C1CFCD /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042AC9862BD8BA1600C1CFCD /* DataModel.swift */; };
+		042AC98A2BD8F1FB00C1CFCD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 042AC9892BD8F1FB00C1CFCD /* GoogleService-Info.plist */; };
+		042ADC972BE818EE00FCE639 /* StringCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042ADC962BE818EE00FCE639 /* StringCarouselView.swift */; };
+		043464C42BCEDE9700C4BE3C /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043464C32BCEDE9700C4BE3C /* CustomView.swift */; };
+		043464C92BCFB4A400C4BE3C /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043464C82BCFB4A400C4BE3C /* BaseViewController.swift */; };
+		0435084A2BD9ADA900A5C8C6 /* LoginTopSectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043508492BD9ADA900A5C8C6 /* LoginTopSectionVC.swift */; };
+		0435084C2BD9ADD200A5C8C6 /* LoginBottomSectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0435084B2BD9ADD200A5C8C6 /* LoginBottomSectionVC.swift */; };
+		043DACFF2BCB2C0D00A365EF /* SideBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043DACFE2BCB2C0D00A365EF /* SideBarViewController.swift */; };
+		043DAD022BCB2D4200A365EF /* ProtocolDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043DAD012BCB2D4200A365EF /* ProtocolDelegates.swift */; };
+		04663F572BDEDC7100F80BE5 /* AstrologersHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04663F562BDEDC7100F80BE5 /* AstrologersHeaders.swift */; };
+		04663F5A2BDEE1AC00F80BE5 /* AstroShopHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04663F592BDEE1AC00F80BE5 /* AstroShopHeaders.swift */; };
+		04663F5C2BDEE36400F80BE5 /* AstroTalkHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04663F5B2BDEE36400F80BE5 /* AstroTalkHeaders.swift */; };
+		04663F5E2BDF12A200F80BE5 /* HomeBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04663F5D2BDF12A200F80BE5 /* HomeBaseViewController.swift */; };
+		04663F602BDF161900F80BE5 /* DailyHoroscopeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04663F5F2BDF161900F80BE5 /* DailyHoroscopeCell.swift */; };
+		04663F622BDF163A00F80BE5 /* FreeChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04663F612BDF163A00F80BE5 /* FreeChatCell.swift */; };
+		04663F642BDF166900F80BE5 /* LiveAstrologersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04663F632BDF166900F80BE5 /* LiveAstrologersCell.swift */; };
+		04663F662BDF168F00F80BE5 /* AstrologersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04663F652BDF168F00F80BE5 /* AstrologersCell.swift */; };
+		04663F682BDF16AC00F80BE5 /* LatestBlogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04663F672BDF16AC00F80BE5 /* LatestBlogCell.swift */; };
+		04663F6A2BDF16C000F80BE5 /* AstromallShopCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04663F692BDF16C000F80BE5 /* AstromallShopCell.swift */; };
+		04663F6C2BDF173D00F80BE5 /* AstroTalkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04663F6B2BDF173D00F80BE5 /* AstroTalkCell.swift */; };
+		04663F6E2BDF1E8000F80BE5 /* LiveAstrologersHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04663F6D2BDF1E8000F80BE5 /* LiveAstrologersHeaders.swift */; };
+		04663F702BDF1FF100F80BE5 /* LatestBlogHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04663F6F2BDF1FF100F80BE5 /* LatestBlogHeaders.swift */; };
+		04663F742BDF250500F80BE5 /* CircleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04663F732BDF250500F80BE5 /* CircleCell.swift */; };
+		04663F782BDF27B700F80BE5 /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04663F772BDF27B700F80BE5 /* ChatCell.swift */; };
+		04663F7C2BDF287300F80BE5 /* LiveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04663F7B2BDF287300F80BE5 /* LiveCell.swift */; };
+		04663F802BDF2A0E00F80BE5 /* Astrologers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04663F7F2BDF2A0E00F80BE5 /* Astrologers.swift */; };
+		04663F842BDF2AC200F80BE5 /* BlogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04663F832BDF2AC200F80BE5 /* BlogCell.swift */; };
+		04663F882BDF2B8A00F80BE5 /* ShopCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04663F872BDF2B8A00F80BE5 /* ShopCell.swift */; };
+		04663F8C2BDF2C3F00F80BE5 /* TalkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04663F8B2BDF2C3F00F80BE5 /* TalkCell.swift */; };
+		04663F8E2BDFB11700F80BE5 /* SearchBarHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04663F8D2BDFB11700F80BE5 /* SearchBarHeader.swift */; };
+		04663F902BDFDBFF00F80BE5 /* FooterHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04663F8F2BDFDBFF00F80BE5 /* FooterHeader.swift */; };
+		0466FE0D2BE39DAF00109D20 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0466FE0C2BE39DAF00109D20 /* UserProfileViewController.swift */; };
+		0466FE0F2BE39DDC00109D20 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0466FE0E2BE39DDC00109D20 /* OrderViewController.swift */; };
+		0466FE112BE39E0500109D20 /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0466FE102BE39E0500109D20 /* ShopViewController.swift */; };
+		0466FE132BE39E1E00109D20 /* BlogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0466FE122BE39E1E00109D20 /* BlogViewController.swift */; };
+		0468B9532BE5565200E12BE0 /* AstrologerProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0468B9522BE5565200E12BE0 /* AstrologerProfileViewController.swift */; };
+		047C1BB02BECD3230004C64F /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047C1BAF2BECD3230004C64F /* WebViewController.swift */; };
+		04898CF72BDD8D350054585A /* CustomPoojaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04898CF62BDD8D350054585A /* CustomPoojaView.swift */; };
+		04898CF92BDD8DED0054585A /* PoojaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04898CF82BDD8DED0054585A /* PoojaCell.swift */; };
+		04898CFC2BDD907B0054585A /* PoojaAllView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04898CFB2BDD907B0054585A /* PoojaAllView.swift */; };
+		04898CFE2BDD908A0054585A /* PoojaLoveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04898CFD2BDD908A0054585A /* PoojaLoveView.swift */; };
+		04898D002BDD90990054585A /* PoojaEducationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04898CFF2BDD90990054585A /* PoojaEducationView.swift */; };
+		04898D022BDD90A80054585A /* PoojaCareerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04898D012BDD90A80054585A /* PoojaCareerView.swift */; };
+		04898D042BDD90B70054585A /* PoojaMarriageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04898D032BDD90B70054585A /* PoojaMarriageView.swift */; };
+		04898D062BDD90C90054585A /* PoojaHealthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04898D052BDD90C90054585A /* PoojaHealthView.swift */; };
+		04898D082BDD90E00054585A /* PoojaWealthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04898D072BDD90E00054585A /* PoojaWealthView.swift */; };
+		04898D0A2BDD91000054585A /* PoojaFinanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04898D092BDD91000054585A /* PoojaFinanceView.swift */; };
+		04898D0C2BDD91200054585A /* PoojaKidsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04898D0B2BDD91200054585A /* PoojaKidsView.swift */; };
+		048C31292BE1809100AF6930 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048C31282BE1809100AF6930 /* SearchViewController.swift */; };
+		04917D5B2BD25E0F00010C2F /* AllView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04917D5A2BD25E0F00010C2F /* AllView.swift */; };
+		04917D5D2BD25E1F00010C2F /* LoveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04917D5C2BD25E1F00010C2F /* LoveView.swift */; };
+		04917D5F2BD25E3500010C2F /* EducationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04917D5E2BD25E3500010C2F /* EducationView.swift */; };
+		04917D612BD25E4600010C2F /* CareerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04917D602BD25E4600010C2F /* CareerView.swift */; };
+		04917D632BD25E5400010C2F /* MarriageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04917D622BD25E5400010C2F /* MarriageView.swift */; };
+		04917D652BD25E6B00010C2F /* HealthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04917D642BD25E6B00010C2F /* HealthView.swift */; };
+		04917D672BD25E7B00010C2F /* WealthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04917D662BD25E7B00010C2F /* WealthView.swift */; };
+		04917D692BD25E9700010C2F /* FinanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04917D682BD25E9700010C2F /* FinanceView.swift */; };
+		04917D6B2BD25EA000010C2F /* KidsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04917D6A2BD25EA000010C2F /* KidsView.swift */; };
+		04917D6D2BD260BE00010C2F /* CustomCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04917D6C2BD260BE00010C2F /* CustomCollectionView.swift */; };
+		04917D6F2BD2620700010C2F /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04917D6E2BD2620700010C2F /* CustomCell.swift */; };
+		049ED12A2BF066E30038B7E3 /* ChatsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049ED1292BF066E30038B7E3 /* ChatsTableViewCell.swift */; };
+		04A48CA72BE4E25C000864F9 /* FirebaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A48CA62BE4E25C000864F9 /* FirebaseModel.swift */; };
+		04A48CA92BE505B8000864F9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A48CA82BE505B8000864F9 /* SettingsViewController.swift */; };
+		04A875132BC8AC1E008C7E06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A875122BC8AC1E008C7E06 /* AppDelegate.swift */; };
+		04A875152BC8AC1E008C7E06 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A875142BC8AC1E008C7E06 /* SceneDelegate.swift */; };
+		04A875172BC8AC1E008C7E06 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A875162BC8AC1E008C7E06 /* ViewController.swift */; };
+		04A8751C2BC8AC1F008C7E06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04A8751B2BC8AC1F008C7E06 /* Assets.xcassets */; };
+		04A8751F2BC8AC1F008C7E06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04A8751D2BC8AC1F008C7E06 /* LaunchScreen.storyboard */; };
+		04A8752A2BC8AC1F008C7E06 /* AstrotalkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A875292BC8AC1F008C7E06 /* AstrotalkTests.swift */; };
+		04A875342BC8AC1F008C7E06 /* AstrotalkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A875332BC8AC1F008C7E06 /* AstrotalkUITests.swift */; };
+		04A875362BC8AC1F008C7E06 /* AstrotalkUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A875352BC8AC1F008C7E06 /* AstrotalkUITestsLaunchTests.swift */; };
+		04A875432BC938F0008C7E06 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A875422BC938F0008C7E06 /* LoginViewController.swift */; };
+		04A875582BC93CFD008C7E06 /* Poppins-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04A875452BC93CFD008C7E06 /* Poppins-ExtraLight.ttf */; };
+		04A875592BC93CFD008C7E06 /* Poppins-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04A875462BC93CFD008C7E06 /* Poppins-ThinItalic.ttf */; };
+		04A8755A2BC93CFD008C7E06 /* Poppins-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04A875472BC93CFD008C7E06 /* Poppins-ExtraLightItalic.ttf */; };
+		04A8755B2BC93CFD008C7E06 /* Poppins-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04A875482BC93CFD008C7E06 /* Poppins-BoldItalic.ttf */; };
+		04A8755C2BC93CFD008C7E06 /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04A875492BC93CFD008C7E06 /* Poppins-Light.ttf */; };
+		04A8755D2BC93CFD008C7E06 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04A8754A2BC93CFD008C7E06 /* Poppins-Medium.ttf */; };
+		04A8755E2BC93CFD008C7E06 /* Poppins-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04A8754B2BC93CFD008C7E06 /* Poppins-SemiBoldItalic.ttf */; };
+		04A8755F2BC93CFD008C7E06 /* Poppins-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04A8754C2BC93CFD008C7E06 /* Poppins-ExtraBoldItalic.ttf */; };
+		04A875602BC93CFD008C7E06 /* Poppins-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04A8754D2BC93CFD008C7E06 /* Poppins-ExtraBold.ttf */; };
+		04A875612BC93CFD008C7E06 /* Poppins-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04A8754E2BC93CFD008C7E06 /* Poppins-BlackItalic.ttf */; };
+		04A875622BC93CFD008C7E06 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 04A8754F2BC93CFD008C7E06 /* OFL.txt */; };
+		04A875632BC93CFD008C7E06 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04A875502BC93CFD008C7E06 /* Poppins-Regular.ttf */; };
+		04A875642BC93CFD008C7E06 /* Poppins-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04A875512BC93CFD008C7E06 /* Poppins-LightItalic.ttf */; };
+		04A875652BC93CFD008C7E06 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04A875522BC93CFD008C7E06 /* Poppins-Bold.ttf */; };
+		04A875662BC93CFD008C7E06 /* Poppins-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04A875532BC93CFD008C7E06 /* Poppins-Black.ttf */; };
+		04A875672BC93CFD008C7E06 /* Poppins-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04A875542BC93CFD008C7E06 /* Poppins-Thin.ttf */; };
+		04A875682BC93CFD008C7E06 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04A875552BC93CFD008C7E06 /* Poppins-SemiBold.ttf */; };
+		04A875692BC93CFD008C7E06 /* Poppins-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04A875562BC93CFD008C7E06 /* Poppins-Italic.ttf */; };
+		04A8756A2BC93CFD008C7E06 /* Poppins-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04A875572BC93CFD008C7E06 /* Poppins-MediumItalic.ttf */; };
+		04A8756D2BC93DA3008C7E06 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A8756C2BC93DA3008C7E06 /* Fonts.swift */; };
+		04A8756F2BC940D6008C7E06 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A8756E2BC940D6008C7E06 /* Label.swift */; };
+		04A875722BC9415E008C7E06 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A875712BC9415E008C7E06 /* Button.swift */; };
+		04A875742BC941C4008C7E06 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A875732BC941C4008C7E06 /* ImageView.swift */; };
+		04AD9C9A2BDA8AE000F0EF40 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AD9C992BDA8AE000F0EF40 /* String.swift */; };
+		04D765582BE6574100BB00E5 /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D765572BE6574100BB00E5 /* FirestoreService.swift */; };
+		04E4A57B2BD3AF25000BADAE /* PoojaBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E4A57A2BD3AF25000BADAE /* PoojaBaseViewController.swift */; };
+		04E9F62D2BD7BBCB00372FEE /* CustomSegmentedControlCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E9F62C2BD7BBCB00372FEE /* CustomSegmentedControlCell.swift */; };
+		05C74861B98CAC7615EF2CAC /* Pods_AstrotalkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33439AA97C84265809AD6006 /* Pods_AstrotalkTests.framework */; };
+		4E9E3DB57B82921F9C62D5B3 /* Pods_Astrotalk_AstrotalkUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C9FC80F02559A3FDD75104D /* Pods_Astrotalk_AstrotalkUITests.framework */; };
+		EE9DF93EA7310ED3C05C14B1 /* Pods_Astrotalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 753180BA6E3AEFFEC0026351 /* Pods_Astrotalk.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		04A875262BC8AC1F008C7E06 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04A875072BC8AC1E008C7E06 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04A8750E2BC8AC1E008C7E06;
+			remoteInfo = Astrotalk;
+		};
+		04A875302BC8AC1F008C7E06 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04A875072BC8AC1E008C7E06 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04A8750E2BC8AC1E008C7E06;
+			remoteInfo = Astrotalk;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0081D1E3CEB4159C51270F55 /* Pods-AstrotalkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AstrotalkTests.debug.xcconfig"; path = "Target Support Files/Pods-AstrotalkTests/Pods-AstrotalkTests.debug.xcconfig"; sourceTree = "<group>"; };
+		0406D6D52BC9FEF900E35A60 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		0406D6D92BCA844100E35A60 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		0406D6DB2BCAA55E00E35A60 /* PaddedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddedLabel.swift; sourceTree = "<group>"; };
+		0406D6DD2BCAD89B00E35A60 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		0406D6DF2BCAD8BC00E35A60 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		0406D6E12BCAD8CE00E35A60 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		0406D6E32BCAD8DC00E35A60 /* LiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveViewController.swift; sourceTree = "<group>"; };
+		0406D6E52BCAD8E800E35A60 /* CallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallViewController.swift; sourceTree = "<group>"; };
+		0406D6E72BCAD8F900E35A60 /* PoojaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoojaViewController.swift; sourceTree = "<group>"; };
+		041610142BE3F0BA00A5AB51 /* CustomTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFieldView.swift; sourceTree = "<group>"; };
+		0422BC5C2BE9B20C00DA4D23 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
+		0422BC5E2BE9B3D100DA4D23 /* MessagesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesCell.swift; sourceTree = "<group>"; };
+		0422BC602BE9BFE200DA4D23 /* ChatManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatManager.swift; sourceTree = "<group>"; };
+		0422BC622BE9C37C00DA4D23 /* ChatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsViewController.swift; sourceTree = "<group>"; };
+		042AC9842BD8B82C00C1CFCD /* SideBarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarCell.swift; sourceTree = "<group>"; };
+		042AC9862BD8BA1600C1CFCD /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		042AC9892BD8F1FB00C1CFCD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		042ADC962BE818EE00FCE639 /* StringCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringCarouselView.swift; sourceTree = "<group>"; };
+		043464C32BCEDE9700C4BE3C /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		043464C82BCFB4A400C4BE3C /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		043508442BD9ABC700A5C8C6 /* Astrotalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Astrotalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		043508452BD9ABC700A5C8C6 /* AstrotalkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AstrotalkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		043508462BD9ABC700A5C8C6 /* AstrotalkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AstrotalkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		043508492BD9ADA900A5C8C6 /* LoginTopSectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTopSectionVC.swift; sourceTree = "<group>"; };
+		0435084B2BD9ADD200A5C8C6 /* LoginBottomSectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBottomSectionVC.swift; sourceTree = "<group>"; };
+		043DACFE2BCB2C0D00A365EF /* SideBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarViewController.swift; sourceTree = "<group>"; };
+		043DAD012BCB2D4200A365EF /* ProtocolDelegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolDelegates.swift; sourceTree = "<group>"; };
+		04663F562BDEDC7100F80BE5 /* AstrologersHeaders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstrologersHeaders.swift; sourceTree = "<group>"; };
+		04663F592BDEE1AC00F80BE5 /* AstroShopHeaders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstroShopHeaders.swift; sourceTree = "<group>"; };
+		04663F5B2BDEE36400F80BE5 /* AstroTalkHeaders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstroTalkHeaders.swift; sourceTree = "<group>"; };
+		04663F5D2BDF12A200F80BE5 /* HomeBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBaseViewController.swift; sourceTree = "<group>"; };
+		04663F5F2BDF161900F80BE5 /* DailyHoroscopeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyHoroscopeCell.swift; sourceTree = "<group>"; };
+		04663F612BDF163A00F80BE5 /* FreeChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeChatCell.swift; sourceTree = "<group>"; };
+		04663F632BDF166900F80BE5 /* LiveAstrologersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveAstrologersCell.swift; sourceTree = "<group>"; };
+		04663F652BDF168F00F80BE5 /* AstrologersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstrologersCell.swift; sourceTree = "<group>"; };
+		04663F672BDF16AC00F80BE5 /* LatestBlogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestBlogCell.swift; sourceTree = "<group>"; };
+		04663F692BDF16C000F80BE5 /* AstromallShopCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstromallShopCell.swift; sourceTree = "<group>"; };
+		04663F6B2BDF173D00F80BE5 /* AstroTalkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstroTalkCell.swift; sourceTree = "<group>"; };
+		04663F6D2BDF1E8000F80BE5 /* LiveAstrologersHeaders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveAstrologersHeaders.swift; sourceTree = "<group>"; };
+		04663F6F2BDF1FF100F80BE5 /* LatestBlogHeaders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestBlogHeaders.swift; sourceTree = "<group>"; };
+		04663F732BDF250500F80BE5 /* CircleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleCell.swift; sourceTree = "<group>"; };
+		04663F772BDF27B700F80BE5 /* ChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
+		04663F7B2BDF287300F80BE5 /* LiveCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveCell.swift; sourceTree = "<group>"; };
+		04663F7F2BDF2A0E00F80BE5 /* Astrologers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Astrologers.swift; sourceTree = "<group>"; };
+		04663F832BDF2AC200F80BE5 /* BlogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogCell.swift; sourceTree = "<group>"; };
+		04663F872BDF2B8A00F80BE5 /* ShopCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopCell.swift; sourceTree = "<group>"; };
+		04663F8B2BDF2C3F00F80BE5 /* TalkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkCell.swift; sourceTree = "<group>"; };
+		04663F8D2BDFB11700F80BE5 /* SearchBarHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarHeader.swift; sourceTree = "<group>"; };
+		04663F8F2BDFDBFF00F80BE5 /* FooterHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterHeader.swift; sourceTree = "<group>"; };
+		0466FE0C2BE39DAF00109D20 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
+		0466FE0E2BE39DDC00109D20 /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
+		0466FE102BE39E0500109D20 /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
+		0466FE122BE39E1E00109D20 /* BlogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogViewController.swift; sourceTree = "<group>"; };
+		0468B9522BE5565200E12BE0 /* AstrologerProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstrologerProfileViewController.swift; sourceTree = "<group>"; };
+		047C1BAF2BECD3230004C64F /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		04898CF62BDD8D350054585A /* CustomPoojaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = CustomPoojaView.swift; sourceTree = "<group>"; };
+		04898CF82BDD8DED0054585A /* PoojaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoojaCell.swift; sourceTree = "<group>"; };
+		04898CFB2BDD907B0054585A /* PoojaAllView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoojaAllView.swift; sourceTree = "<group>"; };
+		04898CFD2BDD908A0054585A /* PoojaLoveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoojaLoveView.swift; sourceTree = "<group>"; };
+		04898CFF2BDD90990054585A /* PoojaEducationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoojaEducationView.swift; sourceTree = "<group>"; };
+		04898D012BDD90A80054585A /* PoojaCareerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoojaCareerView.swift; sourceTree = "<group>"; };
+		04898D032BDD90B70054585A /* PoojaMarriageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoojaMarriageView.swift; sourceTree = "<group>"; };
+		04898D052BDD90C90054585A /* PoojaHealthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoojaHealthView.swift; sourceTree = "<group>"; };
+		04898D072BDD90E00054585A /* PoojaWealthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoojaWealthView.swift; sourceTree = "<group>"; };
+		04898D092BDD91000054585A /* PoojaFinanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoojaFinanceView.swift; sourceTree = "<group>"; };
+		04898D0B2BDD91200054585A /* PoojaKidsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoojaKidsView.swift; sourceTree = "<group>"; };
+		048C31282BE1809100AF6930 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		04917D5A2BD25E0F00010C2F /* AllView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllView.swift; sourceTree = "<group>"; };
+		04917D5C2BD25E1F00010C2F /* LoveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoveView.swift; sourceTree = "<group>"; };
+		04917D5E2BD25E3500010C2F /* EducationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationView.swift; sourceTree = "<group>"; };
+		04917D602BD25E4600010C2F /* CareerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerView.swift; sourceTree = "<group>"; };
+		04917D622BD25E5400010C2F /* MarriageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarriageView.swift; sourceTree = "<group>"; };
+		04917D642BD25E6B00010C2F /* HealthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthView.swift; sourceTree = "<group>"; };
+		04917D662BD25E7B00010C2F /* WealthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WealthView.swift; sourceTree = "<group>"; };
+		04917D682BD25E9700010C2F /* FinanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceView.swift; sourceTree = "<group>"; };
+		04917D6A2BD25EA000010C2F /* KidsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KidsView.swift; sourceTree = "<group>"; };
+		04917D6C2BD260BE00010C2F /* CustomCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionView.swift; sourceTree = "<group>"; };
+		04917D6E2BD2620700010C2F /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		049ED1292BF066E30038B7E3 /* ChatsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsTableViewCell.swift; sourceTree = "<group>"; };
+		04A48CA62BE4E25C000864F9 /* FirebaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseModel.swift; sourceTree = "<group>"; };
+		04A48CA82BE505B8000864F9 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		04A875122BC8AC1E008C7E06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		04A875142BC8AC1E008C7E06 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		04A875162BC8AC1E008C7E06 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		04A8751B2BC8AC1F008C7E06 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		04A8751E2BC8AC1F008C7E06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		04A875202BC8AC1F008C7E06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04A875292BC8AC1F008C7E06 /* AstrotalkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstrotalkTests.swift; sourceTree = "<group>"; };
+		04A875332BC8AC1F008C7E06 /* AstrotalkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstrotalkUITests.swift; sourceTree = "<group>"; };
+		04A875352BC8AC1F008C7E06 /* AstrotalkUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstrotalkUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		04A875422BC938F0008C7E06 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		04A875452BC93CFD008C7E06 /* Poppins-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraLight.ttf"; sourceTree = "<group>"; };
+		04A875462BC93CFD008C7E06 /* Poppins-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ThinItalic.ttf"; sourceTree = "<group>"; };
+		04A875472BC93CFD008C7E06 /* Poppins-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		04A875482BC93CFD008C7E06 /* Poppins-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-BoldItalic.ttf"; sourceTree = "<group>"; };
+		04A875492BC93CFD008C7E06 /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.ttf"; sourceTree = "<group>"; };
+		04A8754A2BC93CFD008C7E06 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		04A8754B2BC93CFD008C7E06 /* Poppins-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		04A8754C2BC93CFD008C7E06 /* Poppins-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		04A8754D2BC93CFD008C7E06 /* Poppins-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraBold.ttf"; sourceTree = "<group>"; };
+		04A8754E2BC93CFD008C7E06 /* Poppins-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-BlackItalic.ttf"; sourceTree = "<group>"; };
+		04A8754F2BC93CFD008C7E06 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		04A875502BC93CFD008C7E06 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		04A875512BC93CFD008C7E06 /* Poppins-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-LightItalic.ttf"; sourceTree = "<group>"; };
+		04A875522BC93CFD008C7E06 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		04A875532BC93CFD008C7E06 /* Poppins-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Black.ttf"; sourceTree = "<group>"; };
+		04A875542BC93CFD008C7E06 /* Poppins-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Thin.ttf"; sourceTree = "<group>"; };
+		04A875552BC93CFD008C7E06 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		04A875562BC93CFD008C7E06 /* Poppins-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Italic.ttf"; sourceTree = "<group>"; };
+		04A875572BC93CFD008C7E06 /* Poppins-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-MediumItalic.ttf"; sourceTree = "<group>"; };
+		04A8756C2BC93DA3008C7E06 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		04A8756E2BC940D6008C7E06 /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
+		04A875712BC9415E008C7E06 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		04A875732BC941C4008C7E06 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
+		04AD9C992BDA8AE000F0EF40 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		04D765572BE6574100BB00E5 /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
+		04E4A57A2BD3AF25000BADAE /* PoojaBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoojaBaseViewController.swift; sourceTree = "<group>"; };
+		04E9F62C2BD7BBCB00372FEE /* CustomSegmentedControlCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControlCell.swift; sourceTree = "<group>"; };
+		2C9FC80F02559A3FDD75104D /* Pods_Astrotalk_AstrotalkUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Astrotalk_AstrotalkUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		33439AA97C84265809AD6006 /* Pods_AstrotalkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AstrotalkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		471AD0EC3F944CD290A2562D /* Pods-Astrotalk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Astrotalk.release.xcconfig"; path = "Target Support Files/Pods-Astrotalk/Pods-Astrotalk.release.xcconfig"; sourceTree = "<group>"; };
+		504D1E8025846E3C88C6256A /* Pods-AstrotalkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AstrotalkTests.release.xcconfig"; path = "Target Support Files/Pods-AstrotalkTests/Pods-AstrotalkTests.release.xcconfig"; sourceTree = "<group>"; };
+		681A17425C1201E694FD0580 /* Pods-Astrotalk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Astrotalk.debug.xcconfig"; path = "Target Support Files/Pods-Astrotalk/Pods-Astrotalk.debug.xcconfig"; sourceTree = "<group>"; };
+		743BEE1EFE4F3BFE0971E799 /* Pods-Astrotalk-AstrotalkUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Astrotalk-AstrotalkUITests.debug.xcconfig"; path = "Target Support Files/Pods-Astrotalk-AstrotalkUITests/Pods-Astrotalk-AstrotalkUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		753180BA6E3AEFFEC0026351 /* Pods_Astrotalk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Astrotalk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D19F99FBF59B132E1C6A2C0 /* Pods-Astrotalk-AstrotalkUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Astrotalk-AstrotalkUITests.release.xcconfig"; path = "Target Support Files/Pods-Astrotalk-AstrotalkUITests/Pods-Astrotalk-AstrotalkUITests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		04A8750C2BC8AC1E008C7E06 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE9DF93EA7310ED3C05C14B1 /* Pods_Astrotalk.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04A875222BC8AC1F008C7E06 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05C74861B98CAC7615EF2CAC /* Pods_AstrotalkTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04A8752C2BC8AC1F008C7E06 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E9E3DB57B82921F9C62D5B3 /* Pods_Astrotalk_AstrotalkUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0406D6D72BCA014100E35A60 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				04A875122BC8AC1E008C7E06 /* AppDelegate.swift */,
+				04A875142BC8AC1E008C7E06 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		0406D6D82BCA015400E35A60 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				04A875162BC8AC1E008C7E06 /* ViewController.swift */,
+				043508472BD9AD0C00A5C8C6 /* LoginViewController */,
+				0406D6E92BCAD90400E35A60 /* TabBarViewController */,
+				0468B9542BE5566E00E12BE0 /* AstrologerScreen */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		0406D6E92BCAD90400E35A60 /* TabBarViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0406D6DD2BCAD89B00E35A60 /* TabBarViewController.swift */,
+				0406D6EA2BCAD94700E35A60 /* TabBars */,
+			);
+			path = TabBarViewController;
+			sourceTree = "<group>";
+		};
+		0406D6EA2BCAD94700E35A60 /* TabBars */ = {
+			isa = PBXGroup;
+			children = (
+				043DACFD2BCB2BD400A365EF /* HomeScreen */,
+				043464C52BCFB26200C4BE3C /* ChatScreen */,
+				0406D6E32BCAD8DC00E35A60 /* LiveViewController.swift */,
+				04AD9B132BD284BF009FE810 /* CallScreen */,
+				04E4A5782BD3AEB5000BADAE /* PoojaScreen */,
+			);
+			path = TabBars;
+			sourceTree = "<group>";
+		};
+		042AC9882BD8BA2900C1CFCD /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				042AC9862BD8BA1600C1CFCD /* DataModel.swift */,
+				04A48CA62BE4E25C000864F9 /* FirebaseModel.swift */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		043464C52BCFB26200C4BE3C /* ChatScreen */ = {
+			isa = PBXGroup;
+			children = (
+				0406D6E12BCAD8CE00E35A60 /* ChatViewController.swift */,
+				043464CE2BCFB4F300C4BE3C /* BaseViewController */,
+			);
+			path = ChatScreen;
+			sourceTree = "<group>";
+		};
+		043464CE2BCFB4F300C4BE3C /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				043464C82BCFB4A400C4BE3C /* BaseViewController.swift */,
+				048C31282BE1809100AF6930 /* SearchViewController.swift */,
+			);
+			path = BaseViewController;
+			sourceTree = "<group>";
+		};
+		043508472BD9AD0C00A5C8C6 /* LoginViewController */ = {
+			isa = PBXGroup;
+			children = (
+				04A875422BC938F0008C7E06 /* LoginViewController.swift */,
+				043508482BD9AD2800A5C8C6 /* LoginScreen */,
+			);
+			path = LoginViewController;
+			sourceTree = "<group>";
+		};
+		043508482BD9AD2800A5C8C6 /* LoginScreen */ = {
+			isa = PBXGroup;
+			children = (
+				043508492BD9ADA900A5C8C6 /* LoginTopSectionVC.swift */,
+				0435084B2BD9ADD200A5C8C6 /* LoginBottomSectionVC.swift */,
+			);
+			path = LoginScreen;
+			sourceTree = "<group>";
+		};
+		043DACFD2BCB2BD400A365EF /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				0406D6DF2BCAD8BC00E35A60 /* HomeViewController.swift */,
+				043DAD052BCC715500A365EF /* HomeBaseViewController */,
+				043DAD002BCB2C1200A365EF /* SideBar */,
+			);
+			path = HomeScreen;
+			sourceTree = "<group>";
+		};
+		043DAD002BCB2C1200A365EF /* SideBar */ = {
+			isa = PBXGroup;
+			children = (
+				043DACFE2BCB2C0D00A365EF /* SideBarViewController.swift */,
+				0466FE142BE39E3200109D20 /* SideBarScreens */,
+				04898CF22BDD7A7A0054585A /* Cell */,
+			);
+			path = SideBar;
+			sourceTree = "<group>";
+		};
+		043DAD052BCC715500A365EF /* HomeBaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				04663F5D2BDF12A200F80BE5 /* HomeBaseViewController.swift */,
+				04898CF12BDD7A4F0054585A /* Cell */,
+			);
+			path = HomeBaseViewController;
+			sourceTree = "<group>";
+		};
+		04663F582BDEDE8200F80BE5 /* CollectionViewHeaders */ = {
+			isa = PBXGroup;
+			children = (
+				04663F6D2BDF1E8000F80BE5 /* LiveAstrologersHeaders.swift */,
+				04663F8D2BDFB11700F80BE5 /* SearchBarHeader.swift */,
+				04663F562BDEDC7100F80BE5 /* AstrologersHeaders.swift */,
+				04663F6F2BDF1FF100F80BE5 /* LatestBlogHeaders.swift */,
+				04663F592BDEE1AC00F80BE5 /* AstroShopHeaders.swift */,
+				04663F5B2BDEE36400F80BE5 /* AstroTalkHeaders.swift */,
+				04663F8F2BDFDBFF00F80BE5 /* FooterHeader.swift */,
+			);
+			path = CollectionViewHeaders;
+			sourceTree = "<group>";
+		};
+		04663F712BDF24A800F80BE5 /* DailyHoroscopeCell */ = {
+			isa = PBXGroup;
+			children = (
+				04663F5F2BDF161900F80BE5 /* DailyHoroscopeCell.swift */,
+				047C1BAF2BECD3230004C64F /* WebViewController.swift */,
+				04663F722BDF24E000F80BE5 /* CircleCell */,
+			);
+			path = DailyHoroscopeCell;
+			sourceTree = "<group>";
+		};
+		04663F722BDF24E000F80BE5 /* CircleCell */ = {
+			isa = PBXGroup;
+			children = (
+				04663F732BDF250500F80BE5 /* CircleCell.swift */,
+			);
+			path = CircleCell;
+			sourceTree = "<group>";
+		};
+		04663F752BDF278400F80BE5 /* FreeChatCell */ = {
+			isa = PBXGroup;
+			children = (
+				04663F612BDF163A00F80BE5 /* FreeChatCell.swift */,
+				04663F762BDF279400F80BE5 /* ChatCell */,
+			);
+			path = FreeChatCell;
+			sourceTree = "<group>";
+		};
+		04663F762BDF279400F80BE5 /* ChatCell */ = {
+			isa = PBXGroup;
+			children = (
+				04663F772BDF27B700F80BE5 /* ChatCell.swift */,
+			);
+			path = ChatCell;
+			sourceTree = "<group>";
+		};
+		04663F792BDF282C00F80BE5 /* LiveAstrologersCell */ = {
+			isa = PBXGroup;
+			children = (
+				04663F632BDF166900F80BE5 /* LiveAstrologersCell.swift */,
+				04663F7A2BDF284600F80BE5 /* LiveCell */,
+			);
+			path = LiveAstrologersCell;
+			sourceTree = "<group>";
+		};
+		04663F7A2BDF284600F80BE5 /* LiveCell */ = {
+			isa = PBXGroup;
+			children = (
+				04663F7B2BDF287300F80BE5 /* LiveCell.swift */,
+			);
+			path = LiveCell;
+			sourceTree = "<group>";
+		};
+		04663F7D2BDF293E00F80BE5 /* AstrologersCell */ = {
+			isa = PBXGroup;
+			children = (
+				04663F652BDF168F00F80BE5 /* AstrologersCell.swift */,
+				04663F7E2BDF295900F80BE5 /* Astrologers */,
+			);
+			path = AstrologersCell;
+			sourceTree = "<group>";
+		};
+		04663F7E2BDF295900F80BE5 /* Astrologers */ = {
+			isa = PBXGroup;
+			children = (
+				04663F7F2BDF2A0E00F80BE5 /* Astrologers.swift */,
+			);
+			path = Astrologers;
+			sourceTree = "<group>";
+		};
+		04663F812BDF2A9200F80BE5 /* LatestBlogCell */ = {
+			isa = PBXGroup;
+			children = (
+				04663F672BDF16AC00F80BE5 /* LatestBlogCell.swift */,
+				04663F822BDF2AA600F80BE5 /* BlogCell */,
+			);
+			path = LatestBlogCell;
+			sourceTree = "<group>";
+		};
+		04663F822BDF2AA600F80BE5 /* BlogCell */ = {
+			isa = PBXGroup;
+			children = (
+				04663F832BDF2AC200F80BE5 /* BlogCell.swift */,
+			);
+			path = BlogCell;
+			sourceTree = "<group>";
+		};
+		04663F852BDF2B5200F80BE5 /* AstromallShopCell */ = {
+			isa = PBXGroup;
+			children = (
+				04663F692BDF16C000F80BE5 /* AstromallShopCell.swift */,
+				04663F862BDF2B6A00F80BE5 /* ShopCell */,
+			);
+			path = AstromallShopCell;
+			sourceTree = "<group>";
+		};
+		04663F862BDF2B6A00F80BE5 /* ShopCell */ = {
+			isa = PBXGroup;
+			children = (
+				04663F872BDF2B8A00F80BE5 /* ShopCell.swift */,
+			);
+			path = ShopCell;
+			sourceTree = "<group>";
+		};
+		04663F892BDF2C0300F80BE5 /* AstroTalkCell */ = {
+			isa = PBXGroup;
+			children = (
+				04663F6B2BDF173D00F80BE5 /* AstroTalkCell.swift */,
+				04663F8A2BDF2C1600F80BE5 /* TalkCell */,
+			);
+			path = AstroTalkCell;
+			sourceTree = "<group>";
+		};
+		04663F8A2BDF2C1600F80BE5 /* TalkCell */ = {
+			isa = PBXGroup;
+			children = (
+				04663F8B2BDF2C3F00F80BE5 /* TalkCell.swift */,
+			);
+			path = TalkCell;
+			sourceTree = "<group>";
+		};
+		0466FE142BE39E3200109D20 /* SideBarScreens */ = {
+			isa = PBXGroup;
+			children = (
+				0466FE0C2BE39DAF00109D20 /* UserProfileViewController.swift */,
+				0466FE0E2BE39DDC00109D20 /* OrderViewController.swift */,
+				0466FE102BE39E0500109D20 /* ShopViewController.swift */,
+				0466FE122BE39E1E00109D20 /* BlogViewController.swift */,
+				04A48CA82BE505B8000864F9 /* SettingsViewController.swift */,
+			);
+			path = SideBarScreens;
+			sourceTree = "<group>";
+		};
+		0468B9542BE5566E00E12BE0 /* AstrologerScreen */ = {
+			isa = PBXGroup;
+			children = (
+				0468B9522BE5565200E12BE0 /* AstrologerProfileViewController.swift */,
+			);
+			path = AstrologerScreen;
+			sourceTree = "<group>";
+		};
+		04898CEB2BDD78220054585A /* SegmentedControl */ = {
+			isa = PBXGroup;
+			children = (
+				04917D592BD25DDB00010C2F /* Segments */,
+				04898D132BDDA8B30054585A /* Cell */,
+			);
+			path = SegmentedControl;
+			sourceTree = "<group>";
+		};
+		04898CEC2BDD788F0054585A /* ReusableCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				04917D6C2BD260BE00010C2F /* CustomCollectionView.swift */,
+				04898CF32BDD7B1C0054585A /* Cell */,
+			);
+			path = ReusableCollectionView;
+			sourceTree = "<group>";
+		};
+		04898CEE2BDD78EA0054585A /* ReusableViews */ = {
+			isa = PBXGroup;
+			children = (
+				04A8756E2BC940D6008C7E06 /* Label.swift */,
+				041610142BE3F0BA00A5AB51 /* CustomTextFieldView.swift */,
+				04AD9C992BDA8AE000F0EF40 /* String.swift */,
+				043464C32BCEDE9700C4BE3C /* CustomView.swift */,
+				04A875732BC941C4008C7E06 /* ImageView.swift */,
+				04A875712BC9415E008C7E06 /* Button.swift */,
+				0406D6D52BC9FEF900E35A60 /* TextField.swift */,
+				0406D6D92BCA844100E35A60 /* View.swift */,
+				0406D6DB2BCAA55E00E35A60 /* PaddedLabel.swift */,
+				042ADC962BE818EE00FCE639 /* StringCarouselView.swift */,
+			);
+			path = ReusableViews;
+			sourceTree = "<group>";
+		};
+		04898CEF2BDD79320054585A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				04A8751B2BC8AC1F008C7E06 /* Assets.xcassets */,
+				04A8751D2BC8AC1F008C7E06 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		04898CF12BDD7A4F0054585A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				04663F712BDF24A800F80BE5 /* DailyHoroscopeCell */,
+				04663F752BDF278400F80BE5 /* FreeChatCell */,
+				04663F792BDF282C00F80BE5 /* LiveAstrologersCell */,
+				04663F7D2BDF293E00F80BE5 /* AstrologersCell */,
+				04663F812BDF2A9200F80BE5 /* LatestBlogCell */,
+				04663F852BDF2B5200F80BE5 /* AstromallShopCell */,
+				04663F892BDF2C0300F80BE5 /* AstroTalkCell */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		04898CF22BDD7A7A0054585A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				042AC9842BD8B82C00C1CFCD /* SideBarCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		04898CF32BDD7B1C0054585A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				04917D6E2BD2620700010C2F /* CustomCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		04898CFA2BDD90560054585A /* PoojaCustomView */ = {
+			isa = PBXGroup;
+			children = (
+				04898CF62BDD8D350054585A /* CustomPoojaView.swift */,
+				04898D0E2BDDA2630054585A /* Cell */,
+				04898D0D2BDD91390054585A /* PoojaSegments */,
+			);
+			path = PoojaCustomView;
+			sourceTree = "<group>";
+		};
+		04898D0D2BDD91390054585A /* PoojaSegments */ = {
+			isa = PBXGroup;
+			children = (
+				04898CFB2BDD907B0054585A /* PoojaAllView.swift */,
+				04898CFD2BDD908A0054585A /* PoojaLoveView.swift */,
+				04898CFF2BDD90990054585A /* PoojaEducationView.swift */,
+				04898D012BDD90A80054585A /* PoojaCareerView.swift */,
+				04898D032BDD90B70054585A /* PoojaMarriageView.swift */,
+				04898D052BDD90C90054585A /* PoojaHealthView.swift */,
+				04898D072BDD90E00054585A /* PoojaWealthView.swift */,
+				04898D092BDD91000054585A /* PoojaFinanceView.swift */,
+				04898D0B2BDD91200054585A /* PoojaKidsView.swift */,
+			);
+			path = PoojaSegments;
+			sourceTree = "<group>";
+		};
+		04898D0E2BDDA2630054585A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				04898CF82BDD8DED0054585A /* PoojaCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		04898D132BDDA8B30054585A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				04E9F62C2BD7BBCB00372FEE /* CustomSegmentedControlCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		04917D572BD15E1C00010C2F /* ProtocolDelegates */ = {
+			isa = PBXGroup;
+			children = (
+				043DAD012BCB2D4200A365EF /* ProtocolDelegates.swift */,
+			);
+			path = ProtocolDelegates;
+			sourceTree = "<group>";
+		};
+		04917D592BD25DDB00010C2F /* Segments */ = {
+			isa = PBXGroup;
+			children = (
+				04917D5A2BD25E0F00010C2F /* AllView.swift */,
+				04917D5C2BD25E1F00010C2F /* LoveView.swift */,
+				04917D5E2BD25E3500010C2F /* EducationView.swift */,
+				04917D602BD25E4600010C2F /* CareerView.swift */,
+				04917D622BD25E5400010C2F /* MarriageView.swift */,
+				04917D642BD25E6B00010C2F /* HealthView.swift */,
+				04917D662BD25E7B00010C2F /* WealthView.swift */,
+				04917D682BD25E9700010C2F /* FinanceView.swift */,
+				04917D6A2BD25EA000010C2F /* KidsView.swift */,
+			);
+			path = Segments;
+			sourceTree = "<group>";
+		};
+		04A875062BC8AC1E008C7E06 = {
+			isa = PBXGroup;
+			children = (
+				04A875112BC8AC1E008C7E06 /* Astrotalk */,
+				04A875282BC8AC1F008C7E06 /* AstrotalkTests */,
+				04A875322BC8AC1F008C7E06 /* AstrotalkUITests */,
+				662AAED19C1B128AF454B2ED /* Pods */,
+				043508442BD9ABC700A5C8C6 /* Astrotalk.app */,
+				043508452BD9ABC700A5C8C6 /* AstrotalkTests.xctest */,
+				043508462BD9ABC700A5C8C6 /* AstrotalkUITests.xctest */,
+				8AF68027D5C8F348378C1CE5 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		04A875112BC8AC1E008C7E06 /* Astrotalk */ = {
+			isa = PBXGroup;
+			children = (
+				04D765562BE6570D00BB00E5 /* FirebaseManager */,
+				042AC9892BD8F1FB00C1CFCD /* GoogleService-Info.plist */,
+				042AC9882BD8BA2900C1CFCD /* DataModel */,
+				04A875702BC940E3008C7E06 /* CustomReusableObjects */,
+				04A8756B2BC93D71008C7E06 /* CustomFonts */,
+				0406D6D72BCA014100E35A60 /* Delegates */,
+				0406D6D82BCA015400E35A60 /* Controllers */,
+				04917D572BD15E1C00010C2F /* ProtocolDelegates */,
+				0422BC5C2BE9B20C00DA4D23 /* MessagesViewController.swift */,
+				0422BC622BE9C37C00DA4D23 /* ChatsViewController.swift */,
+				049ED1292BF066E30038B7E3 /* ChatsTableViewCell.swift */,
+				0422BC5E2BE9B3D100DA4D23 /* MessagesCell.swift */,
+				04898CEF2BDD79320054585A /* Views */,
+				04A875202BC8AC1F008C7E06 /* Info.plist */,
+			);
+			path = Astrotalk;
+			sourceTree = "<group>";
+		};
+		04A875282BC8AC1F008C7E06 /* AstrotalkTests */ = {
+			isa = PBXGroup;
+			children = (
+				04A875292BC8AC1F008C7E06 /* AstrotalkTests.swift */,
+			);
+			path = AstrotalkTests;
+			sourceTree = "<group>";
+		};
+		04A875322BC8AC1F008C7E06 /* AstrotalkUITests */ = {
+			isa = PBXGroup;
+			children = (
+				04A875332BC8AC1F008C7E06 /* AstrotalkUITests.swift */,
+				04A875352BC8AC1F008C7E06 /* AstrotalkUITestsLaunchTests.swift */,
+			);
+			path = AstrotalkUITests;
+			sourceTree = "<group>";
+		};
+		04A875442BC93CFD008C7E06 /* Poppins */ = {
+			isa = PBXGroup;
+			children = (
+				04A875452BC93CFD008C7E06 /* Poppins-ExtraLight.ttf */,
+				04A875462BC93CFD008C7E06 /* Poppins-ThinItalic.ttf */,
+				04A875472BC93CFD008C7E06 /* Poppins-ExtraLightItalic.ttf */,
+				04A875482BC93CFD008C7E06 /* Poppins-BoldItalic.ttf */,
+				04A875492BC93CFD008C7E06 /* Poppins-Light.ttf */,
+				04A8754A2BC93CFD008C7E06 /* Poppins-Medium.ttf */,
+				04A8754B2BC93CFD008C7E06 /* Poppins-SemiBoldItalic.ttf */,
+				04A8754C2BC93CFD008C7E06 /* Poppins-ExtraBoldItalic.ttf */,
+				04A8754D2BC93CFD008C7E06 /* Poppins-ExtraBold.ttf */,
+				04A8754E2BC93CFD008C7E06 /* Poppins-BlackItalic.ttf */,
+				04A8754F2BC93CFD008C7E06 /* OFL.txt */,
+				04A875502BC93CFD008C7E06 /* Poppins-Regular.ttf */,
+				04A875512BC93CFD008C7E06 /* Poppins-LightItalic.ttf */,
+				04A875522BC93CFD008C7E06 /* Poppins-Bold.ttf */,
+				04A875532BC93CFD008C7E06 /* Poppins-Black.ttf */,
+				04A875542BC93CFD008C7E06 /* Poppins-Thin.ttf */,
+				04A875552BC93CFD008C7E06 /* Poppins-SemiBold.ttf */,
+				04A875562BC93CFD008C7E06 /* Poppins-Italic.ttf */,
+				04A875572BC93CFD008C7E06 /* Poppins-MediumItalic.ttf */,
+			);
+			path = Poppins;
+			sourceTree = "<group>";
+		};
+		04A8756B2BC93D71008C7E06 /* CustomFonts */ = {
+			isa = PBXGroup;
+			children = (
+				04A8756C2BC93DA3008C7E06 /* Fonts.swift */,
+				04A875442BC93CFD008C7E06 /* Poppins */,
+			);
+			path = CustomFonts;
+			sourceTree = "<group>";
+		};
+		04A875702BC940E3008C7E06 /* CustomReusableObjects */ = {
+			isa = PBXGroup;
+			children = (
+				04898CEE2BDD78EA0054585A /* ReusableViews */,
+				04898CEB2BDD78220054585A /* SegmentedControl */,
+				04898CEC2BDD788F0054585A /* ReusableCollectionView */,
+				04663F582BDEDE8200F80BE5 /* CollectionViewHeaders */,
+			);
+			path = CustomReusableObjects;
+			sourceTree = "<group>";
+		};
+		04AD9B132BD284BF009FE810 /* CallScreen */ = {
+			isa = PBXGroup;
+			children = (
+				0406D6E52BCAD8E800E35A60 /* CallViewController.swift */,
+			);
+			path = CallScreen;
+			sourceTree = "<group>";
+		};
+		04D765562BE6570D00BB00E5 /* FirebaseManager */ = {
+			isa = PBXGroup;
+			children = (
+				04D765572BE6574100BB00E5 /* FirestoreService.swift */,
+				0422BC602BE9BFE200DA4D23 /* ChatManager.swift */,
+			);
+			path = FirebaseManager;
+			sourceTree = "<group>";
+		};
+		04E4A5782BD3AEB5000BADAE /* PoojaScreen */ = {
+			isa = PBXGroup;
+			children = (
+				0406D6E72BCAD8F900E35A60 /* PoojaViewController.swift */,
+				04E4A5792BD3AEC8000BADAE /* PoojaBaseViewControllerr */,
+			);
+			path = PoojaScreen;
+			sourceTree = "<group>";
+		};
+		04E4A5792BD3AEC8000BADAE /* PoojaBaseViewControllerr */ = {
+			isa = PBXGroup;
+			children = (
+				04E4A57A2BD3AF25000BADAE /* PoojaBaseViewController.swift */,
+				04898CFA2BDD90560054585A /* PoojaCustomView */,
+			);
+			path = PoojaBaseViewControllerr;
+			sourceTree = "<group>";
+		};
+		662AAED19C1B128AF454B2ED /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				681A17425C1201E694FD0580 /* Pods-Astrotalk.debug.xcconfig */,
+				471AD0EC3F944CD290A2562D /* Pods-Astrotalk.release.xcconfig */,
+				743BEE1EFE4F3BFE0971E799 /* Pods-Astrotalk-AstrotalkUITests.debug.xcconfig */,
+				7D19F99FBF59B132E1C6A2C0 /* Pods-Astrotalk-AstrotalkUITests.release.xcconfig */,
+				0081D1E3CEB4159C51270F55 /* Pods-AstrotalkTests.debug.xcconfig */,
+				504D1E8025846E3C88C6256A /* Pods-AstrotalkTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8AF68027D5C8F348378C1CE5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				753180BA6E3AEFFEC0026351 /* Pods_Astrotalk.framework */,
+				2C9FC80F02559A3FDD75104D /* Pods_Astrotalk_AstrotalkUITests.framework */,
+				33439AA97C84265809AD6006 /* Pods_AstrotalkTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		04A8750E2BC8AC1E008C7E06 /* Astrotalk */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04A875392BC8AC1F008C7E06 /* Build configuration list for PBXNativeTarget "Astrotalk" */;
+			buildPhases = (
+				B2EB998DA54604F9020EA34C /* [CP] Check Pods Manifest.lock */,
+				04A8750B2BC8AC1E008C7E06 /* Sources */,
+				04A8750C2BC8AC1E008C7E06 /* Frameworks */,
+				04A8750D2BC8AC1E008C7E06 /* Resources */,
+				C01900CE1B3B3F5F185D27C0 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Astrotalk;
+			productName = Astrotalk;
+			productReference = 043508442BD9ABC700A5C8C6 /* Astrotalk.app */;
+			productType = "com.apple.product-type.application";
+		};
+		04A875242BC8AC1F008C7E06 /* AstrotalkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04A8753C2BC8AC1F008C7E06 /* Build configuration list for PBXNativeTarget "AstrotalkTests" */;
+			buildPhases = (
+				01BA8EF5ED281F395B783A12 /* [CP] Check Pods Manifest.lock */,
+				04A875212BC8AC1F008C7E06 /* Sources */,
+				04A875222BC8AC1F008C7E06 /* Frameworks */,
+				04A875232BC8AC1F008C7E06 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				04A875272BC8AC1F008C7E06 /* PBXTargetDependency */,
+			);
+			name = AstrotalkTests;
+			productName = AstrotalkTests;
+			productReference = 043508452BD9ABC700A5C8C6 /* AstrotalkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		04A8752E2BC8AC1F008C7E06 /* AstrotalkUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04A8753F2BC8AC1F008C7E06 /* Build configuration list for PBXNativeTarget "AstrotalkUITests" */;
+			buildPhases = (
+				716FCA07AEE9BC31496B3C4A /* [CP] Check Pods Manifest.lock */,
+				04A8752B2BC8AC1F008C7E06 /* Sources */,
+				04A8752C2BC8AC1F008C7E06 /* Frameworks */,
+				04A8752D2BC8AC1F008C7E06 /* Resources */,
+				D98A28A52339D47C2B4279A2 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				04A875312BC8AC1F008C7E06 /* PBXTargetDependency */,
+			);
+			name = AstrotalkUITests;
+			productName = AstrotalkUITests;
+			productReference = 043508462BD9ABC700A5C8C6 /* AstrotalkUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		04A875072BC8AC1E008C7E06 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					04A8750E2BC8AC1E008C7E06 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					04A875242BC8AC1F008C7E06 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 04A8750E2BC8AC1E008C7E06;
+					};
+					04A8752E2BC8AC1F008C7E06 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 04A8750E2BC8AC1E008C7E06;
+					};
+				};
+			};
+			buildConfigurationList = 04A8750A2BC8AC1E008C7E06 /* Build configuration list for PBXProject "Astrotalk" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 04A875062BC8AC1E008C7E06;
+			productRefGroup = 04A875062BC8AC1E008C7E06;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				04A8750E2BC8AC1E008C7E06 /* Astrotalk */,
+				04A875242BC8AC1F008C7E06 /* AstrotalkTests */,
+				04A8752E2BC8AC1F008C7E06 /* AstrotalkUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		04A8750D2BC8AC1E008C7E06 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04A8755C2BC93CFD008C7E06 /* Poppins-Light.ttf in Resources */,
+				04A875662BC93CFD008C7E06 /* Poppins-Black.ttf in Resources */,
+				04A875642BC93CFD008C7E06 /* Poppins-LightItalic.ttf in Resources */,
+				04A875672BC93CFD008C7E06 /* Poppins-Thin.ttf in Resources */,
+				04A875582BC93CFD008C7E06 /* Poppins-ExtraLight.ttf in Resources */,
+				04A875682BC93CFD008C7E06 /* Poppins-SemiBold.ttf in Resources */,
+				04A875652BC93CFD008C7E06 /* Poppins-Bold.ttf in Resources */,
+				04A875592BC93CFD008C7E06 /* Poppins-ThinItalic.ttf in Resources */,
+				04A8755A2BC93CFD008C7E06 /* Poppins-ExtraLightItalic.ttf in Resources */,
+				04A875612BC93CFD008C7E06 /* Poppins-BlackItalic.ttf in Resources */,
+				04A8755F2BC93CFD008C7E06 /* Poppins-ExtraBoldItalic.ttf in Resources */,
+				04A8755B2BC93CFD008C7E06 /* Poppins-BoldItalic.ttf in Resources */,
+				04A8755E2BC93CFD008C7E06 /* Poppins-SemiBoldItalic.ttf in Resources */,
+				04A875622BC93CFD008C7E06 /* OFL.txt in Resources */,
+				04A875632BC93CFD008C7E06 /* Poppins-Regular.ttf in Resources */,
+				04A875602BC93CFD008C7E06 /* Poppins-ExtraBold.ttf in Resources */,
+				04A8755D2BC93CFD008C7E06 /* Poppins-Medium.ttf in Resources */,
+				04A8751F2BC8AC1F008C7E06 /* LaunchScreen.storyboard in Resources */,
+				04A875692BC93CFD008C7E06 /* Poppins-Italic.ttf in Resources */,
+				042AC98A2BD8F1FB00C1CFCD /* GoogleService-Info.plist in Resources */,
+				04A8756A2BC93CFD008C7E06 /* Poppins-MediumItalic.ttf in Resources */,
+				04A8751C2BC8AC1F008C7E06 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04A875232BC8AC1F008C7E06 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04A8752D2BC8AC1F008C7E06 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		01BA8EF5ED281F395B783A12 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AstrotalkTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		716FCA07AEE9BC31496B3C4A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Astrotalk-AstrotalkUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B2EB998DA54604F9020EA34C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Astrotalk-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C01900CE1B3B3F5F185D27C0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Astrotalk/Pods-Astrotalk-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Astrotalk/Pods-Astrotalk-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Astrotalk/Pods-Astrotalk-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D98A28A52339D47C2B4279A2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Astrotalk-AstrotalkUITests/Pods-Astrotalk-AstrotalkUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Astrotalk-AstrotalkUITests/Pods-Astrotalk-AstrotalkUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Astrotalk-AstrotalkUITests/Pods-Astrotalk-AstrotalkUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		04A8750B2BC8AC1E008C7E06 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04663F5A2BDEE1AC00F80BE5 /* AstroShopHeaders.swift in Sources */,
+				04A875742BC941C4008C7E06 /* ImageView.swift in Sources */,
+				043DACFF2BCB2C0D00A365EF /* SideBarViewController.swift in Sources */,
+				041610152BE3F0BA00A5AB51 /* CustomTextFieldView.swift in Sources */,
+				04A875722BC9415E008C7E06 /* Button.swift in Sources */,
+				04663F5C2BDEE36400F80BE5 /* AstroTalkHeaders.swift in Sources */,
+				049ED12A2BF066E30038B7E3 /* ChatsTableViewCell.swift in Sources */,
+				04917D672BD25E7B00010C2F /* WealthView.swift in Sources */,
+				04A48CA92BE505B8000864F9 /* SettingsViewController.swift in Sources */,
+				04663F8C2BDF2C3F00F80BE5 /* TalkCell.swift in Sources */,
+				04663F6A2BDF16C000F80BE5 /* AstromallShopCell.swift in Sources */,
+				0435084A2BD9ADA900A5C8C6 /* LoginTopSectionVC.swift in Sources */,
+				04898D022BDD90A80054585A /* PoojaCareerView.swift in Sources */,
+				042AC9852BD8B82C00C1CFCD /* SideBarCell.swift in Sources */,
+				04663F602BDF161900F80BE5 /* DailyHoroscopeCell.swift in Sources */,
+				04898CF72BDD8D350054585A /* CustomPoojaView.swift in Sources */,
+				04663F702BDF1FF100F80BE5 /* LatestBlogHeaders.swift in Sources */,
+				04663F882BDF2B8A00F80BE5 /* ShopCell.swift in Sources */,
+				042ADC972BE818EE00FCE639 /* StringCarouselView.swift in Sources */,
+				04D765582BE6574100BB00E5 /* FirestoreService.swift in Sources */,
+				0406D6DA2BCA844100E35A60 /* View.swift in Sources */,
+				04917D5F2BD25E3500010C2F /* EducationView.swift in Sources */,
+				04A875172BC8AC1E008C7E06 /* ViewController.swift in Sources */,
+				043464C92BCFB4A400C4BE3C /* BaseViewController.swift in Sources */,
+				047C1BB02BECD3230004C64F /* WebViewController.swift in Sources */,
+				04917D612BD25E4600010C2F /* CareerView.swift in Sources */,
+				04AD9C9A2BDA8AE000F0EF40 /* String.swift in Sources */,
+				0406D6E42BCAD8DC00E35A60 /* LiveViewController.swift in Sources */,
+				04898D0C2BDD91200054585A /* PoojaKidsView.swift in Sources */,
+				0466FE0D2BE39DAF00109D20 /* UserProfileViewController.swift in Sources */,
+				04E4A57B2BD3AF25000BADAE /* PoojaBaseViewController.swift in Sources */,
+				04663F6C2BDF173D00F80BE5 /* AstroTalkCell.swift in Sources */,
+				04E9F62D2BD7BBCB00372FEE /* CustomSegmentedControlCell.swift in Sources */,
+				0406D6DE2BCAD89B00E35A60 /* TabBarViewController.swift in Sources */,
+				0422BC612BE9BFE200DA4D23 /* ChatManager.swift in Sources */,
+				04917D652BD25E6B00010C2F /* HealthView.swift in Sources */,
+				04917D6B2BD25EA000010C2F /* KidsView.swift in Sources */,
+				04A8756D2BC93DA3008C7E06 /* Fonts.swift in Sources */,
+				0466FE0F2BE39DDC00109D20 /* OrderViewController.swift in Sources */,
+				04A8756F2BC940D6008C7E06 /* Label.swift in Sources */,
+				04663F7C2BDF287300F80BE5 /* LiveCell.swift in Sources */,
+				04898CF92BDD8DED0054585A /* PoojaCell.swift in Sources */,
+				0422BC632BE9C37C00DA4D23 /* ChatsViewController.swift in Sources */,
+				04A48CA72BE4E25C000864F9 /* FirebaseModel.swift in Sources */,
+				0435084C2BD9ADD200A5C8C6 /* LoginBottomSectionVC.swift in Sources */,
+				0422BC5F2BE9B3D100DA4D23 /* MessagesCell.swift in Sources */,
+				0406D6E82BCAD8F900E35A60 /* PoojaViewController.swift in Sources */,
+				04663F572BDEDC7100F80BE5 /* AstrologersHeaders.swift in Sources */,
+				04663F6E2BDF1E8000F80BE5 /* LiveAstrologersHeaders.swift in Sources */,
+				04A875132BC8AC1E008C7E06 /* AppDelegate.swift in Sources */,
+				04663F642BDF166900F80BE5 /* LiveAstrologersCell.swift in Sources */,
+				04663F662BDF168F00F80BE5 /* AstrologersCell.swift in Sources */,
+				0406D6D62BC9FEFA00E35A60 /* TextField.swift in Sources */,
+				043DAD022BCB2D4200A365EF /* ProtocolDelegates.swift in Sources */,
+				0466FE132BE39E1E00109D20 /* BlogViewController.swift in Sources */,
+				04917D6F2BD2620700010C2F /* CustomCell.swift in Sources */,
+				04917D692BD25E9700010C2F /* FinanceView.swift in Sources */,
+				04A875432BC938F0008C7E06 /* LoginViewController.swift in Sources */,
+				04898D062BDD90C90054585A /* PoojaHealthView.swift in Sources */,
+				04898D002BDD90990054585A /* PoojaEducationView.swift in Sources */,
+				04663F5E2BDF12A200F80BE5 /* HomeBaseViewController.swift in Sources */,
+				0406D6E22BCAD8CE00E35A60 /* ChatViewController.swift in Sources */,
+				048C31292BE1809100AF6930 /* SearchViewController.swift in Sources */,
+				04663F682BDF16AC00F80BE5 /* LatestBlogCell.swift in Sources */,
+				04898D042BDD90B70054585A /* PoojaMarriageView.swift in Sources */,
+				0422BC5D2BE9B20C00DA4D23 /* MessagesViewController.swift in Sources */,
+				043464C42BCEDE9700C4BE3C /* CustomView.swift in Sources */,
+				0466FE112BE39E0500109D20 /* ShopViewController.swift in Sources */,
+				0468B9532BE5565200E12BE0 /* AstrologerProfileViewController.swift in Sources */,
+				04A875152BC8AC1E008C7E06 /* SceneDelegate.swift in Sources */,
+				04663F622BDF163A00F80BE5 /* FreeChatCell.swift in Sources */,
+				04898CFC2BDD907B0054585A /* PoojaAllView.swift in Sources */,
+				04663F842BDF2AC200F80BE5 /* BlogCell.swift in Sources */,
+				04917D6D2BD260BE00010C2F /* CustomCollectionView.swift in Sources */,
+				04663F902BDFDBFF00F80BE5 /* FooterHeader.swift in Sources */,
+				04663F782BDF27B700F80BE5 /* ChatCell.swift in Sources */,
+				04898CFE2BDD908A0054585A /* PoojaLoveView.swift in Sources */,
+				0406D6E02BCAD8BC00E35A60 /* HomeViewController.swift in Sources */,
+				04898D0A2BDD91000054585A /* PoojaFinanceView.swift in Sources */,
+				04917D5D2BD25E1F00010C2F /* LoveView.swift in Sources */,
+				042AC9872BD8BA1600C1CFCD /* DataModel.swift in Sources */,
+				04917D5B2BD25E0F00010C2F /* AllView.swift in Sources */,
+				04917D632BD25E5400010C2F /* MarriageView.swift in Sources */,
+				0406D6E62BCAD8E800E35A60 /* CallViewController.swift in Sources */,
+				0406D6DC2BCAA55E00E35A60 /* PaddedLabel.swift in Sources */,
+				04663F802BDF2A0E00F80BE5 /* Astrologers.swift in Sources */,
+				04663F742BDF250500F80BE5 /* CircleCell.swift in Sources */,
+				04663F8E2BDFB11700F80BE5 /* SearchBarHeader.swift in Sources */,
+				04898D082BDD90E00054585A /* PoojaWealthView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04A875212BC8AC1F008C7E06 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04A8752A2BC8AC1F008C7E06 /* AstrotalkTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04A8752B2BC8AC1F008C7E06 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04A875362BC8AC1F008C7E06 /* AstrotalkUITestsLaunchTests.swift in Sources */,
+				04A875342BC8AC1F008C7E06 /* AstrotalkUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		04A875272BC8AC1F008C7E06 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04A8750E2BC8AC1E008C7E06 /* Astrotalk */;
+			targetProxy = 04A875262BC8AC1F008C7E06 /* PBXContainerItemProxy */;
+		};
+		04A875312BC8AC1F008C7E06 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04A8750E2BC8AC1E008C7E06 /* Astrotalk */;
+			targetProxy = 04A875302BC8AC1F008C7E06 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		04A8751D2BC8AC1F008C7E06 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04A8751E2BC8AC1F008C7E06 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		04A875372BC8AC1F008C7E06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		04A875382BC8AC1F008C7E06 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = "";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		04A8753A2BC8AC1F008C7E06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 681A17425C1201E694FD0580 /* Pods-Astrotalk.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SFJ8H3MDYC;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Astrotalk/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chidiogo.Astrotalk;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		04A8753B2BC8AC1F008C7E06 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 471AD0EC3F944CD290A2562D /* Pods-Astrotalk.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SFJ8H3MDYC;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Astrotalk/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chidiogo.Astrotalk;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		04A8753D2BC8AC1F008C7E06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0081D1E3CEB4159C51270F55 /* Pods-AstrotalkTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SFJ8H3MDYC;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chidiogo.AstrotalkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Astrotalk.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Astrotalk";
+			};
+			name = Debug;
+		};
+		04A8753E2BC8AC1F008C7E06 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 504D1E8025846E3C88C6256A /* Pods-AstrotalkTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SFJ8H3MDYC;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chidiogo.AstrotalkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Astrotalk.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Astrotalk";
+			};
+			name = Release;
+		};
+		04A875402BC8AC1F008C7E06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 743BEE1EFE4F3BFE0971E799 /* Pods-Astrotalk-AstrotalkUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SFJ8H3MDYC;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chidiogo.AstrotalkUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Astrotalk;
+			};
+			name = Debug;
+		};
+		04A875412BC8AC1F008C7E06 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D19F99FBF59B132E1C6A2C0 /* Pods-Astrotalk-AstrotalkUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SFJ8H3MDYC;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chidiogo.AstrotalkUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Astrotalk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		04A8750A2BC8AC1E008C7E06 /* Build configuration list for PBXProject "Astrotalk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04A875372BC8AC1F008C7E06 /* Debug */,
+				04A875382BC8AC1F008C7E06 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04A875392BC8AC1F008C7E06 /* Build configuration list for PBXNativeTarget "Astrotalk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04A8753A2BC8AC1F008C7E06 /* Debug */,
+				04A8753B2BC8AC1F008C7E06 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04A8753C2BC8AC1F008C7E06 /* Build configuration list for PBXNativeTarget "AstrotalkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04A8753D2BC8AC1F008C7E06 /* Debug */,
+				04A8753E2BC8AC1F008C7E06 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04A8753F2BC8AC1F008C7E06 /* Build configuration list for PBXNativeTarget "AstrotalkUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04A875402BC8AC1F008C7E06 /* Debug */,
+				04A875412BC8AC1F008C7E06 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 04A875072BC8AC1E008C7E06 /* Project object */;
+}
