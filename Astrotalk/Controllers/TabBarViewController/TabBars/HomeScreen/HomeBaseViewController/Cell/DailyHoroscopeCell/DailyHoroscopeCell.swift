@@ -64,7 +64,6 @@ class DailyHoroscopeCell: UICollectionViewCell, UICollectionViewDataSource, UICo
         return CGSize(width: collectionView.bounds.width/4.7, height: 70)
     }
     
-
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

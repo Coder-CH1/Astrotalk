@@ -70,6 +70,10 @@ class ChatsViewController: UIViewController, UITableViewDataSource, UITableViewD
         return cell
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 300
+    }
+    
     // MARK: - Subviews and Layout -
     func subviewsAndLayout() {
         view.addSubview(chatsTableView)
