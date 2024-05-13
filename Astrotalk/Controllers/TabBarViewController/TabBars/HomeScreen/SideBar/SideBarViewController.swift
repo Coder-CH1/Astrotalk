@@ -15,6 +15,7 @@ class SideBarViewController: UIViewController {
     
     // MARK: - UI -
     var delegate: SideBarViewControllerDelegate?
+    var sideBarOpen = false
     
     var sideBarItems: [SideBarItem] = [userItem, homeItem, poojaItem, orderItem, shopItem, blogItem, chatItem, settingsItem, loginItem]
     
@@ -50,7 +51,7 @@ class SideBarViewController: UIViewController {
             sidebarCollectionView.reloadData()
         }
     }
-    
+  
     // MARK: - Action back button tapped -
     @objc func toggleBackButtonTapped() {
         delegate?.sideBarDidToggleBack()

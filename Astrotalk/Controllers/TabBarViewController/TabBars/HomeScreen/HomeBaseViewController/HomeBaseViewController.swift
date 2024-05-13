@@ -73,8 +73,8 @@ class HomeBaseViewController: UIViewController {
     // MARK: - Lifecycle -
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        setupStickerButtions()
         toggleStickerButtonsVisibility(hidden: true)
+        
     }
     
     // MARK: - Lifecycle -
