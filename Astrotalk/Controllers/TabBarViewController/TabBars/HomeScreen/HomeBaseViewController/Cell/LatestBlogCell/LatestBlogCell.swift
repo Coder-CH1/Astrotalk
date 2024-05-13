@@ -86,13 +86,13 @@ class LatestBlogCell: UICollectionViewCell, UICollectionViewDataSource, UICollec
     
     //MARK: - Updating UI with singleton instance and fetch method -
     func fetchDataAndUpdateUI() {
-        firestoreService.fetchDataForLatestBlog { latestBlogModel, error in
+        firestoreService.fetchDataForLatestBlog {[weak self] latestBlogModel, error in
             if let error = error {
                 print("\(error.localizedDescription)")
             } else {
                 DispatchQueue.main.async {
-                    self.latestblogArray.append(contentsOf: latestBlogModel)
-                    self.collectionView.reloadData()
+                    self?.latestblogArray.append(contentsOf: latestBlogModel)
+                    self?.collectionView.reloadData()
                 }
             }
         }

@@ -70,23 +70,23 @@ class FreeChatCell: UICollectionViewCell, UICollectionViewDataSource, UICollecti
     }
     
     //MARK: - Updating UI with singleton instance and fetch method -
-//    func fetchFreeChatData() {
-//        firestoreService.fetchDataForFreeChat { [weak self] model, error  in
-//            guard let self = self else { return }
-//            if let error = error {
-//                print("\(error.localizedDescription)")
-//                return
-//            }
-//            DispatchQueue.main.async {
-//                if !model.isEmpty {
-//                    self.freeChatArray = model
-//                    self.collectionView.reloadData()
-//                } else {
-//                    print("Model is empty")
-//                }
-//            }
-//        }
-//    }
+    func fetchFreeChatData() {
+        firestoreService.fetchDataForFreeChat { [weak self] model, error  in
+            guard let self = self else { return }
+            if let error = error {
+                print("\(error.localizedDescription)")
+                return
+            }
+            DispatchQueue.main.async {
+                if !model.isEmpty {
+                    self.freeChatArray = model
+                    self.collectionView.reloadData()
+                } else {
+                    print("Model is empty")
+                }
+            }
+        }
+    }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

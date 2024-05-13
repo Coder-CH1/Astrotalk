@@ -85,14 +85,14 @@ class AstrologersCell: UICollectionViewCell, UICollectionViewDataSource, UIColle
     
     //MARK: - Updating UI with singleton instance and fetch method -
     func fetchAstrologersData() {
-        firestoreService.fetchDataForAstrologers { astrologerModels, error in
+        firestoreService.fetchDataForAstrologers { [weak self] astrologerModels, error in
             if let error = error {
                 print("Error fetching astrologers: \(error.localizedDescription)")
                 
             } else {
-                self.astrologerModel.append(contentsOf: astrologerModels)
+                self?.astrologerModel.append(contentsOf: astrologerModels)
                 DispatchQueue.main.async {
-                    self.collectionView.reloadData()
+                    self?.collectionView.reloadData()
                 }
             }
         }

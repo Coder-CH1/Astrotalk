@@ -76,13 +76,13 @@ class AstromallShopCell: UICollectionViewCell, UICollectionViewDataSource, UICol
     
     //MARK: - Updating UI with singleton instance and fetch method -
     func fetchAstroMallShopData() {
-        firestoreService.fetchDataForAstroMallShop { data, error in
+        firestoreService.fetchDataForAstroMallShop { [weak self] data, error in
             if let error = error {
                 print("\(error.localizedDescription)")
             } else {
-                self.astroMallShopArray.append(contentsOf: data)
+                self?.astroMallShopArray.append(contentsOf: data)
                 DispatchQueue.main.async {
-                    self.collectionView.reloadData()
+                    self?.collectionView.reloadData()
                 }
             }
         }

@@ -94,13 +94,13 @@ class AstroTalkCell: UICollectionViewCell, UICollectionViewDataSource, UICollect
     
     //MARK: - Updating UI with singleton instance and fetch method -
     func fetchAstroTalkData() {
-        firestoreService.fetchDataForAstroTalkNews { data, error in
+        firestoreService.fetchDataForAstroTalkNews {[weak self] data, error in
             if let error = error {
                 print("\(error.localizedDescription)")
             } else {
-                self.astroTalkArray.append(contentsOf: data)
+                self?.astroTalkArray.append(contentsOf: data)
                 DispatchQueue.main.async {
-                    self.collectionView.reloadData()
+                    self?.collectionView.reloadData()
                 }
             }
         }
