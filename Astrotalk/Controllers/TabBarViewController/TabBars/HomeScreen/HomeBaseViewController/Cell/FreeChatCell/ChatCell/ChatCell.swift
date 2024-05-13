@@ -61,7 +61,7 @@ class ChatCell: UICollectionViewCell {
     
     //MARK: Configuring the cell objects and Data model -
         func configure(model: FreeChatModel) {
-            for (key, value) in model.fields {
+            for (_, value) in model.fields {
                 if let url = URL(string: value){
                     img.kf.setImage(with: url)
                 } else {

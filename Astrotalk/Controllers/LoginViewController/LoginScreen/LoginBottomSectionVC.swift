@@ -104,7 +104,7 @@ extension LoginBottomSectionVC {
     //MARK: - Function to check astrologers and users for login flow -
     func navigateToHomeScreen() {
         if Auth.auth().currentUser?.uid == "TbzC8naSFrMRyZbLCgNJUUzxYMJ2" {
-            let astrologerVC = AstrologerProfileViewController()
+            _ = AstrologerProfileViewController()
             let astrologerProfileVC = AstrologerProfileViewController()
             self.navigationController?.pushViewController(astrologerProfileVC, animated: false)
         } else {

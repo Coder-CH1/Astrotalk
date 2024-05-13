@@ -99,7 +99,7 @@ class FirestoreService {
             
             if snapshot.isEmpty {
                 print("No documents found for liveAstrologer")
-                completion([], error)
+                completion([], nil)
                 return
             }
             let liveAstrologerModels = snapshot.documents.compactMap { document in
@@ -107,8 +107,7 @@ class FirestoreService {
                 document.data().forEach { key, value in
                     fields[key] = "\(value)"
                 }
-                return
-                LiveAstrologersModel(fields: fields)
+               return LiveAstrologersModel(fields: fields)
             }
             completion(liveAstrologerModels, nil)
         }
@@ -134,7 +133,7 @@ class FirestoreService {
             
             if snapshot.isEmpty {
                 print("No documents found for liveAstrologer")
-                completion([], error)
+                completion([], nil)
                 return
             }
             
@@ -143,8 +142,7 @@ class FirestoreService {
                 document.data().forEach { key, value in
                     fields[key] = "\(value)"
                 }
-                return
-                AstrologersModel(fields: fields)
+               return AstrologersModel(fields: fields)
             }
             completion(astrologerModels, nil)
         }
@@ -198,7 +196,7 @@ class FirestoreService {
             
             if snapshot.isEmpty {
                 print("No documents found for astroMallShop")
-                completion([], error)
+                completion([], nil)
                 return
             }
             
@@ -207,8 +205,7 @@ class FirestoreService {
                 document.data().forEach { key, value in
                     fields[key] = "\(value)"
                 }
-                return
-                AstroMallShopModel(fields: fields)
+               return AstroMallShopModel(fields: fields)
             }
             completion(astroMallShopModel, nil)
         }
