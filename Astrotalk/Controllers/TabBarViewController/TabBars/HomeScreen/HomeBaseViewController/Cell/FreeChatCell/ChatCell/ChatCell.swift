@@ -60,13 +60,15 @@ class ChatCell: UICollectionViewCell {
         )}
     
     //MARK: Configuring the cell objects and Data model -
-    func configure(model: FreeChatModel) {
-        print("configuring model for free chat: \(model)")
-        let url = URL(string: model.imageUrl)
-        img.kf.setImage(with: url)
-        label.text = model.title
-    }
-    
+        func configure(model: FreeChatModel) {
+            for (key, value) in model.fields {
+                if let url = URL(string: value){
+                    img.kf.setImage(with: url)
+                } else {
+                    label.text = value
+                }
+            }
+        }
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

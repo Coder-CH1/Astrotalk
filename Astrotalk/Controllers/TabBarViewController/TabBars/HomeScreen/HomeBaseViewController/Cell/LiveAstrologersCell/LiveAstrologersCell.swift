@@ -79,10 +79,11 @@ class LiveAstrologersCell: UICollectionViewCell, UICollectionViewDataSource, UIC
         firestoreService.fetchDataForLiveAstrologers { model, error in
             if let error = error {
                 print("\(error.localizedDescription)")
-            }
-            self.liveAstrologerArray.append(contentsOf: model)
-            DispatchQueue.main.async {
-                self.collectionView.reloadData()
+            } else {
+                self.liveAstrologerArray.append(contentsOf: model)
+                DispatchQueue.main.async {
+                    self.collectionView.reloadData()
+                }
             }
         }
     }

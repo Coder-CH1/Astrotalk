@@ -88,11 +88,12 @@ class AstrologersCell: UICollectionViewCell, UICollectionViewDataSource, UIColle
         firestoreService.fetchDataForAstrologers { astrologerModels, error in
             if let error = error {
                 print("Error fetching astrologers: \(error.localizedDescription)")
-                return
-            }
-            self.astrologerModel.append(contentsOf: astrologerModels)
-            DispatchQueue.main.async {
-                self.collectionView.reloadData()
+                
+            } else {
+                self.astrologerModel.append(contentsOf: astrologerModels)
+                DispatchQueue.main.async {
+                    self.collectionView.reloadData()
+                }
             }
         }
     }

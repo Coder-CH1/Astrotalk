@@ -90,9 +90,9 @@ extension LoginBottomSectionVC {
                     print("Firebase Sign-In error: \(error.localizedDescription)")
                     return
                 }
-                guard let currentUser = Auth.auth().currentUser else { return }
+               guard let currentUser = Auth.auth().currentUser else { return }
                 
-                let userEmail = currentUser.email ?? ""
+                guard let userEmail = currentUser.email else {return}
                 self?.saveUserEmailToDB(email: userEmail)
                 self?.saveAstrologersEmailToDB(email: userEmail)
                 self?.dismiss(animated: false)

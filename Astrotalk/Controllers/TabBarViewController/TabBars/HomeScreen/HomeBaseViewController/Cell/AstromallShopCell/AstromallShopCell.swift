@@ -79,10 +79,11 @@ class AstromallShopCell: UICollectionViewCell, UICollectionViewDataSource, UICol
         firestoreService.fetchDataForAstroMallShop { data, error in
             if let error = error {
                 print("\(error.localizedDescription)")
-            }
-            self.astroMallShopArray.append(contentsOf: data)
-            DispatchQueue.main.async {
-                self.collectionView.reloadData()
+            } else {
+                self.astroMallShopArray.append(contentsOf: data)
+                DispatchQueue.main.async {
+                    self.collectionView.reloadData()
+                }
             }
         }
     }

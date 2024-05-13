@@ -89,10 +89,11 @@ class LatestBlogCell: UICollectionViewCell, UICollectionViewDataSource, UICollec
         firestoreService.fetchDataForLatestBlog { latestBlogModel, error in
             if let error = error {
                 print("\(error.localizedDescription)")
-            }
-            DispatchQueue.main.async {
-                self.latestblogArray.append(contentsOf: latestBlogModel)
-                self.collectionView.reloadData()
+            } else {
+                DispatchQueue.main.async {
+                    self.latestblogArray.append(contentsOf: latestBlogModel)
+                    self.collectionView.reloadData()
+                }
             }
         }
     }

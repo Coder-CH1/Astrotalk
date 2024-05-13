@@ -16,6 +16,37 @@ class FirestoreService {
     private init() {}
     
     //MARK: - Fetches dictionary of data saved in Firestore
+//    func fetchDataForFreeChat(completion: @escaping ([FreeChatModel], Error?) -> Void) {
+//        let database = Firestore.firestore()
+//        let query = database.collection("section1")
+//        query.getDocuments { querySnapshot, error in
+//            if let error = error {
+//                print("Error fetching free chat: \(error.localizedDescription)")
+//                completion([], error)
+//                return
+//            }
+//            guard let snapshot = querySnapshot else {
+//                print("No documents found for free chat")
+//                completion([], error)
+//                return
+//            }
+//
+//            if snapshot.isEmpty {
+//                print("No documents found for free chat")
+//                completion([], nil)
+//                return
+//            }
+//
+//            let freeChatModels = snapshot.documents.compactMap { document in
+//                var fields: [String: String] = [:]
+//                document.data().forEach { key, value in
+//                    fields[key] = "\(value)"
+//                }
+//                FreeChatModel(fields: fields)
+//            }
+//            completion(freeChatModels, nil)
+//        }
+//    }
     func fetchDataForFreeChat(completion: @escaping ([FreeChatModel], Error?) -> Void) {
         let database = Firestore.firestore()
         let query = database.collection("section1")
@@ -30,23 +61,24 @@ class FirestoreService {
                 completion([], error)
                 return
             }
+            
             if snapshot.isEmpty {
                 print("No documents found for free chat")
-                completion([], error)
+                completion([], nil)
                 return
             }
             
-            var data: [FreeChatModel] = []
-            for document in snapshot.documents {
-                let imageUrl = document.get("imageUrl") as? String ?? ""
-                let label = document.get("section1Title") as? String ?? ""
-                let model = FreeChatModel(imageUrl: imageUrl, title: label)
-                data.append(model)
+            let freeChatModels = snapshot.documents.compactMap { document in
+                var fields: [String: String] = [:]
+                document.data().forEach { key, value in
+                    fields[key] = "\(value)"
+                }
+                return FreeChatModel(fields: fields)
             }
-            
-            completion(data, nil)
+            completion(freeChatModels, nil) // Passing freeChatModels to completion
         }
     }
+
     
     //MARK: - Fetches dictionary of data saved in Firestore
     func fetchDataForLiveAstrologers(completion: @escaping ([LiveAstrologersModel], Error?) -> Void) {
@@ -143,7 +175,6 @@ class FirestoreService {
                 }
                 return LatestBlogModel(fields: fields)
             }
-            
             completion(latestBlogModels, nil)
         }
     }

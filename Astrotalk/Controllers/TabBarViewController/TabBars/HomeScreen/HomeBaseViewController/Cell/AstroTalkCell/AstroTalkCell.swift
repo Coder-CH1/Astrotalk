@@ -82,7 +82,8 @@ class AstroTalkCell: UICollectionViewCell, UICollectionViewDataSource, UICollect
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let vc = MessageViewController()
+        //let vc = MessageViewController()
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
@@ -96,10 +97,11 @@ class AstroTalkCell: UICollectionViewCell, UICollectionViewDataSource, UICollect
         firestoreService.fetchDataForAstroTalkNews { data, error in
             if let error = error {
                 print("\(error.localizedDescription)")
-            }
-            self.astroTalkArray.append(contentsOf: data)
-            DispatchQueue.main.async {
-                self.collectionView.reloadData()
+            } else {
+                self.astroTalkArray.append(contentsOf: data)
+                DispatchQueue.main.async {
+                    self.collectionView.reloadData()
+                }
             }
         }
     }

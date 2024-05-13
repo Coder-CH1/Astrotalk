@@ -27,12 +27,9 @@ struct DailyHoroscopeModel:  Codable
 }
 
 struct FreeChatModel:  Codable{
-    let imageUrl: String
-    let title: String
-    
-    init(imageUrl: String, title: String) {
-        self.imageUrl = imageUrl
-        self.title = title
+    var fields: [String: String]
+    init(fields: [String : String]) {
+        self.fields = fields
     }
 }
 
