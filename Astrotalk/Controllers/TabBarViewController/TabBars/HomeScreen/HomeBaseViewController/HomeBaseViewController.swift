@@ -8,7 +8,6 @@
 import UIKit
 
 // MARK: -
-
 class HomeBaseViewController: UIViewController {
     
     // MARK: - UI -
@@ -146,13 +145,13 @@ extension HomeBaseViewController: SideBarViewControllerDelegate {
         }
         topView.isHidden = true
         parentCollectionView.isHidden = true
-        leftSticker.isHidden = true
-        rightSticker.isHidden = true
         
         overlayView = UIView(frame: CGRect(x: Int(sideBarWidth), y: 0, width: Int(self.sideBarWidth), height: Int(self.view.frame.height)))
         overlayView.backgroundColor = UIColor.black.withAlphaComponent(0.5)
         view.addSubview(overlayView)
         view.bringSubviewToFront(sideBarViewController.view)
+        leftSticker.isHidden = true
+        rightSticker.isHidden = true
     }
     
     // MARK: - Function to hide sidebar -
@@ -426,4 +425,3 @@ extension HomeBaseViewController: ViewAllAstroShopButtonDelegate {
         navigationController?.pushViewController(vc, animated: false)
     }
 }
-

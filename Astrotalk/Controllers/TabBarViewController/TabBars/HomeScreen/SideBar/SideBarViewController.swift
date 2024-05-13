@@ -189,5 +189,4 @@ extension SideBarViewController {
         navigationController?.pushViewController(vc, animated: false)
         self.navigationController?.navigationBar.tintColor = .black
     }
-    
 }
