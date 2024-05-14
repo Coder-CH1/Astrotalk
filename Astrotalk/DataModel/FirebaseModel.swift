@@ -33,7 +33,7 @@ struct FreeChatModel:  Codable{
     }
 }
 
-struct LiveAstrologersModel: Codable{
+struct LiveAstrologersModel: Equatable{
     var fields: [String: String]
     init(fields: [String : String]) {
         self.fields = fields
