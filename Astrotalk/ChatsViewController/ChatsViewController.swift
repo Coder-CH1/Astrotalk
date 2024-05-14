@@ -33,33 +33,22 @@ class ChatsViewController: UIViewController, UITableViewDataSource, UITableViewD
     //MARK: - Lifecyle -
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetch()
+        fetchUsersFromDB()
     }
     
     //MARK: - Fetching Multiple Dictionary Registered users from Database -
-//    func fetchUsersFromDB() {
-//        dbRef.child("messages").observe(.childAdded, with: { [weak self] (snapshot) in
-//            guard let self = self else { return }
-//            if let messageData = snapshot.value as? [String: String],
-//               let messageText = messageData["message"],
-//               let sender = messageData["sender"] {
-//                let chatMessage = Chats(text: messageText, sender: sender)
-//                self.messages.append(chatMessage)
-//                self.chatsTableView.reloadData()
-//            }
-//        })
-//        subviewsAndLayout()
-//    }
-    func fetch() {
-        dbRef.child("messages").observe(.childAdded) { [weak self] snapshot in
-            guard let messageData = snapshot.value as? [String: String] else {return}
-            let messageText = messageData["message"] ?? ""
-            let sender = messageData["sender"] ?? ""
-            let recipient = messageData["recipient"] ?? ""
-            let message = Chats(text: messageText, sender: sender, recipient: recipient)
-            self?.messages.append(message)
-            self?.chatsTableView.reloadData()
-        }
+    func fetchUsersFromDB() {
+        dbRef.child("messages").observe(.childAdded, with: { [weak self] (snapshot) in
+            guard let self = self else { return }
+            if let messageData = snapshot.value as? [String: String],
+               let messageText = messageData["message"],
+               let sender = messageData["sender"] {
+                let chatMessage = Chats(text: messageText, sender: sender)
+                self.messages.append(chatMessage)
+                self.chatsTableView.reloadData()
+            }
+        })
+        subviewsAndLayout()
     }
 }
 
@@ -79,12 +68,10 @@ extension ChatsViewController {
             cell.bubbleChatsView.backgroundColor = .systemYellow
             cell.chatsLabel.text = message.text
             cell.chatsLabel.textColor = .lightGray
-            cell.chatsLabel.textAlignment = .right
         } else {
             cell.bubbleChatsView.backgroundColor = .lightGray
             cell.chatsLabel.text = message.text
             cell.chatsLabel.textColor = .systemYellow
-            cell.chatsLabel.textAlignment = .left
         }
         return cell
     }

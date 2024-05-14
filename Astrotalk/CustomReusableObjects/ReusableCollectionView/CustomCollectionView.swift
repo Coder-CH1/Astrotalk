@@ -31,8 +31,8 @@ class CustomCollectionView: UICollectionView, UICollectionViewDataSource, UIColl
     func customizeCollectionView() {
         layout.scrollDirection = .vertical
         layout.minimumInteritemSpacing = 2
-        layout.minimumLineSpacing = 10
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        layout.minimumLineSpacing = 15
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 5, right: 0)
         self.collectionViewLayout = layout
         self.delegate = self
         self.dataSource = self
@@ -58,7 +58,7 @@ class CustomCollectionView: UICollectionView, UICollectionViewDataSource, UIColl
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CustomCell", for: indexPath) as! CustomCell
-        cell.layer.shadowColor = UIColor.systemGray3.cgColor
+        cell.layer.shadowColor = UIColor.lightGray.cgColor
         cell.backgroundColor = .white
         cell.layer.shadowOpacity = 10
         cell.layer.shadowOffset = CGSize(width: 10, height: 10)
