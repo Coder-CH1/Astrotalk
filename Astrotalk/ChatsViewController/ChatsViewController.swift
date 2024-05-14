@@ -65,13 +65,13 @@ extension ChatsViewController {
         let currentUserUID = Auth.auth().currentUser?.uid
         let isCurrentUser = message.sender == currentUserUID
         if isCurrentUser {
-            cell.bubbleChatsView.backgroundColor = .systemYellow
-            cell.chatsLabel.text = message.text
-            cell.chatsLabel.textColor = .lightGray
+            cell.rightAlignedLabel.text = message.text
+            cell.rightAlignedLabel.textColor = .lightGray
+            cell.rightAlignedLabel.textAlignment = .right
         } else {
-            cell.bubbleChatsView.backgroundColor = .lightGray
-            cell.chatsLabel.text = message.text
-            cell.chatsLabel.textColor = .systemYellow
+            cell.leftAlignedLabel.text = message.text
+            cell.leftAlignedLabel.textColor = .systemYellow
+            cell.leftAlignedLabel.textAlignment = .left
         }
         return cell
     }
