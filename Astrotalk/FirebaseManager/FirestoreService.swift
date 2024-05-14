@@ -47,6 +47,7 @@ class FirestoreService {
 //            completion(freeChatModels, nil)
 //        }
 //    }
+    
     func fetchDataForFreeChat(completion: @escaping ([FreeChatModel], Error?) -> Void) {
         let database = Firestore.firestore()
         let query = database.collection("section1")

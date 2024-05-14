@@ -12,7 +12,6 @@ class LiveCell: UICollectionViewCell {
     
     //MARK: - UI -
     let identifier = "LiveCell"
-    let containerView = CustomView(color: .white)
     let img = ImageView(image: UIImage(systemName: ""))
     let labelName = Label(label: "", textColor: .black, font: UIFont.systemFont(ofSize: 12, weight: .regular))
     
@@ -24,23 +23,17 @@ class LiveCell: UICollectionViewCell {
     
     // MARK: - Subviews and Layout -
     func setSubviewsAndLayout() {
-        addSubview(containerView)
-        containerView.addSubview(img)
-        containerView.addSubview(labelName)
+        addSubview(img)
+        addSubview(labelName)
         NSLayoutConstraint.activate([
-            containerView.topAnchor.constraint(equalTo: topAnchor),
-            containerView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            containerView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            containerView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            
-            img.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 10),
-            img.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),
+            img.topAnchor.constraint(equalTo: topAnchor, constant: 10),
+            img.centerXAnchor.constraint(equalTo: centerXAnchor),
             img.widthAnchor.constraint(equalToConstant: 60),
             img.heightAnchor.constraint(equalToConstant: 60),
             
             labelName.topAnchor.constraint(equalTo: img.bottomAnchor, constant: 5),
-            labelName.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),
-            labelName.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -10)
+            labelName.centerXAnchor.constraint(equalTo: centerXAnchor),
+            labelName.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10)
         ])
     }
     
