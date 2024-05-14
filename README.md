@@ -20,6 +20,7 @@ The project is built using Programmatic UI and MVVM (Model-View-ViewModel) archi
 - Link Presentation Framework for presenting web contents
 - Subclassing and composite design patterns for reusable view controllers
 - Programmatic UI and MVVM architecture
+- Singleton design pattern for a global access of the fetching of data implemented in the project.
 
 ### Work in Progress
 
