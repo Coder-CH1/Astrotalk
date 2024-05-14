@@ -7,7 +7,7 @@ Replicated the Astrotalk app
 
 This is an iOS project that replicates the AstroTalk app, using a combination of subclassing and composite design patterns to reuse view controllers.
 The app utilizes Firebase for storing and saving data, as well as for chatting features.
-Kingfisher is used for downloading and caching images stored in Firebase, and Link Presentation Framework is used for presenting web contents within the app, UI testing of the Sign in.
+Kingfisher is used for downloading and caching url images stored in Firebase, and Link Presentation Framework is used for presenting web contents saved in Firebase within the app, UI testing of the Sign in.
 
 ### Architecture
 
