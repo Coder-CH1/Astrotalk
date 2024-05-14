@@ -1,7 +1,7 @@
 # Astrotalk
 Replicated the Astrotalk app
 
-# AstroTalk App Replica
+## AstroTalk App Replica
 
 *Overview*
 
