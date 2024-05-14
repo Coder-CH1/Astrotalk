@@ -38,4 +38,4 @@ Note that this project is still a work in progress, with the following features 
 - Cocoapod
 - Realm
 
-## Be right back😝
+## Be right back😍
