@@ -35,6 +35,7 @@ class ChatsTableViewCell: UITableViewCell {
             bubbleChatsView.topAnchor.constraint(equalTo: topAnchor, constant: 16),
             bubbleChatsView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -14),
             bubbleChatsView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -20),
+            bubbleChatsView.widthAnchor.constraint(equalToConstant: 200),
             
             chatsLabel.topAnchor.constraint(equalTo: bubbleChatsView.topAnchor, constant: 5),
             chatsLabel.leadingAnchor.constraint(equalTo: bubbleChatsView.leadingAnchor, constant: 5),

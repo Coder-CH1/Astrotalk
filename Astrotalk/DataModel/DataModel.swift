@@ -123,5 +123,6 @@ struct Member {
 struct Chats {
     let text: String
     let sender: String
+    let recipient: String
 }
 

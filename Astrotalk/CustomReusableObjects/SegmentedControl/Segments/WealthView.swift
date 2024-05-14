@@ -17,6 +17,7 @@ class WealthView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setSubviewsAndLayout()
+        backgroundColor = .systemGray5
     }
     
     // MARK: - Subviews and Layout -

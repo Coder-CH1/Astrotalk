@@ -36,6 +36,7 @@ class CustomCollectionView: UICollectionView, UICollectionViewDataSource, UIColl
         self.collectionViewLayout = layout
         self.delegate = self
         self.dataSource = self
+        self.layer.cornerRadius = 10
         self.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: footerHeight, right: 0)
         self.showsVerticalScrollIndicator = false
         self.translatesAutoresizingMaskIntoConstraints = false

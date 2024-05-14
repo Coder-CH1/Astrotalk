@@ -22,6 +22,7 @@ class ChatsViewController: UIViewController, UITableViewDataSource, UITableViewD
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.separatorStyle = .none
         tableView.register(ChatsTableViewCell.self, forCellReuseIdentifier: "ChatsTableViewCell")
         return tableView
     }()
@@ -32,24 +33,34 @@ class ChatsViewController: UIViewController, UITableViewDataSource, UITableViewD
     //MARK: - Lifecyle -
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchUsersFromDB()
+        fetch()
     }
     
     //MARK: - Fetching Multiple Dictionary Registered users from Database -
-    func fetchUsersFromDB() {
-        dbRef.child("messages").observe(.childAdded, with: { [weak self] (snapshot) in
-            guard let self = self else { return }
-            if let messageData = snapshot.value as? [String: String],
-               let messageText = messageData["message"],
-               let sender = messageData["sender"] {
-                let chatMessage = Chats(text: messageText, sender: sender)
-                self.messages.append(chatMessage)
-                self.chatsTableView.reloadData()
-            }
-        })
-        subviewsAndLayout()
+//    func fetchUsersFromDB() {
+//        dbRef.child("messages").observe(.childAdded, with: { [weak self] (snapshot) in
+//            guard let self = self else { return }
+//            if let messageData = snapshot.value as? [String: String],
+//               let messageText = messageData["message"],
+//               let sender = messageData["sender"] {
+//                let chatMessage = Chats(text: messageText, sender: sender)
+//                self.messages.append(chatMessage)
+//                self.chatsTableView.reloadData()
+//            }
+//        })
+//        subviewsAndLayout()
+//    }
+    func fetch() {
+        dbRef.child("messages").observe(.childAdded) { [weak self] snapshot in
+            guard let messageData = snapshot.value as? [String: String] else {return}
+            let messageText = messageData["message"] ?? ""
+            let sender = messageData["sender"] ?? ""
+            let recipient = messageData["recipient"] ?? ""
+            let message = Chats(text: messageText, sender: sender, recipient: recipient)
+            self?.messages.append(message)
+            self?.chatsTableView.reloadData()
+        }
     }
-    
 }
 
 //MARK: - DataSource, Delegate -
@@ -61,8 +72,8 @@ extension ChatsViewController {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ChatsTableViewCell", for: indexPath) as! ChatsTableViewCell
-        let currentUserUID = Auth.auth().currentUser?.uid
         let message = messages[indexPath.row]
+        let currentUserUID = Auth.auth().currentUser?.uid
         let isCurrentUser = message.sender == currentUserUID
         if isCurrentUser {
             cell.bubbleChatsView.backgroundColor = .systemYellow
@@ -79,7 +90,7 @@ extension ChatsViewController {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 300
+        return 100
     }
     
     // MARK: - Subviews and Layout -
