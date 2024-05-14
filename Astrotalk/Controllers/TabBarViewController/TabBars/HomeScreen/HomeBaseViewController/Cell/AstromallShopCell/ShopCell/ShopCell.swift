@@ -13,7 +13,6 @@ class ShopCell: UICollectionViewCell {
     
     //MARK: - UI -
     let identifier = "ShopCell"
-    let containerView = CustomView(color: .white)
     let img = ImageView(image: UIImage(systemName: ""))
     let labelName = Label(label: "", textColor: .white, font: UIFont.systemFont(ofSize: 18, weight: .semibold))
     
@@ -26,19 +25,13 @@ class ShopCell: UICollectionViewCell {
     
     // MARK: - Subviews and Layout -
     func setSubviewsAndLayout() {
-        addSubview(containerView)
-        containerView.addSubview(img)
+        addSubview(img)
         img.addSubview(labelName)
         NSLayoutConstraint.activate([
-            containerView.topAnchor.constraint(equalTo: topAnchor),
-            containerView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            containerView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            containerView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            
-            img.topAnchor.constraint(equalTo: containerView.topAnchor),
-            img.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
-            img.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
-            img.bottomAnchor.constraint(equalTo: containerView.bottomAnchor),
+            img.topAnchor.constraint(equalTo: topAnchor),
+            img.leadingAnchor.constraint(equalTo: leadingAnchor),
+            img.trailingAnchor.constraint(equalTo: trailingAnchor),
+            img.bottomAnchor.constraint(equalTo: bottomAnchor),
             
             labelName.centerXAnchor.constraint(equalTo: img.centerXAnchor),
             labelName.centerYAnchor.constraint(equalTo: img.centerYAnchor),
@@ -47,7 +40,7 @@ class ShopCell: UICollectionViewCell {
     
     //MARK: Configuring the cell objects and Data model -
     func configure(model: AstroMallShopModel) {
-        for (key, value) in model.fields {
+        for (_, value) in model.fields {
             print("configuring model for shop: \(value)")
             if let url = URL(string: value){
                 img.kf.setImage(with: url)

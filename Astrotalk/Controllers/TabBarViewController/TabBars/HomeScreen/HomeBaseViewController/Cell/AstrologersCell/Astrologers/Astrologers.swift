@@ -13,7 +13,6 @@ class Astrologers: UICollectionViewCell {
     
     //MARK: - UI -
     let identifier = "Astrologers"
-    let containerView = CustomView(color: .white)
     let img = ImageView(image: UIImage(systemName: ""))
     let labelName = Label(label: "", textColor: .black, font: UIFont.systemFont(ofSize: 12, weight: .regular))
     let chatButton = Button(image: UIImage(systemName: ""), text: "", btnTitleColor: .green, backgroundColor: .clear, radius: 8, imageColor: .clear)
@@ -29,26 +28,20 @@ class Astrologers: UICollectionViewCell {
     
     // MARK: - Subviews and Layout -
     func setSubviewsAndLayout() {
-        addSubview(containerView)
-        containerView.addSubview(img)
-        containerView.addSubview(labelName)
-        containerView.addSubview(chatButton)
+        addSubview(img)
+        addSubview(labelName)
+        addSubview(chatButton)
         NSLayoutConstraint.activate([
-            containerView.topAnchor.constraint(equalTo: topAnchor),
-            containerView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            containerView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            containerView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            
-            img.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 20),
-            img.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),
+            img.topAnchor.constraint(equalTo: topAnchor, constant: 20),
+            img.centerXAnchor.constraint(equalTo: centerXAnchor),
             img.heightAnchor.constraint(equalToConstant: 70),
             img.widthAnchor.constraint(equalToConstant: 70),
             
             labelName.topAnchor.constraint(equalTo: img.bottomAnchor, constant: 10),
-            labelName.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),
+            labelName.centerXAnchor.constraint(equalTo: centerXAnchor),
             
-            chatButton.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -20),
-            chatButton.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),
+            chatButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -20),
+            chatButton.centerXAnchor.constraint(equalTo: centerXAnchor),
             chatButton.widthAnchor.constraint(equalToConstant: 70),
             chatButton.heightAnchor.constraint(equalToConstant: 30),
         ])

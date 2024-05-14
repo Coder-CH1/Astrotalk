@@ -14,7 +14,6 @@ class BlogCell: UICollectionViewCell {
     
     //MARK: - UI -
     let identifier = "BlogCell"
-    let containerView = CustomView(color: .white)
     var linkView: LPLinkView?
     
     //MARK: - Lifecycle -
@@ -24,21 +23,15 @@ class BlogCell: UICollectionViewCell {
     }
     
     private func setupLinkView() {
-        addSubview(containerView)
         let linkView = LPLinkView()
         linkView.translatesAutoresizingMaskIntoConstraints = false
-        containerView.addSubview(linkView)
+        addSubview(linkView)
         self.linkView = linkView
         NSLayoutConstraint.activate([
-            containerView.topAnchor.constraint(equalTo: topAnchor),
-            containerView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            containerView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            containerView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            
-            linkView.topAnchor.constraint(equalTo: containerView.topAnchor),
-            linkView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
-            linkView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
-            linkView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor)
+            linkView.topAnchor.constraint(equalTo: topAnchor),
+            linkView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            linkView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            linkView.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
     }
     
