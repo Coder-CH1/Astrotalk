@@ -25,7 +25,7 @@ The project is built using Programmatic UI and MVVM (Model-View-ViewModel) archi
 
 Note that this project is still a work in progress, with the following features still to be implemented:
 - Completion of chat features
-- Astrologers screens
+- Astrologers screens and the implementation between Astrologers and Users of the App.
 
 ### Technologies Used
 
