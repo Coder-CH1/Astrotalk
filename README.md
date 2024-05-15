@@ -25,11 +25,11 @@ The project is built using Programmatic UI and MVVM (Model-View-ViewModel) archi
 ### Work in Progress
 
 Note that this project is still a work in progress, with the following features still to be implemented:
-- Completion of chat features
+- Completion of chat features.
 - Astrologers screens and the implementation between Astrologers and Users of the App.
 - Unit testing.
-- Sidebarviewcontroller contents screens
-- Pooja tabbar 
+- Sidebarviewcontroller contents screens.
+- Pooja, Call and Live tabbar functionalities.
 
 ### Technologies Used
 
