@@ -28,6 +28,8 @@ Note that this project is still a work in progress, with the following features 
 - Completion of chat features
 - Astrologers screens and the implementation between Astrologers and Users of the App.
 - Unit testing.
+- Sidebarviewcontroller contents screens
+- Pooja tabbar 
 
 ### Technologies Used
 
