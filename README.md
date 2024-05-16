@@ -29,7 +29,6 @@ Note that this project is still a work in progress, with the following features 
 - Astrologers screens and the implementation between Astrologers and Users of the App.
 - Unit testing.
 - Sidebarviewcontroller contents screens.
-- Pooja, Call and Live tabbar functionalities.
 
 ### Technologies Used
 
