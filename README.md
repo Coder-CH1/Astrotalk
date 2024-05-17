@@ -29,6 +29,7 @@ Note that this project is still a work in progress, with the following features 
 - Astrologers screens and the implementation between Astrologers and Users of the App.
 - Unit testing.
 - Sidebarviewcontroller contents screens.
+- Coordinator Design Pattern.
 
 ### Technologies Used
 
