@@ -12,6 +12,7 @@ class CustomChatCollectionView: UICollectionView, UICollectionViewDataSource, UI
     
     //MARK: - Object initialization -
     var astrologerDelegate: ViewProfileAstrologersDelegate?
+    var astrologersDelegate: ReusableCollectionViewDelegate?
     let firestoreService = FirestoreService.shared
     var astrologerModel: [AstrologersModel] = []
     private let reuseIdentifier = "CustomChatCell"
@@ -65,7 +66,6 @@ class CustomChatCollectionView: UICollectionView, UICollectionViewDataSource, UI
         let data = astrologerModel[indexPath.item]
         cell.configure(model: data)
         cell.layer.cornerRadius = 8
-        
         return cell
     }
     
@@ -81,7 +81,7 @@ class CustomChatCollectionView: UICollectionView, UICollectionViewDataSource, UI
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        self.astrologerDelegate?.viewProfileAstrologersButtonCellTap()
+        self.astrologerDelegate?.viewProfileAstrologersButtonCellTap(at: indexPath.item)
     }
     
     //MARK: - Fetches Dictionary Data from Firestore -

@@ -62,5 +62,9 @@ protocol StickerButtonVisibilityDelegate {
 }
 
 protocol ViewProfileAstrologersDelegate {
-    func viewProfileAstrologersButtonCellTap()
+    func viewProfileAstrologersButtonCellTap(at Index: Int)
+}
+
+protocol ReusableCollectionViewDelegate {
+    func presentViewController(from cell: CustomChatCell)
 }

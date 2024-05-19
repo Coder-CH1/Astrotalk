@@ -80,7 +80,7 @@ class CustomCallCollectionView: UICollectionView,  UICollectionViewDataSource, U
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        self.astrologerDelegate?.viewProfileAstrologersButtonCellTap()
+        self.astrologerDelegate?.viewProfileAstrologersButtonCellTap(at: indexPath.item)
     }
     
     //MARK: - Fetches Dictionary Data from Firestore -

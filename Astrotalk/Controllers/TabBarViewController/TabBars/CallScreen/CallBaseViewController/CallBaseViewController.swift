@@ -144,14 +144,23 @@ class CallBaseViewController: UIViewController {
     //MARK: - Setup Custom Views representing each segment -
     func setupCustomViews() {
         callAllView.isHidden = false
+        callAllView.collection.astrologerDelegate = self
         callLoveView.isHidden = true
+        callLoveView.collection.astrologerDelegate = self
         callEducationView.isHidden = true
+        callEducationView.collection.astrologerDelegate = self
         callCareerView.isHidden = true
+        callCareerView.collection.astrologerDelegate = self
         callMarriageView.isHidden = true
+        callMarriageView.collection.astrologerDelegate = self
         callHealthView.isHidden = true
+        callHealthView.collection.astrologerDelegate = self
         callWealthView.isHidden = true
+        callWealthView.collection.astrologerDelegate = self
         callFinanceView.isHidden = true
+        callFinanceView.collection.astrologerDelegate = self
         callKidsView.isHidden = true
+        callKidsView.collection.astrologerDelegate = self
         callAllView.translatesAutoresizingMaskIntoConstraints = false
         callLoveView.translatesAutoresizingMaskIntoConstraints = false
         callEducationView.translatesAutoresizingMaskIntoConstraints = false
@@ -272,7 +281,7 @@ extension CallBaseViewController: UICollectionViewDelegate, UICollectionViewData
 }
 
 extension CallBaseViewController: ViewProfileAstrologersDelegate {
-    func viewProfileAstrologersButtonCellTap() {
+    func viewProfileAstrologersButtonCellTap(at Index: Int) {
         let vc = AstrologerProfileViewController()
         navigationController?.pushViewController(vc, animated: false)
     }

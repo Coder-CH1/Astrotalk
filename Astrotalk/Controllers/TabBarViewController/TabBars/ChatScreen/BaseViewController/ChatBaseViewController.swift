@@ -145,14 +145,23 @@ class ChatBaseViewController: UIViewController {
     //MARK: - Setup Custom Views representing each segment -
     func setupCustomViews() {
         chatAllView.isHidden = false
+        chatAllView.collection.astrologerDelegate = self
         chatLoveView.isHidden = true
+        chatLoveView.collection.astrologerDelegate = self
         chatEducationView.isHidden = true
+        chatEducationView.collection.astrologerDelegate = self
         chatCareerView.isHidden = true
+        chatCareerView.collection.astrologerDelegate = self
         chatMarriageView.isHidden = true
+        chatMarriageView.collection.astrologerDelegate = self
         chatHealthView.isHidden = true
+        chatHealthView.collection.astrologerDelegate = self
         chatWealthView.isHidden = true
+        chatWealthView.collection.astrologerDelegate = self
         chatFinanceView.isHidden = true
+        chatFinanceView.collection.astrologerDelegate = self
         chatKidsView.isHidden = true
+        chatKidsView.collection.astrologerDelegate = self
         chatAllView.translatesAutoresizingMaskIntoConstraints = false
         chatLoveView.translatesAutoresizingMaskIntoConstraints = false
         chatEducationView.translatesAutoresizingMaskIntoConstraints = false
@@ -273,8 +282,14 @@ extension ChatBaseViewController: UICollectionViewDelegate, UICollectionViewData
 }
 
 extension ChatBaseViewController: ViewProfileAstrologersDelegate {
-    func viewProfileAstrologersButtonCellTap() {
+    func viewProfileAstrologersButtonCellTap(at Index: Int) {
         let vc = AstrologerProfileViewController()
         navigationController?.pushViewController(vc, animated: false)
     }
 }
+
+//extension ChatBaseViewController: ReusableCollectionViewDelegate {
+//    func presentViewController(from cell: CustomChatCell) {
+//        guard let indexPath = 
+//    }
+//}
