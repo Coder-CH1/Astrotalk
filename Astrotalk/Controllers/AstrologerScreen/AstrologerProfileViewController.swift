@@ -18,6 +18,8 @@ class AstrologerProfileViewController: UIViewController {
     let profileName = Label(label: "Aman Preet", textColor: .black, font: UIFont.systemFont(ofSize: 14, weight: .regular))
     let profileEmail = Label(label: "", textColor: .black, font: UIFont.systemFont(ofSize: 14, weight: .bold))
     let expYrs = Label(label: "Exp: 8years", textColor: .gray, font: UIFont.systemFont(ofSize: 14, weight: .bold))
+    let lineView = CustomView(color: .lightGray)
+    let dividerView = CustomView(color: .lightGray)
     let chatButton = Button(image: UIImage(systemName: "ellipsis.message.fill"), text: "", btnTitleColor: .black, backgroundColor: .clear, radius: 0, imageColor: .gray)
     let callButton = Button(image: UIImage(systemName: "phone.fill"), text: "", btnTitleColor: .black, backgroundColor: .clear, radius: 0, imageColor: .gray)
     
@@ -29,8 +31,9 @@ class AstrologerProfileViewController: UIViewController {
     
     // MARK: - Subviews and Layout -
     func setSubviewsAndLayout() {
-        chatButton.addTarget(self, action: #selector(btnTapped), for: .touchUpInside)
-        let subviews = [topView, profileImage, profileEmail, profileName, expYrs, chatButton, callButton]
+        chatButton.addTarget(self, action: #selector(chatBtnTapped), for: .touchUpInside)
+        callButton.addTarget(self, action: #selector(callBtnTapped), for: .touchUpInside)
+        let subviews = [topView, profileImage, profileEmail, profileName, expYrs, lineView, chatButton, dividerView, callButton]
         for subview in subviews {
             view.addSubview(subview)
         }
@@ -55,18 +58,33 @@ class AstrologerProfileViewController: UIViewController {
             expYrs.topAnchor.constraint(equalTo: profileEmail.bottomAnchor, constant: 5),
             expYrs.leadingAnchor.constraint(equalTo: profileImage.trailingAnchor, constant: 20),
             
-            chatButton.topAnchor.constraint(equalTo: profileImage.bottomAnchor, constant: 50),
+            lineView.topAnchor.constraint(equalTo: profileImage.bottomAnchor, constant: 50),
+            lineView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 5),
+            lineView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -5),
+            lineView.heightAnchor.constraint(equalToConstant: 1),
+            
+            dividerView.topAnchor.constraint(equalTo: lineView.bottomAnchor, constant: 3),
+            dividerView.leadingAnchor.constraint(equalTo: chatButton.trailingAnchor, constant: 80),
+            dividerView.widthAnchor.constraint(equalToConstant: 1),
+            dividerView.heightAnchor.constraint(equalToConstant: 20),
+            
+            chatButton.topAnchor.constraint(equalTo: lineView.bottomAnchor, constant: 5),
             chatButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 80),
             
-            callButton.topAnchor.constraint(equalTo: profileImage.bottomAnchor, constant: 50),
-            callButton.leadingAnchor.constraint(equalTo: chatButton.trailingAnchor, constant: 100),
+            callButton.topAnchor.constraint(equalTo: lineView.bottomAnchor, constant: 5),
+            callButton.leadingAnchor.constraint(equalTo: dividerView.trailingAnchor, constant: 90),
         ])
         updateViews()
     }
     
     //MARK: -
-    @objc func btnTapped() {
+    @objc func chatBtnTapped() {
         let vc = MessageViewController()
+        navigationController?.pushViewController(vc, animated: false)
+    }
+    
+    @objc func callBtnTapped() {
+        let vc = CallsViewController()
         navigationController?.pushViewController(vc, animated: false)
     }
     

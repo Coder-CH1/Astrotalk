@@ -270,3 +270,10 @@ extension CallBaseViewController: UICollectionViewDelegate, UICollectionViewData
         }
     }
 }
+
+extension CallBaseViewController: ViewProfileAstrologersDelegate {
+    func viewProfileAstrologersButtonCellTap() {
+        let vc = AstrologerProfileViewController()
+        navigationController?.pushViewController(vc, animated: false)
+    }
+}

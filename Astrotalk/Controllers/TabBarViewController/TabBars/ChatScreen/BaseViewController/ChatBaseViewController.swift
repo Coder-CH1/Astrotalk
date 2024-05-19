@@ -271,3 +271,10 @@ extension ChatBaseViewController: UICollectionViewDelegate, UICollectionViewData
         }
     }
 }
+
+extension ChatBaseViewController: ViewProfileAstrologersDelegate {
+    func viewProfileAstrologersButtonCellTap() {
+        let vc = AstrologerProfileViewController()
+        navigationController?.pushViewController(vc, animated: false)
+    }
+}

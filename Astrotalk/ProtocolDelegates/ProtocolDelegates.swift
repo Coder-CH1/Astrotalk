@@ -60,3 +60,7 @@ protocol ViewAllAstroShopButtonDelegate {
 protocol StickerButtonVisibilityDelegate {
     func toggleStickerButtonsVisibility(hidden: Bool)
 }
+
+protocol ViewProfileAstrologersDelegate {
+    func viewProfileAstrologersButtonCellTap()
+}

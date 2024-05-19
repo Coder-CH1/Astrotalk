@@ -21,6 +21,7 @@
 		0422BC5F2BE9B3D100DA4D23 /* MessagesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0422BC5E2BE9B3D100DA4D23 /* MessagesCell.swift */; };
 		0422BC612BE9BFE200DA4D23 /* ChatManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0422BC602BE9BFE200DA4D23 /* ChatManager.swift */; };
 		0422BC632BE9C37C00DA4D23 /* ChatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0422BC622BE9C37C00DA4D23 /* ChatsViewController.swift */; };
+		04273B7D2BFA32C400A8BBF0 /* CallsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04273B7C2BFA32C400A8BBF0 /* CallsViewController.swift */; };
 		042AC9852BD8B82C00C1CFCD /* SideBarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042AC9842BD8B82C00C1CFCD /* SideBarCell.swift */; };
 		042AC9872BD8BA1600C1CFCD /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042AC9862BD8BA1600C1CFCD /* DataModel.swift */; };
 		042AC98A2BD8F1FB00C1CFCD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 042AC9892BD8F1FB00C1CFCD /* GoogleService-Info.plist */; };
@@ -171,6 +172,7 @@
 		0422BC5E2BE9B3D100DA4D23 /* MessagesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesCell.swift; sourceTree = "<group>"; };
 		0422BC602BE9BFE200DA4D23 /* ChatManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatManager.swift; sourceTree = "<group>"; };
 		0422BC622BE9C37C00DA4D23 /* ChatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsViewController.swift; sourceTree = "<group>"; };
+		04273B7C2BFA32C400A8BBF0 /* CallsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallsViewController.swift; sourceTree = "<group>"; };
 		042AC9842BD8B82C00C1CFCD /* SideBarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarCell.swift; sourceTree = "<group>"; };
 		042AC9862BD8BA1600C1CFCD /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		042AC9892BD8F1FB00C1CFCD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -398,6 +400,14 @@
 				049ED1292BF066E30038B7E3 /* ChatsTableViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		04273B7B2BFA329D00A8BBF0 /* CallsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				04273B7C2BFA32C400A8BBF0 /* CallsViewController.swift */,
+			);
+			path = CallsViewController;
 			sourceTree = "<group>";
 		};
 		042AC9882BD8BA2900C1CFCD /* DataModel */ = {
@@ -804,6 +814,7 @@
 				0406D6D72BCA014100E35A60 /* Delegates */,
 				0406D6D82BCA015400E35A60 /* Controllers */,
 				04917D572BD15E1C00010C2F /* ProtocolDelegates */,
+				04273B7B2BFA329D00A8BBF0 /* CallsViewController */,
 				041847402BF0EA8D008AF6B1 /* MessagesViewController */,
 				041847412BF0EAAA008AF6B1 /* ChatsViewController */,
 				04898CEF2BDD79320054585A /* Views */,
@@ -1242,6 +1253,7 @@
 				04AB0D392BFA05EE00BF69F7 /* CallKidsView.swift in Sources */,
 				04704D2C2BFA09AC009D3E2D /* CallBaseViewController.swift in Sources */,
 				0406D6E42BCAD8DC00E35A60 /* LiveViewController.swift in Sources */,
+				04273B7D2BFA32C400A8BBF0 /* CallsViewController.swift in Sources */,
 				04898D0C2BDD91200054585A /* PoojaKidsView.swift in Sources */,
 				0466FE0D2BE39DAF00109D20 /* UserProfileViewController.swift in Sources */,
 				04E4A57B2BD3AF25000BADAE /* PoojaBaseViewController.swift in Sources */,

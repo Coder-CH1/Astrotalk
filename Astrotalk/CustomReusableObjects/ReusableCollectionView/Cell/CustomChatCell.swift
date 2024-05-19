@@ -46,7 +46,7 @@ class CustomChatCell: UICollectionViewCell {
             
             chatButton.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -30),
             chatButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
-            chatButton.widthAnchor.constraint(equalToConstant: 70),
+            chatButton.widthAnchor.constraint(equalToConstant: 90),
             chatButton.heightAnchor.constraint(equalToConstant: 30),
         ])
     }

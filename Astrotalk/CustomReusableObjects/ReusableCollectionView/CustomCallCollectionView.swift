@@ -11,11 +11,11 @@ import UIKit
 class CustomCallCollectionView: UICollectionView,  UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 
     //MARK: - Object initialization -
+    var astrologerDelegate: ViewProfileAstrologersDelegate?
     let firestoreService = FirestoreService.shared
     var callModel: [CallModel] = []
     private let reuseIdentifier = "CustomCallCell"
     let layout = UICollectionViewFlowLayout()
-    let footerHeight: CGFloat = 250
     
     init(frame: CGRect){
         super.init(frame: frame, collectionViewLayout: layout)
@@ -32,12 +32,13 @@ class CustomCallCollectionView: UICollectionView,  UICollectionViewDataSource, U
         layout.scrollDirection = .vertical
         layout.minimumInteritemSpacing = 2
         layout.minimumLineSpacing = 15
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 5, right: 0)
+        layout.sectionInset = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
         self.collectionViewLayout = layout
         self.delegate = self
         self.dataSource = self
         self.layer.cornerRadius = 10
-        self.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: footerHeight, right: 0)
+        self.backgroundColor = .systemGray5
+        self.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
         self.showsVerticalScrollIndicator = false
         self.translatesAutoresizingMaskIntoConstraints = false
         self.register(CustomCallCell.self, forCellWithReuseIdentifier: "CustomCallCell")
@@ -58,11 +59,7 @@ class CustomCallCollectionView: UICollectionView,  UICollectionViewDataSource, U
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CustomCallCell", for: indexPath) as! CustomCallCell
-        cell.layer.shadowColor = UIColor.lightGray.cgColor
         cell.backgroundColor = .white
-        cell.layer.shadowOpacity = 10
-        cell.layer.shadowOffset = CGSize(width: 10, height: 10)
-        cell.layer.shadowRadius = 6
         cell.layer.cornerRadius = 10
         let data = callModel[indexPath.item]
         cell.configure(model: data)
@@ -80,6 +77,10 @@ class CustomCallCollectionView: UICollectionView,  UICollectionViewDataSource, U
         if indexPath.item == callModel.count - 1 {
             fetchCallData()
         }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.astrologerDelegate?.viewProfileAstrologersButtonCellTap()
     }
     
     //MARK: - Fetches Dictionary Data from Firestore -
