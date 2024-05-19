@@ -16,6 +16,7 @@ class HomeBaseViewController: UIViewController {
     var topView = TopView(color: .clear)
     var overlayView = UIView()
     var topEdgesView = CustomView(color: .systemYellow)
+    var coordinator: AppCoordinator?
     
     var sideBarViewController = SideBarViewController()
     
@@ -192,10 +193,10 @@ extension HomeBaseViewController: UICollectionViewDataSource {
         switch indexPath.section {
         case 0:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DailyHoroscopeCell", for: indexPath) as! DailyHoroscopeCell
-            cell.delegate = self
             return cell
         case 1:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FreeChatCell", for: indexPath) as! FreeChatCell
+            cell.delegate = self
             return cell
         case 2:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "LiveAstrologersCell", for: indexPath) as! LiveAstrologersCell
@@ -203,6 +204,7 @@ extension HomeBaseViewController: UICollectionViewDataSource {
         case 3:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AstrologersCell", for: indexPath) as! AstrologersCell
             cell.layer.cornerRadius = 8
+            cell.delegate = self
             return cell
         case 4:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "LatestBlogCell", for: indexPath) as! LatestBlogCell
@@ -376,7 +378,7 @@ extension HomeBaseViewController {
 //MARK: - Extensions -
 extension HomeBaseViewController: CellSelectedDelegate {
     func cellSelected(_ vc: UIViewController) {
-        self.navigationController?.pushViewController(vc, animated: true)
+        self.navigationController?.pushViewController(vc, animated: false)
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
 }
@@ -384,7 +386,7 @@ extension HomeBaseViewController: CellSelectedDelegate {
 //MARK: - Extensions -
 extension HomeBaseViewController: CellButtonDelegate {
     func didButtonTapped(_ vc: UIViewController) {
-        self.navigationController?.pushViewController(vc, animated: true)
+        self.navigationController?.pushViewController(vc, animated: false)
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
 }

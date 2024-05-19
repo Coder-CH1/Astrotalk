@@ -12,7 +12,6 @@ class CircleCell: UICollectionViewCell {
     
     //MARK: - UI -
     let identifier = "CircleCell"
-    var delegate: CellSelectedDelegate?
     let dailyHoroscopeImg = ImageView(image: UIImage(systemName: ""))
     let freeKundliImg = ImageView(image: UIImage(systemName: ""))
     let kundliMatchingImg = ImageView(image: UIImage(systemName: ""))

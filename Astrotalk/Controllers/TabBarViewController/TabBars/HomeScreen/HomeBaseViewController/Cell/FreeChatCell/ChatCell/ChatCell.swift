@@ -12,6 +12,7 @@ import Kingfisher
 class ChatCell: UICollectionViewCell {
     
     //MARK: - UI -
+    var delegate: CellSelectedDelegate?
     let identifier = "ChatCell"
     let containerView = CustomView(color: .white)
     let img = ImageView(image: UIImage(systemName: ""))

@@ -12,6 +12,8 @@ import Kingfisher
 class FreeChatCell: UICollectionViewCell, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     //MARK: - UI -
+    //var coordinator: AppCoordinator?
+    var delegate: CellSelectedDelegate?
     let firestoreService = FirestoreService.shared
     var freeChatArray: [FreeChatModel] = []
     lazy var collectionView: UICollectionView = {
@@ -67,6 +69,11 @@ class FreeChatCell: UICollectionViewCell, UICollectionViewDataSource, UICollecti
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.bounds.width, height: 80)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let vc = MessageViewController()
+        delegate?.cellSelected(vc)
     }
     
     //MARK: - Updating UI with singleton instance and fetch method -

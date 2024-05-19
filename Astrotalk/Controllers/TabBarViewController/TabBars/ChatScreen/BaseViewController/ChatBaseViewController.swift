@@ -288,8 +288,9 @@ extension ChatBaseViewController: ViewProfileAstrologersDelegate {
     }
 }
 
-//extension ChatBaseViewController: ReusableCollectionViewDelegate {
-//    func presentViewController(from cell: CustomChatCell) {
-//        guard let indexPath = 
-//    }
-//}
+extension ChatBaseViewController: CellButtonDelegate {
+    func didButtonTapped(_ vc: UIViewController) {
+        self.navigationController?.pushViewController(vc, animated: true)
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+    }
+}
