@@ -8,7 +8,7 @@
 import UIKit
 
 //MARK: -
-class ChatViewController: BaseViewController {
+class ChatViewController: ChatBaseViewController {
     
     // MARK: - Lifecycle -
     override func viewDidLoad() {

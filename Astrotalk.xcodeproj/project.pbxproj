@@ -26,7 +26,7 @@
 		042AC98A2BD8F1FB00C1CFCD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 042AC9892BD8F1FB00C1CFCD /* GoogleService-Info.plist */; };
 		042ADC972BE818EE00FCE639 /* StringCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042ADC962BE818EE00FCE639 /* StringCarouselView.swift */; };
 		043464C42BCEDE9700C4BE3C /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043464C32BCEDE9700C4BE3C /* CustomView.swift */; };
-		043464C92BCFB4A400C4BE3C /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043464C82BCFB4A400C4BE3C /* BaseViewController.swift */; };
+		043464C92BCFB4A400C4BE3C /* ChatBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043464C82BCFB4A400C4BE3C /* ChatBaseViewController.swift */; };
 		0435084A2BD9ADA900A5C8C6 /* LoginTopSectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043508492BD9ADA900A5C8C6 /* LoginTopSectionVC.swift */; };
 		0435084C2BD9ADD200A5C8C6 /* LoginBottomSectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0435084B2BD9ADD200A5C8C6 /* LoginBottomSectionVC.swift */; };
 		043DACFF2BCB2C0D00A365EF /* SideBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043DACFE2BCB2C0D00A365EF /* SideBarViewController.swift */; };
@@ -58,6 +58,7 @@
 		0466FE112BE39E0500109D20 /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0466FE102BE39E0500109D20 /* ShopViewController.swift */; };
 		0466FE132BE39E1E00109D20 /* BlogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0466FE122BE39E1E00109D20 /* BlogViewController.swift */; };
 		0468B9532BE5565200E12BE0 /* AstrologerProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0468B9522BE5565200E12BE0 /* AstrologerProfileViewController.swift */; };
+		04704D2C2BFA09AC009D3E2D /* CallBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04704D2B2BFA09AC009D3E2D /* CallBaseViewController.swift */; };
 		047C1BB02BECD3230004C64F /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047C1BAF2BECD3230004C64F /* WebViewController.swift */; };
 		04898CF72BDD8D350054585A /* CustomPoojaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04898CF62BDD8D350054585A /* CustomPoojaView.swift */; };
 		04898CF92BDD8DED0054585A /* PoojaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04898CF82BDD8DED0054585A /* PoojaCell.swift */; };
@@ -71,17 +72,17 @@
 		04898D0A2BDD91000054585A /* PoojaFinanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04898D092BDD91000054585A /* PoojaFinanceView.swift */; };
 		04898D0C2BDD91200054585A /* PoojaKidsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04898D0B2BDD91200054585A /* PoojaKidsView.swift */; };
 		048C31292BE1809100AF6930 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048C31282BE1809100AF6930 /* SearchViewController.swift */; };
-		04917D5B2BD25E0F00010C2F /* AllView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04917D5A2BD25E0F00010C2F /* AllView.swift */; };
-		04917D5D2BD25E1F00010C2F /* LoveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04917D5C2BD25E1F00010C2F /* LoveView.swift */; };
-		04917D5F2BD25E3500010C2F /* EducationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04917D5E2BD25E3500010C2F /* EducationView.swift */; };
-		04917D612BD25E4600010C2F /* CareerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04917D602BD25E4600010C2F /* CareerView.swift */; };
-		04917D632BD25E5400010C2F /* MarriageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04917D622BD25E5400010C2F /* MarriageView.swift */; };
-		04917D652BD25E6B00010C2F /* HealthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04917D642BD25E6B00010C2F /* HealthView.swift */; };
-		04917D672BD25E7B00010C2F /* WealthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04917D662BD25E7B00010C2F /* WealthView.swift */; };
-		04917D692BD25E9700010C2F /* FinanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04917D682BD25E9700010C2F /* FinanceView.swift */; };
-		04917D6B2BD25EA000010C2F /* KidsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04917D6A2BD25EA000010C2F /* KidsView.swift */; };
-		04917D6D2BD260BE00010C2F /* CustomCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04917D6C2BD260BE00010C2F /* CustomCollectionView.swift */; };
-		04917D6F2BD2620700010C2F /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04917D6E2BD2620700010C2F /* CustomCell.swift */; };
+		04917D5B2BD25E0F00010C2F /* ChatAllView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04917D5A2BD25E0F00010C2F /* ChatAllView.swift */; };
+		04917D5D2BD25E1F00010C2F /* ChatLoveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04917D5C2BD25E1F00010C2F /* ChatLoveView.swift */; };
+		04917D5F2BD25E3500010C2F /* ChatEducationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04917D5E2BD25E3500010C2F /* ChatEducationView.swift */; };
+		04917D612BD25E4600010C2F /* ChatCareerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04917D602BD25E4600010C2F /* ChatCareerView.swift */; };
+		04917D632BD25E5400010C2F /* ChatMarriageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04917D622BD25E5400010C2F /* ChatMarriageView.swift */; };
+		04917D652BD25E6B00010C2F /* ChatHealthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04917D642BD25E6B00010C2F /* ChatHealthView.swift */; };
+		04917D672BD25E7B00010C2F /* ChatWealthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04917D662BD25E7B00010C2F /* ChatWealthView.swift */; };
+		04917D692BD25E9700010C2F /* ChatFinanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04917D682BD25E9700010C2F /* ChatFinanceView.swift */; };
+		04917D6B2BD25EA000010C2F /* ChatKidsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04917D6A2BD25EA000010C2F /* ChatKidsView.swift */; };
+		04917D6D2BD260BE00010C2F /* CustomChatCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04917D6C2BD260BE00010C2F /* CustomChatCollectionView.swift */; };
+		04917D6F2BD2620700010C2F /* CustomChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04917D6E2BD2620700010C2F /* CustomChatCell.swift */; };
 		049ED12A2BF066E30038B7E3 /* ChatsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049ED1292BF066E30038B7E3 /* ChatsTableViewCell.swift */; };
 		04A48CA72BE4E25C000864F9 /* FirebaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A48CA62BE4E25C000864F9 /* FirebaseModel.swift */; };
 		04A48CA92BE505B8000864F9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A48CA82BE505B8000864F9 /* SettingsViewController.swift */; };
@@ -117,6 +118,17 @@
 		04A8756F2BC940D6008C7E06 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A8756E2BC940D6008C7E06 /* Label.swift */; };
 		04A875722BC9415E008C7E06 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A875712BC9415E008C7E06 /* Button.swift */; };
 		04A875742BC941C4008C7E06 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A875732BC941C4008C7E06 /* ImageView.swift */; };
+		04AB0D232BFA025500BF69F7 /* CustomCallCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AB0D222BFA025500BF69F7 /* CustomCallCollectionView.swift */; };
+		04AB0D252BFA02F200BF69F7 /* CustomCallCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AB0D242BFA02F200BF69F7 /* CustomCallCell.swift */; };
+		04AB0D292BFA051100BF69F7 /* CallAllView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AB0D282BFA051100BF69F7 /* CallAllView.swift */; };
+		04AB0D2B2BFA052800BF69F7 /* CallLoveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AB0D2A2BFA052800BF69F7 /* CallLoveView.swift */; };
+		04AB0D2D2BFA054D00BF69F7 /* CallEducationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AB0D2C2BFA054D00BF69F7 /* CallEducationView.swift */; };
+		04AB0D2F2BFA056D00BF69F7 /* CallCareerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AB0D2E2BFA056D00BF69F7 /* CallCareerView.swift */; };
+		04AB0D312BFA058800BF69F7 /* CallMarriageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AB0D302BFA058800BF69F7 /* CallMarriageView.swift */; };
+		04AB0D332BFA05A400BF69F7 /* CallHealthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AB0D322BFA05A400BF69F7 /* CallHealthView.swift */; };
+		04AB0D352BFA05BD00BF69F7 /* CallWealthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AB0D342BFA05BD00BF69F7 /* CallWealthView.swift */; };
+		04AB0D372BFA05D600BF69F7 /* CallFinanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AB0D362BFA05D600BF69F7 /* CallFinanceView.swift */; };
+		04AB0D392BFA05EE00BF69F7 /* CallKidsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AB0D382BFA05EE00BF69F7 /* CallKidsView.swift */; };
 		04AD9C9A2BDA8AE000F0EF40 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AD9C992BDA8AE000F0EF40 /* String.swift */; };
 		04D765582BE6574100BB00E5 /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D765572BE6574100BB00E5 /* FirestoreService.swift */; };
 		04E4A57B2BD3AF25000BADAE /* PoojaBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E4A57A2BD3AF25000BADAE /* PoojaBaseViewController.swift */; };
@@ -164,7 +176,7 @@
 		042AC9892BD8F1FB00C1CFCD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		042ADC962BE818EE00FCE639 /* StringCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringCarouselView.swift; sourceTree = "<group>"; };
 		043464C32BCEDE9700C4BE3C /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
-		043464C82BCFB4A400C4BE3C /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		043464C82BCFB4A400C4BE3C /* ChatBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBaseViewController.swift; sourceTree = "<group>"; };
 		043508442BD9ABC700A5C8C6 /* Astrotalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Astrotalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		043508452BD9ABC700A5C8C6 /* AstrotalkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AstrotalkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		043508462BD9ABC700A5C8C6 /* AstrotalkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AstrotalkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -199,6 +211,7 @@
 		0466FE102BE39E0500109D20 /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
 		0466FE122BE39E1E00109D20 /* BlogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogViewController.swift; sourceTree = "<group>"; };
 		0468B9522BE5565200E12BE0 /* AstrologerProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstrologerProfileViewController.swift; sourceTree = "<group>"; };
+		04704D2B2BFA09AC009D3E2D /* CallBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallBaseViewController.swift; sourceTree = "<group>"; };
 		047C1BAF2BECD3230004C64F /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		04898CF62BDD8D350054585A /* CustomPoojaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = CustomPoojaView.swift; sourceTree = "<group>"; };
 		04898CF82BDD8DED0054585A /* PoojaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoojaCell.swift; sourceTree = "<group>"; };
@@ -212,17 +225,17 @@
 		04898D092BDD91000054585A /* PoojaFinanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoojaFinanceView.swift; sourceTree = "<group>"; };
 		04898D0B2BDD91200054585A /* PoojaKidsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoojaKidsView.swift; sourceTree = "<group>"; };
 		048C31282BE1809100AF6930 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		04917D5A2BD25E0F00010C2F /* AllView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllView.swift; sourceTree = "<group>"; };
-		04917D5C2BD25E1F00010C2F /* LoveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoveView.swift; sourceTree = "<group>"; };
-		04917D5E2BD25E3500010C2F /* EducationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationView.swift; sourceTree = "<group>"; };
-		04917D602BD25E4600010C2F /* CareerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerView.swift; sourceTree = "<group>"; };
-		04917D622BD25E5400010C2F /* MarriageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarriageView.swift; sourceTree = "<group>"; };
-		04917D642BD25E6B00010C2F /* HealthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthView.swift; sourceTree = "<group>"; };
-		04917D662BD25E7B00010C2F /* WealthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WealthView.swift; sourceTree = "<group>"; };
-		04917D682BD25E9700010C2F /* FinanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceView.swift; sourceTree = "<group>"; };
-		04917D6A2BD25EA000010C2F /* KidsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KidsView.swift; sourceTree = "<group>"; };
-		04917D6C2BD260BE00010C2F /* CustomCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionView.swift; sourceTree = "<group>"; };
-		04917D6E2BD2620700010C2F /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		04917D5A2BD25E0F00010C2F /* ChatAllView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatAllView.swift; sourceTree = "<group>"; };
+		04917D5C2BD25E1F00010C2F /* ChatLoveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLoveView.swift; sourceTree = "<group>"; };
+		04917D5E2BD25E3500010C2F /* ChatEducationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatEducationView.swift; sourceTree = "<group>"; };
+		04917D602BD25E4600010C2F /* ChatCareerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCareerView.swift; sourceTree = "<group>"; };
+		04917D622BD25E5400010C2F /* ChatMarriageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMarriageView.swift; sourceTree = "<group>"; };
+		04917D642BD25E6B00010C2F /* ChatHealthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatHealthView.swift; sourceTree = "<group>"; };
+		04917D662BD25E7B00010C2F /* ChatWealthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatWealthView.swift; sourceTree = "<group>"; };
+		04917D682BD25E9700010C2F /* ChatFinanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatFinanceView.swift; sourceTree = "<group>"; };
+		04917D6A2BD25EA000010C2F /* ChatKidsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatKidsView.swift; sourceTree = "<group>"; };
+		04917D6C2BD260BE00010C2F /* CustomChatCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomChatCollectionView.swift; sourceTree = "<group>"; };
+		04917D6E2BD2620700010C2F /* CustomChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomChatCell.swift; sourceTree = "<group>"; };
 		049ED1292BF066E30038B7E3 /* ChatsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsTableViewCell.swift; sourceTree = "<group>"; };
 		04A48CA62BE4E25C000864F9 /* FirebaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseModel.swift; sourceTree = "<group>"; };
 		04A48CA82BE505B8000864F9 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -259,6 +272,17 @@
 		04A8756E2BC940D6008C7E06 /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
 		04A875712BC9415E008C7E06 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		04A875732BC941C4008C7E06 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
+		04AB0D222BFA025500BF69F7 /* CustomCallCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCallCollectionView.swift; sourceTree = "<group>"; };
+		04AB0D242BFA02F200BF69F7 /* CustomCallCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCallCell.swift; sourceTree = "<group>"; };
+		04AB0D282BFA051100BF69F7 /* CallAllView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallAllView.swift; sourceTree = "<group>"; };
+		04AB0D2A2BFA052800BF69F7 /* CallLoveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallLoveView.swift; sourceTree = "<group>"; };
+		04AB0D2C2BFA054D00BF69F7 /* CallEducationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallEducationView.swift; sourceTree = "<group>"; };
+		04AB0D2E2BFA056D00BF69F7 /* CallCareerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallCareerView.swift; sourceTree = "<group>"; };
+		04AB0D302BFA058800BF69F7 /* CallMarriageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallMarriageView.swift; sourceTree = "<group>"; };
+		04AB0D322BFA05A400BF69F7 /* CallHealthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallHealthView.swift; sourceTree = "<group>"; };
+		04AB0D342BFA05BD00BF69F7 /* CallWealthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallWealthView.swift; sourceTree = "<group>"; };
+		04AB0D362BFA05D600BF69F7 /* CallFinanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallFinanceView.swift; sourceTree = "<group>"; };
+		04AB0D382BFA05EE00BF69F7 /* CallKidsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallKidsView.swift; sourceTree = "<group>"; };
 		04AD9C992BDA8AE000F0EF40 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		04D765572BE6574100BB00E5 /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
 		04E4A57A2BD3AF25000BADAE /* PoojaBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoojaBaseViewController.swift; sourceTree = "<group>"; };
@@ -397,7 +421,7 @@
 		043464CE2BCFB4F300C4BE3C /* BaseViewController */ = {
 			isa = PBXGroup;
 			children = (
-				043464C82BCFB4A400C4BE3C /* BaseViewController.swift */,
+				043464C82BCFB4A400C4BE3C /* ChatBaseViewController.swift */,
 				048C31282BE1809100AF6930 /* SearchViewController.swift */,
 			);
 			path = BaseViewController;
@@ -604,10 +628,19 @@
 			path = AstrologerScreen;
 			sourceTree = "<group>";
 		};
+		04704D2A2BFA097B009D3E2D /* CallBaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				04704D2B2BFA09AC009D3E2D /* CallBaseViewController.swift */,
+			);
+			path = CallBaseViewController;
+			sourceTree = "<group>";
+		};
 		04898CEB2BDD78220054585A /* SegmentedControl */ = {
 			isa = PBXGroup;
 			children = (
-				04917D592BD25DDB00010C2F /* Segments */,
+				04917D592BD25DDB00010C2F /* ChatSegments */,
+				04AB0D272BFA04DA00BF69F7 /* CallSegments */,
 				04898D132BDDA8B30054585A /* Cell */,
 			);
 			path = SegmentedControl;
@@ -616,7 +649,8 @@
 		04898CEC2BDD788F0054585A /* ReusableCollectionView */ = {
 			isa = PBXGroup;
 			children = (
-				04917D6C2BD260BE00010C2F /* CustomCollectionView.swift */,
+				04917D6C2BD260BE00010C2F /* CustomChatCollectionView.swift */,
+				04AB0D222BFA025500BF69F7 /* CustomCallCollectionView.swift */,
 				04898CF32BDD7B1C0054585A /* Cell */,
 			);
 			path = ReusableCollectionView;
@@ -673,7 +707,8 @@
 		04898CF32BDD7B1C0054585A /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				04917D6E2BD2620700010C2F /* CustomCell.swift */,
+				04917D6E2BD2620700010C2F /* CustomChatCell.swift */,
+				04AB0D242BFA02F200BF69F7 /* CustomCallCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -728,20 +763,20 @@
 			path = ProtocolDelegates;
 			sourceTree = "<group>";
 		};
-		04917D592BD25DDB00010C2F /* Segments */ = {
+		04917D592BD25DDB00010C2F /* ChatSegments */ = {
 			isa = PBXGroup;
 			children = (
-				04917D5A2BD25E0F00010C2F /* AllView.swift */,
-				04917D5C2BD25E1F00010C2F /* LoveView.swift */,
-				04917D5E2BD25E3500010C2F /* EducationView.swift */,
-				04917D602BD25E4600010C2F /* CareerView.swift */,
-				04917D622BD25E5400010C2F /* MarriageView.swift */,
-				04917D642BD25E6B00010C2F /* HealthView.swift */,
-				04917D662BD25E7B00010C2F /* WealthView.swift */,
-				04917D682BD25E9700010C2F /* FinanceView.swift */,
-				04917D6A2BD25EA000010C2F /* KidsView.swift */,
+				04917D5A2BD25E0F00010C2F /* ChatAllView.swift */,
+				04917D5C2BD25E1F00010C2F /* ChatLoveView.swift */,
+				04917D5E2BD25E3500010C2F /* ChatEducationView.swift */,
+				04917D602BD25E4600010C2F /* ChatCareerView.swift */,
+				04917D622BD25E5400010C2F /* ChatMarriageView.swift */,
+				04917D642BD25E6B00010C2F /* ChatHealthView.swift */,
+				04917D662BD25E7B00010C2F /* ChatWealthView.swift */,
+				04917D682BD25E9700010C2F /* ChatFinanceView.swift */,
+				04917D6A2BD25EA000010C2F /* ChatKidsView.swift */,
 			);
-			path = Segments;
+			path = ChatSegments;
 			sourceTree = "<group>";
 		};
 		04A875062BC8AC1E008C7E06 = {
@@ -840,10 +875,27 @@
 			path = CustomReusableObjects;
 			sourceTree = "<group>";
 		};
+		04AB0D272BFA04DA00BF69F7 /* CallSegments */ = {
+			isa = PBXGroup;
+			children = (
+				04AB0D282BFA051100BF69F7 /* CallAllView.swift */,
+				04AB0D2A2BFA052800BF69F7 /* CallLoveView.swift */,
+				04AB0D2C2BFA054D00BF69F7 /* CallEducationView.swift */,
+				04AB0D2E2BFA056D00BF69F7 /* CallCareerView.swift */,
+				04AB0D302BFA058800BF69F7 /* CallMarriageView.swift */,
+				04AB0D322BFA05A400BF69F7 /* CallHealthView.swift */,
+				04AB0D342BFA05BD00BF69F7 /* CallWealthView.swift */,
+				04AB0D362BFA05D600BF69F7 /* CallFinanceView.swift */,
+				04AB0D382BFA05EE00BF69F7 /* CallKidsView.swift */,
+			);
+			path = CallSegments;
+			sourceTree = "<group>";
+		};
 		04AD9B132BD284BF009FE810 /* CallScreen */ = {
 			isa = PBXGroup;
 			children = (
 				0406D6E52BCAD8E800E35A60 /* CallViewController.swift */,
+				04704D2A2BFA097B009D3E2D /* CallBaseViewController */,
 			);
 			path = CallScreen;
 			sourceTree = "<group>";
@@ -1158,17 +1210,21 @@
 			files = (
 				04663F5A2BDEE1AC00F80BE5 /* AstroShopHeaders.swift in Sources */,
 				04A875742BC941C4008C7E06 /* ImageView.swift in Sources */,
+				04AB0D2B2BFA052800BF69F7 /* CallLoveView.swift in Sources */,
 				043DACFF2BCB2C0D00A365EF /* SideBarViewController.swift in Sources */,
 				041610152BE3F0BA00A5AB51 /* CustomTextFieldView.swift in Sources */,
 				04A875722BC9415E008C7E06 /* Button.swift in Sources */,
 				04663F5C2BDEE36400F80BE5 /* AstroTalkHeaders.swift in Sources */,
 				049ED12A2BF066E30038B7E3 /* ChatsTableViewCell.swift in Sources */,
-				04917D672BD25E7B00010C2F /* WealthView.swift in Sources */,
+				04917D672BD25E7B00010C2F /* ChatWealthView.swift in Sources */,
 				04A48CA92BE505B8000864F9 /* SettingsViewController.swift in Sources */,
 				04663F8C2BDF2C3F00F80BE5 /* TalkCell.swift in Sources */,
 				04663F6A2BDF16C000F80BE5 /* AstromallShopCell.swift in Sources */,
+				04AB0D2F2BFA056D00BF69F7 /* CallCareerView.swift in Sources */,
 				0435084A2BD9ADA900A5C8C6 /* LoginTopSectionVC.swift in Sources */,
+				04AB0D252BFA02F200BF69F7 /* CustomCallCell.swift in Sources */,
 				04898D022BDD90A80054585A /* PoojaCareerView.swift in Sources */,
+				04AB0D312BFA058800BF69F7 /* CallMarriageView.swift in Sources */,
 				042AC9852BD8B82C00C1CFCD /* SideBarCell.swift in Sources */,
 				04663F602BDF161900F80BE5 /* DailyHoroscopeCell.swift in Sources */,
 				04898CF72BDD8D350054585A /* CustomPoojaView.swift in Sources */,
@@ -1177,12 +1233,14 @@
 				042ADC972BE818EE00FCE639 /* StringCarouselView.swift in Sources */,
 				04D765582BE6574100BB00E5 /* FirestoreService.swift in Sources */,
 				0406D6DA2BCA844100E35A60 /* View.swift in Sources */,
-				04917D5F2BD25E3500010C2F /* EducationView.swift in Sources */,
+				04917D5F2BD25E3500010C2F /* ChatEducationView.swift in Sources */,
 				04A875172BC8AC1E008C7E06 /* ViewController.swift in Sources */,
-				043464C92BCFB4A400C4BE3C /* BaseViewController.swift in Sources */,
+				043464C92BCFB4A400C4BE3C /* ChatBaseViewController.swift in Sources */,
 				047C1BB02BECD3230004C64F /* WebViewController.swift in Sources */,
-				04917D612BD25E4600010C2F /* CareerView.swift in Sources */,
+				04917D612BD25E4600010C2F /* ChatCareerView.swift in Sources */,
 				04AD9C9A2BDA8AE000F0EF40 /* String.swift in Sources */,
+				04AB0D392BFA05EE00BF69F7 /* CallKidsView.swift in Sources */,
+				04704D2C2BFA09AC009D3E2D /* CallBaseViewController.swift in Sources */,
 				0406D6E42BCAD8DC00E35A60 /* LiveViewController.swift in Sources */,
 				04898D0C2BDD91200054585A /* PoojaKidsView.swift in Sources */,
 				0466FE0D2BE39DAF00109D20 /* UserProfileViewController.swift in Sources */,
@@ -1191,8 +1249,9 @@
 				04E9F62D2BD7BBCB00372FEE /* CustomSegmentedControlCell.swift in Sources */,
 				0406D6DE2BCAD89B00E35A60 /* TabBarViewController.swift in Sources */,
 				0422BC612BE9BFE200DA4D23 /* ChatManager.swift in Sources */,
-				04917D652BD25E6B00010C2F /* HealthView.swift in Sources */,
-				04917D6B2BD25EA000010C2F /* KidsView.swift in Sources */,
+				04917D652BD25E6B00010C2F /* ChatHealthView.swift in Sources */,
+				04917D6B2BD25EA000010C2F /* ChatKidsView.swift in Sources */,
+				04AB0D372BFA05D600BF69F7 /* CallFinanceView.swift in Sources */,
 				04A8756D2BC93DA3008C7E06 /* Fonts.swift in Sources */,
 				0466FE0F2BE39DDC00109D20 /* OrderViewController.swift in Sources */,
 				04A8756F2BC940D6008C7E06 /* Label.swift in Sources */,
@@ -1200,9 +1259,11 @@
 				04898CF92BDD8DED0054585A /* PoojaCell.swift in Sources */,
 				0422BC632BE9C37C00DA4D23 /* ChatsViewController.swift in Sources */,
 				04A48CA72BE4E25C000864F9 /* FirebaseModel.swift in Sources */,
+				04AB0D332BFA05A400BF69F7 /* CallHealthView.swift in Sources */,
 				0435084C2BD9ADD200A5C8C6 /* LoginBottomSectionVC.swift in Sources */,
 				0422BC5F2BE9B3D100DA4D23 /* MessagesCell.swift in Sources */,
 				0406D6E82BCAD8F900E35A60 /* PoojaViewController.swift in Sources */,
+				04AB0D232BFA025500BF69F7 /* CustomCallCollectionView.swift in Sources */,
 				04663F572BDEDC7100F80BE5 /* AstrologersHeaders.swift in Sources */,
 				04663F6E2BDF1E8000F80BE5 /* LiveAstrologersHeaders.swift in Sources */,
 				04A875132BC8AC1E008C7E06 /* AppDelegate.swift in Sources */,
@@ -1211,8 +1272,8 @@
 				0406D6D62BC9FEFA00E35A60 /* TextField.swift in Sources */,
 				043DAD022BCB2D4200A365EF /* ProtocolDelegates.swift in Sources */,
 				0466FE132BE39E1E00109D20 /* BlogViewController.swift in Sources */,
-				04917D6F2BD2620700010C2F /* CustomCell.swift in Sources */,
-				04917D692BD25E9700010C2F /* FinanceView.swift in Sources */,
+				04917D6F2BD2620700010C2F /* CustomChatCell.swift in Sources */,
+				04917D692BD25E9700010C2F /* ChatFinanceView.swift in Sources */,
 				04A875432BC938F0008C7E06 /* LoginViewController.swift in Sources */,
 				04898D062BDD90C90054585A /* PoojaHealthView.swift in Sources */,
 				04898D002BDD90990054585A /* PoojaEducationView.swift in Sources */,
@@ -1222,6 +1283,8 @@
 				04663F682BDF16AC00F80BE5 /* LatestBlogCell.swift in Sources */,
 				04898D042BDD90B70054585A /* PoojaMarriageView.swift in Sources */,
 				0422BC5D2BE9B20C00DA4D23 /* MessagesViewController.swift in Sources */,
+				04AB0D2D2BFA054D00BF69F7 /* CallEducationView.swift in Sources */,
+				04AB0D352BFA05BD00BF69F7 /* CallWealthView.swift in Sources */,
 				043464C42BCEDE9700C4BE3C /* CustomView.swift in Sources */,
 				0466FE112BE39E0500109D20 /* ShopViewController.swift in Sources */,
 				0468B9532BE5565200E12BE0 /* AstrologerProfileViewController.swift in Sources */,
@@ -1229,19 +1292,20 @@
 				04663F622BDF163A00F80BE5 /* FreeChatCell.swift in Sources */,
 				04898CFC2BDD907B0054585A /* PoojaAllView.swift in Sources */,
 				04663F842BDF2AC200F80BE5 /* BlogCell.swift in Sources */,
-				04917D6D2BD260BE00010C2F /* CustomCollectionView.swift in Sources */,
+				04917D6D2BD260BE00010C2F /* CustomChatCollectionView.swift in Sources */,
 				04663F902BDFDBFF00F80BE5 /* FooterHeader.swift in Sources */,
 				04663F782BDF27B700F80BE5 /* ChatCell.swift in Sources */,
 				04898CFE2BDD908A0054585A /* PoojaLoveView.swift in Sources */,
 				0406D6E02BCAD8BC00E35A60 /* HomeViewController.swift in Sources */,
 				04898D0A2BDD91000054585A /* PoojaFinanceView.swift in Sources */,
-				04917D5D2BD25E1F00010C2F /* LoveView.swift in Sources */,
+				04917D5D2BD25E1F00010C2F /* ChatLoveView.swift in Sources */,
 				042AC9872BD8BA1600C1CFCD /* DataModel.swift in Sources */,
-				04917D5B2BD25E0F00010C2F /* AllView.swift in Sources */,
-				04917D632BD25E5400010C2F /* MarriageView.swift in Sources */,
+				04917D5B2BD25E0F00010C2F /* ChatAllView.swift in Sources */,
+				04917D632BD25E5400010C2F /* ChatMarriageView.swift in Sources */,
 				0406D6E62BCAD8E800E35A60 /* CallViewController.swift in Sources */,
 				0406D6DC2BCAA55E00E35A60 /* PaddedLabel.swift in Sources */,
 				04663F802BDF2A0E00F80BE5 /* Astrologers.swift in Sources */,
+				04AB0D292BFA051100BF69F7 /* CallAllView.swift in Sources */,
 				04663F742BDF250500F80BE5 /* CircleCell.swift in Sources */,
 				04663F8E2BDFB11700F80BE5 /* SearchBarHeader.swift in Sources */,
 				04898D082BDD90E00054585A /* PoojaWealthView.swift in Sources */,

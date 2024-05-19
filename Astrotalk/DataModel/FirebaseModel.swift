@@ -26,35 +26,35 @@ struct DailyHoroscopeModel:  Codable
     }
 }
 
-struct FreeChatModel:  Codable{
+struct FreeChatModel {
     var fields: [String: String]
     init(fields: [String : String]) {
         self.fields = fields
     }
 }
 
-struct LiveAstrologersModel: Equatable{
+struct LiveAstrologersModel {
     var fields: [String: String]
     init(fields: [String : String]) {
         self.fields = fields
     }
 }
 
-struct AstrologersModel: Codable{
+struct AstrologersModel {
     var fields: [String: String]
     init(fields: [String : String]) {
         self.fields = fields
     }
 }
 
-struct LatestBlogModel: Codable{
+struct LatestBlogModel {
     var fields: [String: String]
     init(fields: [String : String]) {
         self.fields = fields
     }
 }
 
-struct AstroMallShopModel: Codable{
+struct AstroMallShopModel {
     var fields: [String: String]
     init(fields: [String : String]) {
         self.fields = fields
@@ -62,6 +62,13 @@ struct AstroMallShopModel: Codable{
 }
 
 struct AstroTalkModel {
+    var fields: [String: String]
+    init(fields: [String : String]) {
+        self.fields = fields
+    }
+}
+
+struct CallModel {
     var fields: [String: String]
     init(fields: [String : String]) {
         self.fields = fields

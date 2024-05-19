@@ -207,5 +207,38 @@ class FirestoreService {
             completion(astroTalkModels, nil)
         }
     }
+    
+    //MARK: - Fetches dictionary of data saved in Firestore
+    func fetchDataForCall(completion: @escaping ([CallModel], Error?) -> Void) {
+        let database = Firestore.firestore()
+        let query = database.collection("call")
+        query.getDocuments { querySnapshot, error in
+            if let error = error {
+                print("Error fetching free call: \(error.localizedDescription)")
+                completion([], error)
+                return
+            }
+            guard let snapshot = querySnapshot else {
+                print("No documents found for free call")
+                completion([], error)
+                return
+            }
+
+            if snapshot.isEmpty {
+                print("No documents found for free call")
+                completion([], nil)
+                return
+            }
+
+            let callModels = snapshot.documents.compactMap { document in
+                var fields: [String: String] = [:]
+                document.data().forEach { key, value in
+                    fields[key] = "\(value)"
+                }
+              return  CallModel(fields: fields)
+            }
+            completion(callModels, nil)
+        }
+    }
 }
 

@@ -59,7 +59,7 @@ class Astrologers: UICollectionViewCell {
         }
         img.layer.borderWidth = 2
         img.layer.borderColor = UIColor.systemYellow.cgColor
-        img.layer.cornerRadius = 35
+        img.layer.cornerRadius = 10
         chatButton.setTitle("Chat", for: .normal)
         chatButton.setTitleColor(.systemGreen, for: .normal)
         chatButton.layer.cornerRadius = 15

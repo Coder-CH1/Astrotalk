@@ -9,7 +9,7 @@ import UIKit
 import CallKit
 
 //MARK: -
-class CallViewController: BaseViewController {
+class CallViewController: CallBaseViewController {
   
     // MARK: - Lifecycle -
     override func viewDidLoad() {
