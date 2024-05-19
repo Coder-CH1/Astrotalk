@@ -41,11 +41,11 @@ class CustomCallCell: UICollectionViewCell {
             img.heightAnchor.constraint(equalToConstant: 80),
             img.widthAnchor.constraint(equalToConstant: 80),
             
-            nameLabel.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 50),
-            nameLabel.leadingAnchor.constraint(equalTo: img.trailingAnchor, constant: 15),
+            nameLabel.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 20),
+            nameLabel.leadingAnchor.constraint(equalTo: img.trailingAnchor, constant: 10),
             
             chatButton.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -30),
-            chatButton.leadingAnchor.constraint(equalTo: nameLabel.trailingAnchor, constant: 30),
+            chatButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
             chatButton.widthAnchor.constraint(equalToConstant: 70),
             chatButton.heightAnchor.constraint(equalToConstant: 30),
         ])

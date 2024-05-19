@@ -240,5 +240,38 @@ class FirestoreService {
             completion(callModels, nil)
         }
     }
+    
+    //MARK: - Fetches dictionary of data saved in Firestore
+    func fetchDataForProfileAstrologers(completion: @escaping ([ProfileAstrologersModel], Error?) -> Void) {
+        let database = Firestore.firestore()
+        let query = database.collection("astrologers")
+        query.getDocuments { querySnapshot, error in
+            if let error = error {
+                print("Error fetching profile astrologers: \(error.localizedDescription)")
+                completion([], error)
+                return
+            }
+            guard let snapshot = querySnapshot else {
+                print("No documents found for profile astrologers")
+                completion([], error)
+                return
+            }
+
+            if snapshot.isEmpty {
+                print("No documents found for profile astrologers")
+                completion([], nil)
+                return
+            }
+
+            let profileAstrologersModels = snapshot.documents.compactMap { document in
+                var fields: [String: String] = [:]
+                document.data().forEach { key, value in
+                    fields[key] = "\(value)"
+                }
+              return  ProfileAstrologersModel(fields: fields)
+            }
+            completion(profileAstrologersModels, nil)
+        }
+    }
 }
 

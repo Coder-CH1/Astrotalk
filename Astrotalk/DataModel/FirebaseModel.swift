@@ -75,6 +75,13 @@ struct CallModel {
     }
 }
 
+struct ProfileAstrologersModel {
+    var  fields: [String: String]
+    init(fields: [String : String]) {
+        self.fields = fields
+    }
+}
+
 //MARK: - Registered users model
 struct RegisteredUsersModel {
     let email: String

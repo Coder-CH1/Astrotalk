@@ -41,11 +41,11 @@ class CustomChatCell: UICollectionViewCell {
             img.heightAnchor.constraint(equalToConstant: 80),
             img.widthAnchor.constraint(equalToConstant: 80),
             
-            labelName.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 50),
+            labelName.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 20),
             labelName.leadingAnchor.constraint(equalTo: img.trailingAnchor, constant: 15),
             
             chatButton.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -30),
-            chatButton.leadingAnchor.constraint(equalTo: labelName.trailingAnchor, constant: 30),
+            chatButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
             chatButton.widthAnchor.constraint(equalToConstant: 70),
             chatButton.heightAnchor.constraint(equalToConstant: 30),
         ])
@@ -64,7 +64,7 @@ class CustomChatCell: UICollectionViewCell {
         img.layer.borderWidth = 2
         img.layer.borderColor = UIColor.systemYellow.cgColor
         img.layer.cornerRadius = 40
-        chatButton.setTitle("Chat", for: .normal)
+        chatButton.setTitle("Free Chat", for: .normal)
         chatButton.setTitleColor(.systemGreen, for: .normal)
         chatButton.layer.cornerRadius = 8
         chatButton.layer.borderWidth = 1
