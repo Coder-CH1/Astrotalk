@@ -346,7 +346,10 @@
 				04A875162BC8AC1E008C7E06 /* ViewController.swift */,
 				043508472BD9AD0C00A5C8C6 /* LoginViewController */,
 				0406D6E92BCAD90400E35A60 /* TabBarViewController */,
+				041847412BF0EAAA008AF6B1 /* ChatsViewController */,
 				0468B9542BE5566E00E12BE0 /* AstrologerScreen */,
+				041847402BF0EA8D008AF6B1 /* MessagesViewController */,
+				04273B7B2BFA329D00A8BBF0 /* CallsViewController */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -827,9 +830,6 @@
 				0406D6D72BCA014100E35A60 /* Delegates */,
 				0406D6D82BCA015400E35A60 /* Controllers */,
 				04917D572BD15E1C00010C2F /* ProtocolDelegates */,
-				04273B7B2BFA329D00A8BBF0 /* CallsViewController */,
-				041847402BF0EA8D008AF6B1 /* MessagesViewController */,
-				041847412BF0EAAA008AF6B1 /* ChatsViewController */,
 				04898CEF2BDD79320054585A /* Views */,
 				04A875202BC8AC1F008C7E06 /* Info.plist */,
 			);
