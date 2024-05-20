@@ -19,7 +19,7 @@ class CallManager: NSObject, CXProviderDelegate {
     
     func reportIncomingCalls(id: UUID, handle: String) {
         let update = CXCallUpdate()
-        update.remoteHandle = CXHandle(type: .emailAddress, value: handle)
+        update.remoteHandle = CXHandle(type: .generic, value: handle)
         provider.reportNewIncomingCall(with: id, update: update) { error in
             if let error = error {
                 print("\(error.localizedDescription)")
@@ -30,7 +30,7 @@ class CallManager: NSObject, CXProviderDelegate {
     }
     
     func startCall(id: UUID, handle: String) {
-        let handle = CXHandle(type: .emailAddress, value: handle)
+        let handle = CXHandle(type: .generic, value: handle)
         let action = CXStartCallAction(call: id, handle: handle)
         let transaction = CXTransaction(action: action)
         callController.request(transaction) { error in
@@ -44,5 +44,13 @@ class CallManager: NSObject, CXProviderDelegate {
     
     func providerDidReset(_ provider: CXProvider) {
         
+    }
+    
+    func provider(_ provider: CXProvider, perform action: CXAnswerCallAction) {
+        action.fulfill()
+    }
+    
+    func provider(_ provider: CXProvider, perform action: CXEndCallAction) {
+        action.fulfill()
     }
 }

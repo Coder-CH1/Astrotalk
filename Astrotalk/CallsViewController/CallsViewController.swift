@@ -14,6 +14,7 @@ class CallsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .gray
         startCall()
     }
     func startCall() {
