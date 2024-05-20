@@ -21,6 +21,7 @@ The project is built using Programmatic UI and MVVM (Model-View-ViewModel) archi
 - Subclassing and composite design patterns for reusable view controllers
 - Programmatic UI and MVVM architecture
 - Singleton design pattern.
+- CallKit Framework for calling experience between Astrologers and users.
 
 ### Work in Progress
 
