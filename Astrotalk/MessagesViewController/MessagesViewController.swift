@@ -53,17 +53,17 @@ extension MessageViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MessagesCell", for: indexPath) as! MessagesCell
-        let user = usersModel[indexPath.row]
-        cell.textLabel?.text = user.email
+        //let user = usersModel[indexPath.row]
+        cell.textLabel?.text = recipientEmail
         cell.textLabel?.textColor = .blue
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         chatsTableView.deselectRow(at: indexPath, animated: true)
-        let selectedUser = usersModel[indexPath.row]
+        //let selectedUser = usersModel[indexPath.row]
         let chatsKitVC = ChatsViewController()
-        chatsKitVC.title = "Chat with \(selectedUser.email)"
+        chatsKitVC.title = "Chat with \(recipientEmail ?? "")"
         navigationController?.pushViewController(chatsKitVC, animated: false)
     }
     

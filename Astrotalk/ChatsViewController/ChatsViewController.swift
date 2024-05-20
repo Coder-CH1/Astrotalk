@@ -44,9 +44,14 @@ class ChatsViewController: UIViewController, UITableViewDataSource, UITableViewD
             let value = snapshot.value as! Dictionary<String,String>
             let text = value["MessageBody"]!
             let sender = value["Sender"]!
+            var recipient: String?
+            if let recipientEmail = value["Recipient"] {
+                recipient = recipientEmail
+            }
             var msg = Chats()
             msg.msgBody = text
             msg.sender = sender
+            msg.recipient = recipient ?? ""
             self?.messages.append(msg)
             print("\(String(describing: self?.messages.count))")
             self?.chatsTableView.reloadData()
@@ -119,7 +124,8 @@ extension ChatsViewController {
         chatsTextField.isEnabled = false
         sendBtn.isEnabled = false
         let msgDB = Database.database().reference().child("Messages")
-        let msgDict = ["Sender" : Auth.auth().currentUser?.email, "MessageBody" : chatsTextField.text!]
+        let msgDict = ["Sender" : Auth.auth().currentUser?.email, "MessageBody" : chatsTextField.text!,
+                       "Recipient" : title?.components(separatedBy: "Chats with").last?.trimmingCharacters(in: .whitespaces)]
         msgDB.childByAutoId().setValue(msgDict){(error,ref) in
             if(error != nil){
                 print("\(String(describing: error?.localizedDescription))")

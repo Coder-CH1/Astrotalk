@@ -92,5 +92,5 @@ struct Chats {
     var sender = ""
     var recipient = ""
     var msgBody = ""
-    var timeStamp = 0
+    //var timeStamp = 0
 }
