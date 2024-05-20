@@ -84,11 +84,12 @@ extension MessageViewController: UITableViewDataSource, UITableViewDelegate {
     }
 }
 
+//MARK: - Extension -
 extension MessageViewController: AstrologerProfileDelegate {
     func didSelectAstrologer(astrologerEmail: String) {
         let user = RegisteredUsersModel(email: astrologerEmail)
         usersModel.append(user)
+        recipientEmail = astrologerEmail
         chatsTableView.reloadData()
-        //recipientEmail = astrologerEmail
     }
 }

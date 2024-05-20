@@ -83,6 +83,7 @@ class AstrologerProfileViewController: UIViewController {
     @objc func chatBtnTapped() {
         delegate?.didSelectAstrologer(astrologerEmail: profileEmail.text ?? "")
         let vc = MessageViewController()
+        vc.recipientEmail = profileEmail.text
         navigationController?.pushViewController(vc, animated: false)
     }
     

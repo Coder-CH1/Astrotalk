@@ -37,7 +37,7 @@ class ChatsViewController: UIViewController, UITableViewDataSource, UITableViewD
         getMessages()
     }
     
-    //MARK: - Fetching Multiple Dictionary Registered users from Database -
+    //MARK: - Fetching Messages from Realtime Database -
     func getMessages() {
         let msgDB = Database.database().reference().child("Messages")
         msgDB.observe(.childAdded) {  [weak self] (snapshot: DataSnapshot) -> Void in
@@ -102,6 +102,7 @@ extension ChatsViewController {
         configureTextField()
     }
     
+    //MARK: - Configure Chats TextField -
     func configureTextField() {
         chatsTextField.backgroundColor = .white
         chatsTextField.layer.borderWidth = 1

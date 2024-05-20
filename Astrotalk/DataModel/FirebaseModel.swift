@@ -84,7 +84,7 @@ struct ProfileAstrologersModel {
 
 //MARK: - Registered users model
 struct RegisteredUsersModel {
-    let email: String
+    var email: String
 }
 
 //MARK: - Chats Data Model -
