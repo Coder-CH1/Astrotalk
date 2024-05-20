@@ -13,11 +13,11 @@ class ChatsTableViewCell: UITableViewCell {
     //MARK: - UI -
     let identifier = "ChatsTableViewCell"
     
-    let userNameLabel = Label(label: "", textColor: .gray, font: UIFont.systemFont(ofSize: 8, weight: .regular))
+    let userNameLabel = Label(label: "", textColor: .gray, font: UIFont.systemFont(ofSize: 12, weight: .regular))
     
     let chatsView = CustomView(color: .systemYellow)
     
-    let chatsLabel = Label(label: "", textColor: .black, font: UIFont.systemFont(ofSize: 10, weight: .medium))
+    let chatsLabel = Label(label: "", textColor: .black, font: UIFont.systemFont(ofSize: 16, weight: .medium))
     
     //MARK: - Lifecyle -
     override func awakeFromNib() {
@@ -40,7 +40,7 @@ class ChatsTableViewCell: UITableViewCell {
             chatsView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -14),
             chatsView.heightAnchor.constraint(equalToConstant: 70),
             chatsView.widthAnchor.constraint(equalToConstant: 200),
-            
+
             userNameLabel.topAnchor.constraint(equalTo: chatsView.topAnchor, constant: 5),
             userNameLabel.trailingAnchor.constraint(equalTo: chatsView.trailingAnchor, constant: -5),
             userNameLabel.leadingAnchor.constraint(equalTo: chatsView.leadingAnchor, constant: 5),

@@ -83,9 +83,9 @@ extension ChatsViewController {
             chatsTableView.topAnchor.constraint(equalTo: view.topAnchor, constant: 70),
             chatsTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             chatsTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            chatsTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            chatsTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -160),
             
-            textfieldView.bottomAnchor.constraint(equalTo: chatsTableView.bottomAnchor, constant: -100),
+            textfieldView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -80),
             textfieldView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             textfieldView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             textfieldView.heightAnchor.constraint(equalToConstant: 80),
