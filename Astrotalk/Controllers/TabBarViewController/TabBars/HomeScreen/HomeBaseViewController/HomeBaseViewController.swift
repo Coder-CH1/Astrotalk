@@ -7,6 +7,9 @@
 
 import UIKit
 
+var leftSticker = Button(image: UIImage(systemName: "ellipsis.message.fill"), text: "Chat with Astrologer", btnTitleColor: .black, backgroundColor: .systemYellow, radius: 20, imageColor: .black)
+var rightSticker = Button(image: UIImage(systemName: "phone.fill"), text: "Call with Astrologer", btnTitleColor: .black, backgroundColor: .systemYellow, radius: 20, imageColor: .black)
+
 // MARK: -
 class HomeBaseViewController: UIViewController {
     
@@ -56,8 +59,6 @@ class HomeBaseViewController: UIViewController {
     
     var isFeedbackViewVisible = false
     let yourFeedbackViewHeight: CGFloat = 280
-    var leftSticker = Button(image: UIImage(systemName: "ellipsis.message.fill"), text: "Chat with Astrologer", btnTitleColor: .black, backgroundColor: .systemYellow, radius: 20, imageColor: .black)
-    var rightSticker = Button(image: UIImage(systemName: "phone.fill"), text: "Call with Astrologer", btnTitleColor: .black, backgroundColor: .systemYellow, radius: 20, imageColor: .black)
     
     // MARK: - Lifecycle -
     override func viewDidLoad() {

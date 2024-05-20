@@ -51,6 +51,12 @@ class SideBarViewController: UIViewController {
             sidebarCollectionView.reloadData()
         }
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        leftSticker.isHidden = true
+        rightSticker.isHidden = true
+    }
   
     // MARK: - Action back button tapped -
     @objc func toggleBackButtonTapped() {
