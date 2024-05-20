@@ -21,12 +21,11 @@ The project is built using Programmatic UI and MVVM (Model-View-ViewModel) archi
 - Subclassing and composite design patterns for reusable view controllers
 - Programmatic UI and MVVM architecture
 - Singleton design pattern.
+- CallKit Framework for calling experience between Astrologers and users.
 
 ### Work in Progress
 
 Note that this project is still a work in progress, with the following features still to be implemented:
-- Completion of chat features.
-- Astrologers screens and the implementation between Astrologers and Users of the App.
 - Unit testing.
 - Sidebarviewcontroller contents screens.
 - Coordinator Design Pattern.
@@ -40,5 +39,6 @@ Note that this project is still a work in progress, with the following features 
 - MVVM architecture
 - Cocoapod
 - Realm
+- CallKit
 
 ## Be right back😍
