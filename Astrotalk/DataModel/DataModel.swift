@@ -109,19 +109,9 @@ struct Horoscope {
 
 /// Data Initialization
 let horoscopeArray = [
-            Horoscope(img: UIImage(systemName: "sun.and.horizon"), label: "Daily Horoscope"),
-            Horoscope(img: UIImage(systemName: "trapezoid.and.line.vertical"), label: "FREE KUNDLI"),
-            Horoscope(img: UIImage(systemName: "circlebadge.2"), label: "KUNDLI MATCHING"),
-            Horoscope(img: UIImage(systemName: "staroflife.fill"), label: "FREE CHAT")]
+    Horoscope(img: UIImage(systemName: "sun.and.horizon"), label: "Daily Horoscope"),
+    Horoscope(img: UIImage(systemName: "trapezoid.and.line.vertical"), label: "FREE KUNDLI"),
+    Horoscope(img: UIImage(systemName: "circlebadge.2"), label: "KUNDLI MATCHING"),
+    Horoscope(img: UIImage(systemName: "staroflife.fill"), label: "FREE CHAT")]
 
-//MARK: - Chats Data Model -
-struct Member {
-    var name: String
-    var color: UIColor
-}
-
-struct Chats {
-    let text: String
-    let sender: String
-}
 

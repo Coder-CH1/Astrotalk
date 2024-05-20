@@ -12,28 +12,12 @@ import FirebaseAuth
 class ChatsTableViewCell: UITableViewCell {
     //MARK: - UI -
     let identifier = "ChatsTableViewCell"
-    lazy var leftAlignedLabel: PaddedLabel = {
-        let leftAlignedLabel = PaddedLabel()
-        leftAlignedLabel.translatesAutoresizingMaskIntoConstraints = false
-        leftAlignedLabel.textColor = .black
-        leftAlignedLabel.font = UIFont.systemFont(ofSize: 12, weight: .regular)
-        leftAlignedLabel.textAlignment = .left
-        leftAlignedLabel.backgroundColor = .green
-        leftAlignedLabel.numberOfLines = 0
-        return leftAlignedLabel
-    }()
     
-    lazy var rightAlignedLabel: PaddedLabel = {
-        let rightAlignedLabel = PaddedLabel()
-        rightAlignedLabel.translatesAutoresizingMaskIntoConstraints = false
-        rightAlignedLabel.textColor = .black
-        rightAlignedLabel.font = UIFont.systemFont(ofSize: 12, weight: .regular)
-        rightAlignedLabel.textAlignment = .right
-        rightAlignedLabel.backgroundColor = .blue
-        rightAlignedLabel.numberOfLines = 0
-        return rightAlignedLabel
-    }()
-    let isCurrentUser = false
+    let userNameLabel = Label(label: "", textColor: .gray, font: UIFont.systemFont(ofSize: 8, weight: .regular))
+    
+    let chatsView = CustomView(color: .systemYellow)
+    
+    let chatsLabel = Label(label: "", textColor: .black, font: UIFont.systemFont(ofSize: 10, weight: .medium))
     
     //MARK: - Lifecyle -
     override func awakeFromNib() {
@@ -48,18 +32,24 @@ class ChatsTableViewCell: UITableViewCell {
     
     // MARK: - Subviews and Layout -
     func subviewsAndLayout() {
-        addSubview(leftAlignedLabel)
-        addSubview(rightAlignedLabel)
+        addSubview(chatsView)
+        chatsView.addSubview(userNameLabel)
+        chatsView.addSubview(chatsLabel)
         NSLayoutConstraint.activate([
-            leftAlignedLabel.topAnchor.constraint(equalTo: topAnchor, constant: 5),
-            leftAlignedLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 5),
-            leftAlignedLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -5),
-            leftAlignedLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -5),
+            chatsView.topAnchor.constraint(equalTo: topAnchor),
+            chatsView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -14),
+            chatsView.heightAnchor.constraint(equalToConstant: 70),
+            chatsView.widthAnchor.constraint(equalToConstant: 200),
             
-            rightAlignedLabel.topAnchor.constraint(equalTo: topAnchor, constant: 5),
-            rightAlignedLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 5),
-            rightAlignedLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -5),
-            rightAlignedLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -5),
+            userNameLabel.topAnchor.constraint(equalTo: chatsView.topAnchor, constant: 5),
+            userNameLabel.trailingAnchor.constraint(equalTo: chatsView.trailingAnchor, constant: -5),
+            userNameLabel.leadingAnchor.constraint(equalTo: chatsView.leadingAnchor, constant: 5),
+            
+            chatsLabel.topAnchor.constraint(equalTo: userNameLabel.bottomAnchor, constant: 4),
+            chatsLabel.leadingAnchor.constraint(equalTo: chatsView.leadingAnchor, constant: 5),
+            chatsLabel.trailingAnchor.constraint(equalTo: chatsView.trailingAnchor, constant: -5),
+            chatsLabel.bottomAnchor.constraint(equalTo: chatsView.bottomAnchor, constant: -5),
         ])
+        chatsView.layer.cornerRadius = 15
     }
 }

@@ -86,3 +86,9 @@ struct ProfileAstrologersModel {
 struct RegisteredUsersModel {
     let email: String
 }
+
+//MARK: - Chats Data Model -
+struct Chats {
+    var sender = ""
+    var msgBody = ""
+}
