@@ -34,11 +34,11 @@ class ChatsViewController: UIViewController, UITableViewDataSource, UITableViewD
     //MARK: - Lifecyle -
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchUsersFromDB()
+        getMessages()
     }
     
     //MARK: - Fetching Multiple Dictionary Registered users from Database -
-    func fetchUsersFromDB() {
+    func getMessages() {
         let msgDB = Database.database().reference().child("Messages")
         msgDB.observe(.childAdded) {  [weak self] (snapshot: DataSnapshot) -> Void in
             let value = snapshot.value as! Dictionary<String,String>

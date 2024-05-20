@@ -22,10 +22,12 @@ class AstrologerProfileViewController: UIViewController {
     let dividerView = CustomView(color: .lightGray)
     let chatButton = Button(image: UIImage(systemName: "ellipsis.message.fill"), text: "", btnTitleColor: .black, backgroundColor: .clear, radius: 0, imageColor: .gray)
     let callButton = Button(image: UIImage(systemName: "phone.fill"), text: "", btnTitleColor: .black, backgroundColor: .clear, radius: 0, imageColor: .gray)
+    var delegate: AstrologerProfileDelegate?
     
     //MARK: - Lifecycle -
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setSubviewsAndLayout()
     }
     
@@ -79,6 +81,7 @@ class AstrologerProfileViewController: UIViewController {
     
     //MARK: -
     @objc func chatBtnTapped() {
+        delegate?.didSelectAstrologer(astrologerEmail: profileEmail.text ?? "")
         let vc = MessageViewController()
         navigationController?.pushViewController(vc, animated: false)
     }

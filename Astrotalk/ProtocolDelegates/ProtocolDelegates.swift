@@ -68,3 +68,7 @@ protocol ViewProfileAstrologersDelegate {
 protocol ReusableCollectionViewDelegate {
     func presentViewController(from cell: CustomChatCell)
 }
+
+protocol AstrologerProfileDelegate {
+    func didSelectAstrologer(astrologerEmail: String)
+}

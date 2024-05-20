@@ -90,5 +90,7 @@ struct RegisteredUsersModel {
 //MARK: - Chats Data Model -
 struct Chats {
     var sender = ""
+    var recipient = ""
     var msgBody = ""
+    var timeStamp = 0
 }

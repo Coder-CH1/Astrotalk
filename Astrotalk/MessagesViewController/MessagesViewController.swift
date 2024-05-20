@@ -13,6 +13,7 @@ class MessageViewController: UIViewController {
     
     //MARK: - UI -
     var usersModel: [RegisteredUsersModel] = []
+    var recipientEmail: String?
     let dbRef = Database.database().reference().child("users")
     
     lazy var chatsTableView: UITableView = {
@@ -52,8 +53,6 @@ extension MessageViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MessagesCell", for: indexPath) as! MessagesCell
-        cell.backgroundColor = .systemBlue
-        cell.accessoryType = .disclosureIndicator
         let user = usersModel[indexPath.row]
         cell.textLabel?.text = user.email
         cell.textLabel?.textColor = .blue
@@ -70,12 +69,10 @@ extension MessageViewController: UITableViewDataSource, UITableViewDelegate {
     
     //MARK: - Fetch registered users from Database -
     func fetchUsersFromDB() {
-        dbRef.observe(.childAdded) { snapshot,_ in
-            if let dict = snapshot.value as? [String: Any] {
-                guard let email = dict["email"] as? String else {
-                    print("Error: Email not found in user data")
-                    return
-                }
+        guard let currentUser = Auth.auth().currentUser?.email else {return}
+        dbRef.queryOrdered(byChild: "email").queryEqual(toValue: currentUser).observe(.childAdded) { snapshot, _ in
+            if let dictionary = snapshot.value as? [String: Any] {
+                guard let email = dictionary["email"] as? String else {return}
                 let user = RegisteredUsersModel(email: email)
                 self.usersModel.append(user)
                 print("\(user.email)")
@@ -87,3 +84,11 @@ extension MessageViewController: UITableViewDataSource, UITableViewDelegate {
     }
 }
 
+extension MessageViewController: AstrologerProfileDelegate {
+    func didSelectAstrologer(astrologerEmail: String) {
+        let user = RegisteredUsersModel(email: astrologerEmail)
+        usersModel.append(user)
+        chatsTableView.reloadData()
+        //recipientEmail = astrologerEmail
+    }
+}
