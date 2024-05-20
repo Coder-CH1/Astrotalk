@@ -23,6 +23,7 @@
 		0422BC632BE9C37C00DA4D23 /* ChatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0422BC622BE9C37C00DA4D23 /* ChatsViewController.swift */; };
 		04273B7D2BFA32C400A8BBF0 /* CallsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04273B7C2BFA32C400A8BBF0 /* CallsViewController.swift */; };
 		04273B802BFA967A00A8BBF0 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04273B7F2BFA967A00A8BBF0 /* AppCoordinator.swift */; };
+		04273B822BFAC0AF00A8BBF0 /* CallManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04273B812BFAC0AF00A8BBF0 /* CallManager.swift */; };
 		042AC9852BD8B82C00C1CFCD /* SideBarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042AC9842BD8B82C00C1CFCD /* SideBarCell.swift */; };
 		042AC9872BD8BA1600C1CFCD /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042AC9862BD8BA1600C1CFCD /* DataModel.swift */; };
 		042AC98A2BD8F1FB00C1CFCD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 042AC9892BD8F1FB00C1CFCD /* GoogleService-Info.plist */; };
@@ -175,6 +176,7 @@
 		0422BC622BE9C37C00DA4D23 /* ChatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsViewController.swift; sourceTree = "<group>"; };
 		04273B7C2BFA32C400A8BBF0 /* CallsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallsViewController.swift; sourceTree = "<group>"; };
 		04273B7F2BFA967A00A8BBF0 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		04273B812BFAC0AF00A8BBF0 /* CallManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallManager.swift; sourceTree = "<group>"; };
 		042AC9842BD8B82C00C1CFCD /* SideBarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarCell.swift; sourceTree = "<group>"; };
 		042AC9862BD8BA1600C1CFCD /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		042AC9892BD8F1FB00C1CFCD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -927,6 +929,7 @@
 			children = (
 				04D765572BE6574100BB00E5 /* FirestoreService.swift */,
 				0422BC602BE9BFE200DA4D23 /* ChatManager.swift */,
+				04273B812BFAC0AF00A8BBF0 /* CallManager.swift */,
 			);
 			path = FirebaseManager;
 			sourceTree = "<group>";
@@ -1249,6 +1252,7 @@
 				04AB0D312BFA058800BF69F7 /* CallMarriageView.swift in Sources */,
 				042AC9852BD8B82C00C1CFCD /* SideBarCell.swift in Sources */,
 				04663F602BDF161900F80BE5 /* DailyHoroscopeCell.swift in Sources */,
+				04273B822BFAC0AF00A8BBF0 /* CallManager.swift in Sources */,
 				04898CF72BDD8D350054585A /* CustomPoojaView.swift in Sources */,
 				04663F702BDF1FF100F80BE5 /* LatestBlogHeaders.swift in Sources */,
 				04663F882BDF2B8A00F80BE5 /* ShopCell.swift in Sources */,
