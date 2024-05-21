@@ -34,7 +34,7 @@ class FreeChatCell: UICollectionViewCell, UICollectionViewDataSource, UICollecti
     //MARK: - Lifecycle -
     override init(frame: CGRect) {
         super.init(frame: frame)
-        //fetchFreeChatData()
+        fetchFreeChatData()
         setSubviewsAndLayout()
     }
     
