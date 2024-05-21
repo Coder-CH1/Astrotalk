@@ -34,4 +34,4 @@ The project is built using Programmatic UI and MVVM (Model-View-ViewModel) archi
 - Realm
 - CallKit
 
-## Be right back😍
+💃🫅🤟
