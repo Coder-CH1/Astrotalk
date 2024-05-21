@@ -27,8 +27,6 @@ The project is built using Programmatic UI and MVVM (Model-View-ViewModel) archi
 
 Note that this project is still a work in progress, with the following features still to be implemented:
 - Unit testing.
-- Sidebarviewcontroller contents screens.
-- Coordinator Design Pattern.
 
 ### Technologies Used
 
