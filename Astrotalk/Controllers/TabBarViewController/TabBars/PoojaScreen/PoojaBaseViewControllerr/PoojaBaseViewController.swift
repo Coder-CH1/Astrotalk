@@ -11,6 +11,7 @@ import UIKit
 class PoojaBaseViewController: UIViewController {
     
     // MARK: - UI -
+    //var coordinator: SideBarCoordinator?
     var sideBarShowing = false
     let sideBarWidth: CGFloat = 250
     let topView = TopView(color: .systemYellow)

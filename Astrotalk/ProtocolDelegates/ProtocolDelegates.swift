@@ -72,3 +72,8 @@ protocol ReusableCollectionViewDelegate {
 protocol AstrologerProfileDelegate {
     func didSelectAstrologer(astrologerEmail: String)
 }
+
+protocol Coordinator {
+    var navigationController: UINavigationController { get set }
+    func start()
+}

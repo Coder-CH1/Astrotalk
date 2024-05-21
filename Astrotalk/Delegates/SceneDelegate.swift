@@ -12,15 +12,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, UIGestureRecognizerDele
     
     var window: UIWindow?
     var stickerButtonDelegate: StickerButtonVisibilityDelegate?
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
-        
+
         window = UIWindow(windowScene: windowScene)
         let rootViewController = LoginViewController()
-        let navigationController = UINavigationController(rootViewController: rootViewController)
-        window?.rootViewController = navigationController
-        window?.makeKeyAndVisible()
+        window?.rootViewController = rootViewController
         window?.backgroundColor = .white
+        window?.makeKeyAndVisible()
     }
     
     func sceneDidDisconnect(_ scene: UIScene) {

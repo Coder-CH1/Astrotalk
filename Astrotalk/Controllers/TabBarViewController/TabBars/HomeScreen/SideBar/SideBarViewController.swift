@@ -16,7 +16,7 @@ class SideBarViewController: UIViewController {
     // MARK: - UI -
     var delegate: SideBarViewControllerDelegate?
     var sideBarOpen = false
-    
+    //var coordinator: SideBarCoordinator?
     var sideBarItems: [SideBarItem] = [userItem, homeItem, poojaItem, orderItem, shopItem, blogItem, chatItem, settingsItem, loginItem]
     
     fileprivate lazy var toggleBackButton: UIButton = {
@@ -108,25 +108,34 @@ extension SideBarViewController: UICollectionViewDataSource, UICollectionViewDel
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        //guard let coordinator = coordinator else {return}
         switch indexPath.item {
         case 0:
             navigateToProfileViewController()
         case 1:
             navigateToHomeViewController()
+            //coordinator.navigateToHomeVC()
         case 2:
             navigateToPoojaViewController()
+            //coordinator.navigateToUserPoojaVC()
         case 3:
             navigateToOrderViewController()
+            //coordinator.navigateToOrderVC()
         case 4:
             navigateToShopViewController()
+            //coordinator.navigateToShopVC()
         case 5:
             navigateToBlogViewController()
+            //coordinator.navigateToBlogVC()
         case 6:
             navigateToChatViewController()
+            //coordinator.navigateToChatVC()
         case 7:
             navigateToSettingsViewController()
+            //coordinator.navigateToSettingsVC()
         case 8:
             navigateToLoginViewController()
+            //coordinator.navigateToLoginVC()
         default:
             break
         }
@@ -146,52 +155,61 @@ extension SideBarViewController {
             self.navigationController?.navigationBar.tintColor = .black
         }else {
             navigateToLoginViewController()
+            //coordinator?.navigateToLoginVC()
         }
     }
     
     func navigateToHomeViewController() {
+        //coordinator?.navigateToHomeVC()
         let vc = HomeViewController()
         navigationController?.pushViewController(vc, animated: false)
         self.navigationController?.navigationBar.tintColor = .black
     }
-    
+
     func navigateToPoojaViewController() {
+        //coordinator?.navigateToUserPoojaVC()
         let vc = PoojaViewController()
         navigationController?.pushViewController(vc, animated: false)
         self.navigationController?.navigationBar.tintColor = .black
     }
-    
+
     func navigateToOrderViewController() {
+        //coordinator?.navigateToOrderVC()
         let vc = OrderViewController()
         navigationController?.pushViewController(vc, animated: false)
         self.navigationController?.navigationBar.tintColor = .black
     }
-    
+
     func navigateToShopViewController() {
+        //coordinator?.navigateToShopVC()
         let vc = ShopViewController()
         navigationController?.pushViewController(vc, animated: false)
         self.navigationController?.navigationBar.tintColor = .black
     }
-    
+
     func navigateToBlogViewController() {
+        //coordinator?.navigateToBlogVC()
         let vc = BlogViewController()
         navigationController?.pushViewController(vc, animated: false)
         self.navigationController?.navigationBar.tintColor = .black
     }
-    
+
     func navigateToChatViewController() {
+        //coordinator?.navigateToChatVC()
         let vc = ChatViewController()
         navigationController?.pushViewController(vc, animated: false)
         self.navigationController?.navigationBar.tintColor = .black
     }
-    
+
     func navigateToSettingsViewController() {
+        //coordinator?.navigateToSettingsVC()
         let vc = SettingsViewController()
         navigationController?.pushViewController(vc, animated: false)
         self.navigationController?.navigationBar.tintColor = .black
     }
-    
+
     func navigateToLoginViewController() {
+        //coordinator?.navigateToLoginVC()
         let vc = LoginViewController()
         navigationController?.pushViewController(vc, animated: false)
         self.navigationController?.navigationBar.tintColor = .black

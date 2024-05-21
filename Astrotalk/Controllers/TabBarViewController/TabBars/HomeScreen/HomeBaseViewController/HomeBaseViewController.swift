@@ -19,7 +19,7 @@ class HomeBaseViewController: UIViewController {
     var topView = TopView(color: .clear)
     var overlayView = UIView()
     var topEdgesView = CustomView(color: .systemYellow)
-    var coordinator: AppCoordinator?
+    var coordinator: Coordinator?
     
     var sideBarViewController = SideBarViewController()
     
@@ -426,5 +426,11 @@ extension HomeBaseViewController: ViewAllAstroShopButtonDelegate {
     func viewAstroShopButtonDidTap() {
         let vc = MessageViewController()
         navigationController?.pushViewController(vc, animated: false)
+    }
+}
+
+extension HomeBaseViewController {
+    func navigateToMessageVC() {
+    
     }
 }

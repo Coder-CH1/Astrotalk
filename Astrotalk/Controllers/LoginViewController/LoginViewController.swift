@@ -11,6 +11,7 @@ import UIKit
 class LoginViewController: UIViewController {
     
     //MARK: - Instantiating the Child ViewControllers -
+    //var coordinator: SideBarCoordinator?
     private let topSectionViewController = LoginTopSectionVC()
     private let bottomSectionViewController = LoginBottomSectionVC()
     
