@@ -23,14 +23,9 @@ The project is built using Programmatic UI and MVVM (Model-View-ViewModel) archi
 - Singleton design pattern.
 - CallKit Framework for calling experience between Astrologers and users.
 
-### Work in Progress
-
-Note that this project is still a work in progress, with the following features still to be implemented:
-- Unit testing.
-
 ### Technologies Used
 
-- Firebase
+- Firebase(Authentication, Firestore, Realtime Database and Firebase Storage)
 - Kingfisher
 - Link Presentation Framework
 - Programmatic UI
